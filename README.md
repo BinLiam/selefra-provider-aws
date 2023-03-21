@@ -33,11 +33,12 @@
   <img src="https://user-images.githubusercontent.com/124020340/225897757-188f1a50-2efa-4a9e-9199-7cb7f68485be.png">
 </p>
 <br/>
+
 Use this repo as a raw reference to **tables and schema** for AWS cloud resources. [Here's](https://www.selefra.io/docs/providers-connector/aws) a summary of full coverage.
 As an experienced user, the tables are especially helpful when you're writing SQL queries for specific task.
 If you're just starting, try some of the pre-written rules before writing customized ones:
 
-- [S3 misconfiguration](https://github.com/selefra/rules-aws-misconfiguration-s3)
+- [AWS S3 Misconfiguration](https://github.com/selefra/selefra-modules-aws-s3)
 
 ## Community
 
