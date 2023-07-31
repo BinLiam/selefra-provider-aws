@@ -57,8 +57,8 @@ func (x *TableAwsRamResourcesGenerator) GetDataSource() *schema.DataSource {
 
 func fetchRamResourcesByOwner(ctx context.Context, client any, shareType types.ResourceOwner, res chan<- any) error {
 	input := &ram.ListResourcesInput{
-		MaxResults:	aws.Int32(500),
-		ResourceOwner:	shareType,
+		MaxResults:    aws.Int32(500),
+		ResourceOwner: shareType,
 	}
 	paginator := ram.NewListResourcesPaginator(client.(*aws_client.Client).AwsServices().RAM, input)
 	for paginator.HasMorePages() {

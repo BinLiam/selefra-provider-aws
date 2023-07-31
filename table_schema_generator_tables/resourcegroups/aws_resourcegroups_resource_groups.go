@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/resourcegroups/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsResourcegroupsResourceGroupsGenerator struct {
@@ -69,8 +69,8 @@ func (x *TableAwsResourcegroupsResourceGroupsGenerator) GetDataSource() *schema.
 						return nil, err
 					}
 					return ResourceGroupWrapper{
-						Group:		groupResponse.Group,
-						ResourceQuery:	output.GroupQuery.ResourceQuery,
+						Group:         groupResponse.Group,
+						ResourceQuery: output.GroupQuery.ResourceQuery,
 					}, nil
 
 				})

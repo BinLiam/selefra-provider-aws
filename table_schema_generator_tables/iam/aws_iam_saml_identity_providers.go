@@ -55,9 +55,9 @@ func (x *TableAwsIamSamlIdentityProvidersGenerator) GetDataSource() *schema.Data
 					return nil, err
 				}
 				return IAMSAMLIdentityProviderWrapper{
-					GetSAMLProviderOutput:	providerResponse,
-					Arn:			*p.Arn,
-					Tags:			aws_client.TagsToMap(providerResponse.Tags),
+					GetSAMLProviderOutput: providerResponse,
+					Arn:                   *p.Arn,
+					Tags:                  aws_client.TagsToMap(providerResponse.Tags),
 				}, nil
 
 			})
@@ -68,8 +68,8 @@ func (x *TableAwsIamSamlIdentityProvidersGenerator) GetDataSource() *schema.Data
 
 type IAMSAMLIdentityProviderWrapper struct {
 	*iam.GetSAMLProviderOutput
-	Arn	string
-	Tags	map[string]string
+	Arn  string
+	Tags map[string]string
 }
 
 func (x *TableAwsIamSamlIdentityProvidersGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

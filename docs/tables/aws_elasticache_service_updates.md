@@ -11,21 +11,21 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| service_update_severity | string | X | √ |  | 
-| region | string | X | √ |  | 
-| service_update_name | string | X | √ |  | 
-| service_update_description | string | X | √ |  | 
-| service_update_status | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| auto_update_after_recommended_apply_by_date | bool | X | √ |  | 
 | engine_version | string | X | √ |  | 
 | estimated_update_time | string | X | √ |  | 
 | service_update_type | string | X | √ |  | 
-| arn | string | √ | √ |  | 
+| region | string | X | √ |  | 
 | service_update_end_date | timestamp | X | √ |  | 
+| service_update_name | string | X | √ |  | 
+| service_update_status | string | X | √ |  | 
 | engine | string | X | √ |  | 
-| service_update_recommended_apply_by_date | timestamp | X | √ |  | 
 | service_update_release_date | timestamp | X | √ |  | 
 | account_id | string | X | √ |  | 
-| auto_update_after_recommended_apply_by_date | bool | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| service_update_description | string | X | √ |  | 
+| service_update_recommended_apply_by_date | timestamp | X | √ |  | 
+| service_update_severity | string | X | √ |  | 
 
 

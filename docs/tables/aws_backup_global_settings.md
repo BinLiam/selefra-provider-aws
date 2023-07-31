@@ -3,7 +3,7 @@
 ## Primary Keys 
 
 ```
-account_id
+account_id, region
 ```
 
 
@@ -11,10 +11,11 @@ account_id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | √ | √ |  | 
+| result_metadata | json | X | √ |  | 
+| account_id | string | X | √ |  | 
+| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | global_settings | json | X | √ |  | 
 | last_update_time | timestamp | X | √ |  | 
-| result_metadata | json | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

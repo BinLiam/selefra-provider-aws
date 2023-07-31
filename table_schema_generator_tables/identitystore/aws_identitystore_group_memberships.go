@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/identitystore"
 	"github.com/aws/aws-sdk-go-v2/service/identitystore/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsIdentitystoreGroupMembershipsGenerator struct {
@@ -39,8 +39,8 @@ func (x *TableAwsIdentitystoreGroupMembershipsGenerator) GetDataSource() *schema
 			svc := client.(*aws_client.Client).AwsServices().Identitystore
 			group := task.ParentRawResult.(types.Group)
 			config := identitystore.ListGroupMembershipsInput{
-				GroupId:		group.GroupId,
-				IdentityStoreId:	group.IdentityStoreId,
+				GroupId:         group.GroupId,
+				IdentityStoreId: group.IdentityStoreId,
 			}
 			for {
 				response, err := svc.ListGroupMemberships(ctx, &config)

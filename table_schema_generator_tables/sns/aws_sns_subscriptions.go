@@ -9,9 +9,9 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSnsSubscriptionsGenerator struct {
@@ -56,11 +56,11 @@ func (x *TableAwsSnsSubscriptionsGenerator) GetDataSource() *schema.DataSource {
 					svc := c.AwsServices().Sns
 					item := result.(types.Subscription)
 					s := Subscription{
-						SubscriptionArn:	item.SubscriptionArn,
-						Owner:			item.Owner,
-						Protocol:		item.Protocol,
-						TopicArn:		item.TopicArn,
-						Endpoint:		item.Endpoint,
+						SubscriptionArn: item.SubscriptionArn,
+						Owner:           item.Owner,
+						Protocol:        item.Protocol,
+						TopicArn:        item.TopicArn,
+						Endpoint:        item.Endpoint,
 					}
 
 					if aws.ToString(item.SubscriptionArn) == "PendingConfirmation" {
@@ -93,33 +93,33 @@ func (x *TableAwsSnsSubscriptionsGenerator) GetDataSource() *schema.DataSource {
 }
 
 type Subscription struct {
-	Endpoint	*string
+	Endpoint *string
 
-	Owner	*string
+	Owner *string
 
-	Protocol	*string
+	Protocol *string
 
-	SubscriptionArn	*string
+	SubscriptionArn *string
 
-	TopicArn	*string
+	TopicArn *string
 
-	ConfirmationWasAuthenticated	*bool
+	ConfirmationWasAuthenticated *bool
 
-	DeliveryPolicy	*string
+	DeliveryPolicy *string
 
-	EffectiveDeliveryPolicy	*string
+	EffectiveDeliveryPolicy *string
 
-	FilterPolicy	*string
+	FilterPolicy *string
 
-	PendingConfirmation	*bool
+	PendingConfirmation *bool
 
-	RawMessageDelivery	*bool
+	RawMessageDelivery *bool
 
-	RedrivePolicy	*string
+	RedrivePolicy *string
 
-	SubscriptionRoleArn	*string
+	SubscriptionRoleArn *string
 
-	UnknownFields	map[string]any	`mapstructure:",remain"`
+	UnknownFields map[string]any `mapstructure:",remain"`
 }
 
 func (x *TableAwsSnsSubscriptionsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

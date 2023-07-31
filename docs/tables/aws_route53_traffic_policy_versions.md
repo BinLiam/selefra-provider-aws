@@ -11,15 +11,15 @@ traffic_policy_arn, id, version
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| document | json | X | √ |  | 
 | type | string | X | √ |  | 
 | comment | string | X | √ |  | 
-| aws_route53_traffic_policies_selefra_id | string | X | X | fk to aws_route53_traffic_policies.selefra_id | 
 | account_id | string | X | √ |  | 
-| traffic_policy_arn | string | X | √ |  | 
+| aws_route53_traffic_policies_selefra_id | string | X | X | fk to aws_route53_traffic_policies.selefra_id | 
 | id | string | X | √ |  | 
-| version | int | X | √ |  | 
-| document | json | X | √ |  | 
 | name | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| version | int | X | √ |  | 
+| traffic_policy_arn | string | X | √ |  | 
 
 

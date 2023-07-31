@@ -3,7 +3,7 @@
 ## Primary Keys 
 
 ```
-account_id, region, id
+arn
 ```
 
 
@@ -11,34 +11,35 @@ account_id, region, id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| domain_name | string | X | √ |  | 
-| encryption_at_rest_options | json | X | √ |  | 
-| snapshot_options | json | X | √ |  | 
-| upgrade_processing | bool | X | √ |  | 
-| ebs_options | json | X | √ |  | 
-| auto_tune_options | json | X | √ |  | 
-| cognito_options | json | X | √ |  | 
-| endpoints | json | X | √ |  | 
-| region | string | X | √ |  | 
-| created | bool | X | √ |  | 
-| node_to_node_encryption_options | json | X | √ |  | 
-| vpc_options | json | X | √ |  | 
-| id | string | X | √ |  | 
-| elasticsearch_cluster_config | json | X | √ |  | 
-| access_policies | string | X | √ |  | 
 | change_progress_details | json | X | √ |  | 
+| region | string | X | √ |  | 
+| domain_name | string | X | √ |  | 
+| vpc_options | json | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| access_policies | string | X | √ |  | 
+| elasticsearch_version | string | X | √ |  | 
+| service_software_options | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | tags | json | X | √ |  | 
 | advanced_security_options | json | X | √ |  | 
-| domain_endpoint_options | json | X | √ |  | 
-| log_publishing_options | json | X | √ |  | 
+| domain_id | string | X | √ |  | 
+| created | bool | X | √ |  | 
+| encryption_at_rest_options | json | X | √ |  | 
+| authorized_principals | json | X | √ |  | 
+| arn | string | √ | √ |  | 
+| ebs_options | json | X | √ |  | 
 | processing | bool | X | √ |  | 
-| service_software_options | json | X | √ |  | 
+| log_publishing_options | json | X | √ |  | 
+| elasticsearch_cluster_config | json | X | √ |  | 
 | advanced_options | json | X | √ |  | 
-| arn | string | X | √ |  | 
+| auto_tune_options | json | X | √ |  | 
+| cognito_options | json | X | √ |  | 
 | deleted | bool | X | √ |  | 
-| elasticsearch_version | string | X | √ |  | 
 | endpoint | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
+| endpoints | json | X | √ |  | 
+| snapshot_options | json | X | √ |  | 
+| domain_endpoint_options | json | X | √ |  | 
+| node_to_node_encryption_options | json | X | √ |  | 
+| upgrade_processing | bool | X | √ |  | 
 
 

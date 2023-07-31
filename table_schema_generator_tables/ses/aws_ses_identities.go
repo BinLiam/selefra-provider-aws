@@ -60,9 +60,9 @@ func (x *TableAwsSesIdentitiesGenerator) GetDataSource() *schema.DataSource {
 						return nil, err
 					}
 					return &EmailIdentity{
-						IdentityName:		ei.IdentityName,
-						SendingEnabled:		ei.SendingEnabled,
-						GetEmailIdentityOutput:	getOutput,
+						IdentityName:           ei.IdentityName,
+						SendingEnabled:         ei.SendingEnabled,
+						GetEmailIdentityOutput: getOutput,
 					}, nil
 
 				})
@@ -74,8 +74,8 @@ func (x *TableAwsSesIdentitiesGenerator) GetDataSource() *schema.DataSource {
 }
 
 type EmailIdentity struct {
-	IdentityName	*string
-	SendingEnabled	bool
+	IdentityName   *string
+	SendingEnabled bool
 
 	*sesv2.GetEmailIdentityOutput
 }

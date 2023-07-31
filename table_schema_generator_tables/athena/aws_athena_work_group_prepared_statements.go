@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/athena"
 	"github.com/aws/aws-sdk-go-v2/service/athena/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsAthenaWorkGroupPreparedStatementsGenerator struct {
@@ -53,8 +53,8 @@ func (x *TableAwsAthenaWorkGroupPreparedStatementsGenerator) GetDataSource() *sc
 
 					d := result.(types.PreparedStatementSummary)
 					dc, err := svc.GetPreparedStatement(ctx, &athena.GetPreparedStatementInput{
-						WorkGroup:	wg.Name,
-						StatementName:	d.StatementName,
+						WorkGroup:     wg.Name,
+						StatementName: d.StatementName,
 					})
 					if err != nil {
 						return nil, err

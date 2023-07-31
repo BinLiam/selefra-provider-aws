@@ -59,7 +59,7 @@ func (x *TableAwsIamPasswordPoliciesGenerator) GetDataSource() *schema.DataSourc
 
 type PasswordPolicyWrapper struct {
 	types.PasswordPolicy
-	PolicyExists	bool
+	PolicyExists bool
 }
 
 func (x *TableAwsIamPasswordPoliciesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

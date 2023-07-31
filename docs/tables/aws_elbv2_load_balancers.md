@@ -11,23 +11,24 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
+| scheme | string | X | √ |  | 
+| type | string | X | √ |  | 
 | web_acl_arn | string | X | √ |  | 
-| customer_owned_ipv4_pool | string | X | √ |  | 
-| state | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | tags | json | X | √ |  | 
-| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| created_time | timestamp | X | √ |  | 
+| customer_owned_ipv4_pool | string | X | √ |  | 
 | ip_address_type | string | X | √ |  | 
-| security_groups | string_array | X | √ |  | 
-| region | string | X | √ |  | 
+| load_balancer_name | string | X | √ |  | 
+| vpc_id | string | X | √ |  | 
 | availability_zones | json | X | √ |  | 
 | canonical_hosted_zone_id | string | X | √ |  | 
-| created_time | timestamp | X | √ |  | 
-| scheme | string | X | √ |  | 
+| security_groups | string_array | X | √ |  | 
+| state | json | X | √ |  | 
 | dns_name | string | X | √ |  | 
-| load_balancer_name | string | X | √ |  | 
-| type | string | X | √ |  | 
-| vpc_id | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| load_balancer_arn | string | X | √ |  | 
+| region | string | X | √ |  | 
+| arn | string | √ | √ |  | 
 
 

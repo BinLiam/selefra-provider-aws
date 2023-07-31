@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/autoscaling"
 	"github.com/aws/aws-sdk-go-v2/service/autoscaling/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsAutoscalingGroupsGenerator struct {
@@ -65,8 +65,8 @@ func (x *TableAwsAutoscalingGroupsGenerator) GetDataSource() *schema.DataSource 
 				}
 				for _, gr := range groups {
 					wrapper := AutoScalingGroupWrapper{
-						AutoScalingGroup:		gr,
-						NotificationConfigurations:	getNotificationConfigurationByGroupName(*gr.AutoScalingGroupName, configurations),
+						AutoScalingGroup:           gr,
+						NotificationConfigurations: getNotificationConfigurationByGroupName(*gr.AutoScalingGroupName, configurations),
 					}
 					resultChannel <- wrapper
 				}

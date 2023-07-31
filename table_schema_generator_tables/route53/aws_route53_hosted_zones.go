@@ -11,9 +11,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/route53/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsRoute53HostedZonesGenerator struct {
@@ -69,10 +69,10 @@ func (x *TableAwsRoute53HostedZonesGenerator) GetDataSource() *schema.DataSource
 						delegationSetId = gotHostedZone.DelegationSet.Id
 					}
 					resultChannel <- &Route53HostedZoneWrapper{
-						HostedZone:		h,
-						Tags:			aws_client.TagsToMap(getRoute53tagsByResourceID(*h.Id, tagsResponse.ResourceTagSets)),
-						DelegationSetId:	delegationSetId,
-						VPCs:			gotHostedZone.VPCs,
+						HostedZone:      h,
+						Tags:            aws_client.TagsToMap(getRoute53tagsByResourceID(*h.Id, tagsResponse.ResourceTagSets)),
+						DelegationSetId: delegationSetId,
+						VPCs:            gotHostedZone.VPCs,
 					}
 				}
 				return nil
@@ -127,11 +127,11 @@ func (x *TableAwsRoute53HostedZonesGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					hz := result.(*Route53HostedZoneWrapper)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("route53"),
-						Region:		"",
-						AccountID:	"",
-						Resource:	fmt.Sprintf("hostedzone/%s", aws.ToString(hz.Id)),
+						Partition: cl.Partition,
+						Service:   string("route53"),
+						Region:    "",
+						AccountID: "",
+						Resource:  fmt.Sprintf("hostedzone/%s", aws.ToString(hz.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

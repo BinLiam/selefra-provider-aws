@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/workspaces"
 	"github.com/aws/aws-sdk-go-v2/service/workspaces/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWorkspacesWorkspacesGenerator struct {
@@ -82,11 +82,11 @@ func (x *TableAwsWorkspacesWorkspacesGenerator) GetColumns() []*schema.Column {
 					item := result.(types.Workspace)
 
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"workspaces",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"workspaces/" + *item.WorkspaceId,
+						Partition: cl.Partition,
+						Service:   "workspaces",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "workspaces/" + *item.WorkspaceId,
 					}
 					return a.String(), nil
 				}

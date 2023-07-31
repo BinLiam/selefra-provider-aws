@@ -5,10 +5,10 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcsClusterServicesGenerator struct {
@@ -57,9 +57,9 @@ func (x *TableAwsEcsClusterServicesGenerator) GetDataSource() *schema.DataSource
 					return nil
 				}
 				describeServicesInput := ecs.DescribeServicesInput{
-					Cluster:	cluster.ClusterArn,
-					Services:	listServicesOutput.ServiceArns,
-					Include:	[]types.ServiceField{types.ServiceFieldTags},
+					Cluster:  cluster.ClusterArn,
+					Services: listServicesOutput.ServiceArns,
+					Include:  []types.ServiceField{types.ServiceFieldTags},
 				}
 				describeServicesOutput, err := svc.DescribeServices(ctx, &describeServicesInput, func(o *ecs.Options) {
 					o.Region = region

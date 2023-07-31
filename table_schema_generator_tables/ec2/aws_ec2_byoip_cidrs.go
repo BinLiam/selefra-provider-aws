@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEc2ByoipCidrsGenerator struct {
@@ -48,8 +48,8 @@ func (x *TableAwsEc2ByoipCidrsGenerator) GetDataSource() *schema.DataSource {
 			c := client.(*aws_client.Client)
 
 			if _, ok := map[string]struct{}{
-				"cn-north-1":		{},
-				"cn-northwest-1":	{},
+				"cn-north-1":     {},
+				"cn-northwest-1": {},
 			}[c.Region]; ok {
 				return nil
 			}

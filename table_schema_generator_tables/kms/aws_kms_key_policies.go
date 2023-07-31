@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kms"
 	"github.com/aws/aws-sdk-go-v2/service/kms/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsKmsKeyPoliciesGenerator struct {
@@ -48,8 +48,8 @@ func (x *TableAwsKmsKeyPoliciesGenerator) GetDataSource() *schema.DataSource {
 
 			k := task.ParentRawResult.(*types.KeyMetadata)
 			d, err := svc.GetKeyPolicy(ctx, &kms.GetKeyPolicyInput{
-				KeyId:		k.Arn,
-				PolicyName:	aws.String(policyName),
+				KeyId:      k.Arn,
+				PolicyName: aws.String(policyName),
 			})
 			if err != nil {
 				return schema.NewDiagnosticsErrorPullTable(task.Table, err)
@@ -57,8 +57,8 @@ func (x *TableAwsKmsKeyPoliciesGenerator) GetDataSource() *schema.DataSource {
 			}
 
 			resultChannel <- KeyPolicy{
-				Name:	policyName,
-				Policy:	d.Policy,
+				Name:   policyName,
+				Policy: d.Policy,
 			}
 			return nil
 		},
@@ -66,8 +66,8 @@ func (x *TableAwsKmsKeyPoliciesGenerator) GetDataSource() *schema.DataSource {
 }
 
 type KeyPolicy struct {
-	Name	string
-	Policy	*string
+	Name   string
+	Policy *string
 }
 
 func (x *TableAwsKmsKeyPoliciesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

@@ -1,8 +1,8 @@
 package aws_client
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"github.com/selefra/selefra-provider-sdk/test_helper"
 	"github.com/spf13/viper"
 	"testing"
@@ -23,9 +23,9 @@ func MockTestHelper(t *testing.T, table *schema.Table, builder func(*testing.T, 
 
 func newTestProvider(t *testing.T, ctrl *gomock.Controller, table *schema.Table, builder func(*testing.T, *gomock.Controller) AwsServices) *provider.Provider {
 	return &provider.Provider{
-		Name:		constants.Aws,
-		Version:	constants.V,
-		TableList:	[]*schema.Table{table},
+		Name:      constants.Aws,
+		Version:   constants.V,
+		TableList: []*schema.Table{table},
 		ClientMeta: schema.ClientMeta{
 			InitClient: func(ctx context.Context, clientMeta *schema.ClientMeta, config *viper.Viper) ([]any, *schema.Diagnostics) {
 
@@ -36,10 +36,10 @@ func newTestProvider(t *testing.T, ctrl *gomock.Controller, table *schema.Table,
 				accountAwsServiceManager.AwsServicesManagerMap[partition] = make(map[string]*AwsServices, 0)
 				accountAwsServiceManager.AwsServicesManagerMap[partition][region] = &awsServices
 				client := &Client{
-					Partition:			partition,
-					AccountID:			constants.TestAccount,
-					Region:				region,
-					accountAwsServiceManager:	accountAwsServiceManager,
+					Partition:                partition,
+					AccountID:                constants.TestAccount,
+					Region:                   region,
+					accountAwsServiceManager: accountAwsServiceManager,
 				}
 				return []any{client}, nil
 			},
@@ -85,7 +85,7 @@ func newTestProvider(t *testing.T, ctrl *gomock.Controller, table *schema.Table,
 				constants.NA,
 				constants.Notsupported,
 			},
-			DataSourcePullResultAutoExpand:	true,
+			DataSourcePullResultAutoExpand: true,
 		},
 		ErrorsHandlerMeta: schema.ErrorsHandlerMeta{
 			IgnoredErrors: []schema.IgnoredError{schema.IgnoredErrorOnSaveResult},

@@ -11,11 +11,10 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| create_date | timestamp | X | √ |  | 
-| valid_until | timestamp | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
+| get_saml_provider_output | json | X | √ |  | 
 | arn | string | √ | √ |  | 
 | tags | json | X | √ |  | 
+| account_id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

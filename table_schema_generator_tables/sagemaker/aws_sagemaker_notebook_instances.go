@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/sagemaker"
 	"github.com/aws/aws-sdk-go-v2/service/sagemaker/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSagemakerNotebookInstancesGenerator struct {
@@ -61,9 +61,9 @@ func (x *TableAwsSagemakerNotebookInstancesGenerator) GetDataSource() *schema.Da
 						return nil, err
 					}
 					return &WrappedSageMakerNotebookInstance{
-						DescribeNotebookInstanceOutput:	response,
-						NotebookInstanceArn:		*n.NotebookInstanceArn,
-						NotebookInstanceName:		*n.NotebookInstanceName,
+						DescribeNotebookInstanceOutput: response,
+						NotebookInstanceArn:            *n.NotebookInstanceArn,
+						NotebookInstanceName:           *n.NotebookInstanceName,
 					}, nil
 
 				})
@@ -79,8 +79,8 @@ func (x *TableAwsSagemakerNotebookInstancesGenerator) GetDataSource() *schema.Da
 
 type WrappedSageMakerNotebookInstance struct {
 	*sagemaker.DescribeNotebookInstanceOutput
-	NotebookInstanceArn	string
-	NotebookInstanceName	string
+	NotebookInstanceArn  string
+	NotebookInstanceName string
 }
 
 func (x *TableAwsSagemakerNotebookInstancesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

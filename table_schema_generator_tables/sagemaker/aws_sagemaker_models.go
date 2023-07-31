@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/sagemaker"
 	"github.com/aws/aws-sdk-go-v2/service/sagemaker/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSagemakerModelsGenerator struct {
@@ -61,9 +61,9 @@ func (x *TableAwsSagemakerModelsGenerator) GetDataSource() *schema.DataSource {
 						return nil, err
 					}
 					return &WrappedSageMakerModel{
-						DescribeModelOutput:	response,
-						ModelArn:		n.ModelArn,
-						ModelName:		n.ModelName,
+						DescribeModelOutput: response,
+						ModelArn:            n.ModelArn,
+						ModelName:           n.ModelName,
 					}, nil
 
 				})
@@ -79,8 +79,8 @@ func (x *TableAwsSagemakerModelsGenerator) GetDataSource() *schema.DataSource {
 
 type WrappedSageMakerModel struct {
 	*sagemaker.DescribeModelOutput
-	ModelArn	*string
-	ModelName	*string
+	ModelArn  *string
+	ModelName *string
 }
 
 func (x *TableAwsSagemakerModelsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

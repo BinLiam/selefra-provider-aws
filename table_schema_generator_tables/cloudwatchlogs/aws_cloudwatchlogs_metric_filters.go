@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs"
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsCloudwatchlogsMetricFiltersGenerator struct {
@@ -78,11 +78,11 @@ func (x *TableAwsCloudwatchlogsMetricFiltersGenerator) GetColumns() []*schema.Co
 				extractor := func() (any, error) {
 					cl := client.(*aws_client.Client)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"logs",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"metric_filter/" + aws.ToString(result.(types.MetricFilter).FilterName),
+						Partition: cl.Partition,
+						Service:   "logs",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "metric_filter/" + aws.ToString(result.(types.MetricFilter).FilterName),
 					}
 					return a.String(), nil
 				}

@@ -11,26 +11,26 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| attributes | json | X | √ |  | 
 | service | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| description | string | X | √ |  | 
-| schema_version | int | X | √ |  | 
-| title | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| user_attributes | json | X | √ |  | 
-| created_at | timestamp | X | √ |  | 
-| asset_attributes | json | X | √ |  | 
-| id | string | X | √ |  | 
-| indicator_of_compromise | bool | X | √ |  | 
-| numeric_severity | float | X | √ |  | 
 | service_attributes | json | X | √ |  | 
+| account_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| created_at | timestamp | X | √ |  | 
+| id | string | X | √ |  | 
+| numeric_severity | float | X | √ |  | 
+| schema_version | big_int | X | √ |  | 
 | severity | string | X | √ |  | 
-| region | string | X | √ |  | 
-| updated_at | timestamp | X | √ |  | 
-| asset_type | string | X | √ |  | 
-| confidence | int | X | √ |  | 
-| recommendation | string | X | √ |  | 
+| title | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| region | string | X | √ |  | 
+| asset_attributes | json | X | √ |  | 
+| asset_type | string | X | √ |  | 
+| description | string | X | √ |  | 
+| recommendation | string | X | √ |  | 
+| indicator_of_compromise | bool | X | √ |  | 
+| attributes | json | X | √ |  | 
+| updated_at | timestamp | X | √ |  | 
+| user_attributes | json | X | √ |  | 
+| confidence | big_int | X | √ |  | 
 
 

@@ -3,7 +3,7 @@
 ## Primary Keys 
 
 ```
-account_id
+account_id, region
 ```
 
 
@@ -11,10 +11,10 @@ account_id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | √ | √ |  | 
+| account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | connection_password_encryption | json | X | √ |  | 
 | encryption_at_rest | json | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
 	"github.com/aws/aws-sdk-go-v2/service/quicksight/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQuicksightGroupMembersGenerator struct {
@@ -46,9 +46,9 @@ func (x *TableAwsQuicksightGroupMembersGenerator) GetDataSource() *schema.DataSo
 			svc := cl.AwsServices().Quicksight
 
 			input := quicksight.ListGroupMembershipsInput{
-				AwsAccountId:	aws.String(cl.AccountID),
-				Namespace:	aws.String(defaultNamespace),
-				GroupName:	item.GroupName,
+				AwsAccountId: aws.String(cl.AccountID),
+				Namespace:    aws.String(defaultNamespace),
+				GroupName:    item.GroupName,
 			}
 			for {
 				out, err := svc.ListGroupMemberships(ctx, &input)

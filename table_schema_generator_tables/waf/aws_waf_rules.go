@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/waf"
 	"github.com/aws/aws-sdk-go-v2/service/waf/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafRulesGenerator struct {
@@ -86,11 +86,11 @@ func (x *TableAwsWafRulesGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					rule := result.(*types.Rule)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"waf",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	fmt.Sprintf("rule/%s", aws.ToString(rule.RuleId)),
+						Partition: cl.Partition,
+						Service:   "waf",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  fmt.Sprintf("rule/%s", aws.ToString(rule.RuleId)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

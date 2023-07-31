@@ -46,8 +46,8 @@ func (x *TableAwsApigatewayv2ApiIntegrationResponsesGenerator) GetDataSource() *
 			r := task.ParentRawResult.(types.Integration)
 			p := task.ParentTask.ParentRawResult.(types.Api)
 			config := apigatewayv2.GetIntegrationResponsesInput{
-				ApiId:		p.ApiId,
-				IntegrationId:	r.IntegrationId,
+				ApiId:         p.ApiId,
+				IntegrationId: r.IntegrationId,
 			}
 			c := client.(*aws_client.Client)
 			svc := c.AwsServices().Apigatewayv2
@@ -103,11 +103,11 @@ func (x *TableAwsApigatewayv2ApiIntegrationResponsesGenerator) GetColumns() []*s
 					i := task.ParentRawResult.(types.Integration)
 					api := task.ParentTask.ParentTask.ParentRawResult.(types.Api)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/apis/%s/integrations/%s/integrationresponses/%s", aws.ToString(api.ApiId), aws.ToString(i.IntegrationId), aws.ToString(r.IntegrationResponseId)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/apis/%s/integrations/%s/integrationresponses/%s", aws.ToString(api.ApiId), aws.ToString(i.IntegrationId), aws.ToString(r.IntegrationResponseId)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

@@ -11,15 +11,15 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| arn | string | √ | √ |  | 
+| account_id | string | X | √ |  | 
 | definition | json | X | √ |  | 
 | url | string | X | √ |  | 
-| error_code | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
 | error_message | string | X | √ |  | 
 | last_triggered | timestamp | X | √ |  | 
 | tags | json | X | √ |  | 
+| arn | string | √ | √ |  | 
+| error_code | string | X | √ |  | 
+| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

@@ -3,7 +3,7 @@
 ## Primary Keys 
 
 ```
-id, arn
+arn
 ```
 
 
@@ -11,15 +11,18 @@ id, arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| description | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| transit_gateway_id | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| creation_time | timestamp | X | √ |  | 
+| options | json | X | √ |  | 
 | owner_id | string | X | √ |  | 
 | state | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| creation_time | timestamp | X | √ |  | 
-| description | string | X | √ |  | 
-| options | json | X | √ |  | 
-| id | string | X | √ |  | 
-| arn | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| transit_gateway_arn | string | X | √ |  | 
+| region | string | X | √ |  | 
+| arn | string | √ | √ |  | 
 
 

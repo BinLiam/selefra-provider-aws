@@ -6,9 +6,9 @@ import (
 	elbv1 "github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
 	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsElbv1LoadBalancerPoliciesGenerator struct {
@@ -51,8 +51,8 @@ func (x *TableAwsElbv1LoadBalancerPoliciesGenerator) GetDataSource() *schema.Dat
 
 type ELBv1LoadBalancerWrapper struct {
 	types.LoadBalancerDescription
-	Tags		map[string]string
-	Attributes	*types.LoadBalancerAttributes
+	Tags       map[string]string
+	Attributes *types.LoadBalancerAttributes
 }
 
 func (x *TableAwsElbv1LoadBalancerPoliciesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

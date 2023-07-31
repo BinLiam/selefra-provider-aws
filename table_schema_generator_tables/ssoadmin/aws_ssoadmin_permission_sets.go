@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ssoadmin"
 	"github.com/aws/aws-sdk-go-v2/service/ssoadmin/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSsoadminPermissionSetsGenerator struct {
@@ -54,8 +54,8 @@ func (x *TableAwsSsoadminPermissionSetsGenerator) GetDataSource() *schema.DataSo
 					permission_set_arn := result.(string)
 					instance_arn := task.ParentRawResult.(types.InstanceMetadata).InstanceArn
 					config := ssoadmin.DescribePermissionSetInput{
-						InstanceArn:		instance_arn,
-						PermissionSetArn:	&permission_set_arn,
+						InstanceArn:      instance_arn,
+						PermissionSetArn: &permission_set_arn,
 					}
 
 					response, err := svc.DescribePermissionSet(ctx, &config)
@@ -102,8 +102,8 @@ func (x *TableAwsSsoadminPermissionSetsGenerator) GetColumns() []*schema.Column 
 					permissionSetARN := result.(*types.PermissionSet).PermissionSetArn
 					instanceARN := task.ParentRawResult.(types.InstanceMetadata).InstanceArn
 					config := ssoadmin.GetInlinePolicyForPermissionSetInput{
-						InstanceArn:		instanceARN,
-						PermissionSetArn:	permissionSetARN,
+						InstanceArn:      instanceARN,
+						PermissionSetArn: permissionSetARN,
 					}
 
 					response, err := svc.GetInlinePolicyForPermissionSet(ctx, &config)

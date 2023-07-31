@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/apigateway"
 	"github.com/aws/aws-sdk-go-v2/service/apigateway/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsApigatewayUsagePlansGenerator struct {
@@ -95,11 +95,11 @@ func (x *TableAwsApigatewayUsagePlansGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					up := result.(types.UsagePlan)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/usageplans/%s", aws.ToString(up.Id)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/usageplans/%s", aws.ToString(up.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

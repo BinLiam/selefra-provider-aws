@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcsClusterTasksGenerator struct {
@@ -61,9 +61,9 @@ func (x *TableAwsEcsClusterTasksGenerator) GetDataSource() *schema.DataSource {
 					return nil
 				}
 				describeServicesInput := ecs.DescribeTasksInput{
-					Cluster:	cluster.ClusterArn,
-					Tasks:		listTasks.TaskArns,
-					Include:	[]types.TaskField{types.TaskFieldTags},
+					Cluster: cluster.ClusterArn,
+					Tasks:   listTasks.TaskArns,
+					Include: []types.TaskField{types.TaskFieldTags},
 				}
 				describeTasks, err := svc.DescribeTasks(ctx, &describeServicesInput)
 				if err != nil {
@@ -143,8 +143,8 @@ func (x *TableAwsEcsClusterTasksGenerator) GetColumns() []*schema.Column {
 					svc := client.(*aws_client.Client).AwsServices().Ecs
 					task := result.(types.Task)
 					resp, err := svc.GetTaskProtection(ctx, &ecs.GetTaskProtectionInput{
-						Cluster:	task.ClusterArn,
-						Tasks:		[]string{aws.ToString(task.TaskArn)},
+						Cluster: task.ClusterArn,
+						Tasks:   []string{aws.ToString(task.TaskArn)},
 					})
 					if err != nil {
 						return nil, err

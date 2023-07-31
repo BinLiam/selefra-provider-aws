@@ -11,22 +11,23 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| arn | string | √ | √ |  | 
-| delivery_policy | json | X | √ |  | 
-| redrive_policy | json | X | √ |  | 
-| owner | string | X | √ |  | 
-| effective_delivery_policy | json | X | √ |  | 
 | protocol | string | X | √ |  | 
-| confirmation_was_authenticated | bool | X | √ |  | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| topic_arn | string | X | √ |  | 
-| raw_message_delivery | bool | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| filter_policy | json | X | √ |  | 
-| endpoint | string | X | √ |  | 
+| subscription_arn | string | X | √ |  | 
 | pending_confirmation | bool | X | √ |  | 
+| redrive_policy | json | X | √ |  | 
+| endpoint | string | X | √ |  | 
+| owner | string | X | √ |  | 
+| confirmation_was_authenticated | bool | X | √ |  | 
+| effective_delivery_policy | json | X | √ |  | 
+| region | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| topic_arn | string | X | √ |  | 
+| filter_policy | json | X | √ |  | 
 | subscription_role_arn | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| delivery_policy | json | X | √ |  | 
+| raw_message_delivery | bool | X | √ |  | 
 | unknown_fields | json | X | √ |  | 
 
 

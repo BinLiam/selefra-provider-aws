@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/autoscaling/types"
 	"github.com/aws/smithy-go"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsAutoscalingGroupLifecycleHooksGenerator struct {
@@ -61,7 +61,7 @@ var groupNotFoundRegex = regexp.MustCompile(`AutoScalingGroup name not found|Gro
 
 type AutoScalingGroupWrapper struct {
 	types.AutoScalingGroup
-	NotificationConfigurations	[]types.NotificationConfiguration
+	NotificationConfigurations []types.NotificationConfiguration
 }
 
 func isAutoScalingGroupNotExistsError(err error) bool {

@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/wafv2"
 	"github.com/aws/aws-sdk-go-v2/service/wafv2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafv2IpsetsGenerator struct {
@@ -45,8 +45,8 @@ func (x *TableAwsWafv2IpsetsGenerator) GetDataSource() *schema.DataSource {
 			svc := cl.AwsServices().Wafv2
 
 			params := wafv2.ListIPSetsInput{
-				Scope:	cl.WAFScope,
-				Limit:	aws.Int32(100),
+				Scope: cl.WAFScope,
+				Limit: aws.Int32(100),
 			}
 			for {
 				result, err := svc.ListIPSets(ctx, &params)
@@ -62,9 +62,9 @@ func (x *TableAwsWafv2IpsetsGenerator) GetDataSource() *schema.DataSource {
 					info, err := svc.GetIPSet(
 						ctx,
 						&wafv2.GetIPSetInput{
-							Id:	s.Id,
-							Name:	s.Name,
-							Scope:	cl.WAFScope,
+							Id:    s.Id,
+							Name:  s.Name,
+							Scope: cl.WAFScope,
 						},
 						func(options *wafv2.Options) {
 							options.Region = cl.Region

@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/quicksight/types"
 	"github.com/aws/smithy-go"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQuicksightAnalysesGenerator struct {
@@ -65,8 +65,8 @@ func (x *TableAwsQuicksightAnalysesGenerator) GetDataSource() *schema.DataSource
 					item := result.(types.AnalysisSummary)
 
 					out, err := svc.DescribeAnalysis(ctx, &quicksight.DescribeAnalysisInput{
-						AwsAccountId:	aws.String(cl.AccountID),
-						AnalysisId:	item.AnalysisId,
+						AwsAccountId: aws.String(cl.AccountID),
+						AnalysisId:   item.AnalysisId,
 					})
 					if err != nil {
 						return nil, err

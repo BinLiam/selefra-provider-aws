@@ -11,17 +11,17 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| arn | string | √ | √ |  | 
-| created_at | timestamp | X | √ |  | 
-| name | string | X | √ |  | 
-| type | string | X | √ |  | 
-| status_reason | json | X | √ |  | 
 | tags | json | X | √ |  | 
 | account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| last_resource_analyzed_at | timestamp | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| arn | string | √ | √ |  | 
+| name | string | X | √ |  | 
 | status | string | X | √ |  | 
+| type | string | X | √ |  | 
+| last_resource_analyzed_at | timestamp | X | √ |  | 
+| status_reason | json | X | √ |  | 
+| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| created_at | timestamp | X | √ |  | 
 | last_resource_analyzed | string | X | √ |  | 
 
 

@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
 	"github.com/aws/smithy-go"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQuicksightGroupsGenerator struct {
@@ -44,8 +44,8 @@ func (x *TableAwsQuicksightGroupsGenerator) GetDataSource() *schema.DataSource {
 			cl := client.(*aws_client.Client)
 			svc := cl.AwsServices().Quicksight
 			input := quicksight.ListGroupsInput{
-				AwsAccountId:	aws.String(cl.AccountID),
-				Namespace:	aws.String(defaultNamespace),
+				AwsAccountId: aws.String(cl.AccountID),
+				Namespace:    aws.String(defaultNamespace),
 			}
 			var ae smithy.APIError
 

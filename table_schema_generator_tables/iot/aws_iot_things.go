@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/iot"
 	"github.com/aws/aws-sdk-go-v2/service/iot/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsIotThingsGenerator struct {
@@ -82,8 +82,8 @@ func (x *TableAwsIotThingsGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					svc := cl.AwsServices().Iot
 					input := iot.ListThingPrincipalsInput{
-						ThingName:	i.ThingName,
-						MaxResults:	aws.Int32(250),
+						ThingName:  i.ThingName,
+						MaxResults: aws.Int32(250),
 					}
 					var principals []string
 

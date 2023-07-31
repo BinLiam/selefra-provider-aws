@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/wafv2"
 	"github.com/aws/aws-sdk-go-v2/service/wafv2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafv2RuleGroupsGenerator struct {
@@ -58,9 +58,9 @@ func (x *TableAwsWafv2RuleGroupsGenerator) GetDataSource() *schema.DataSource {
 					ruleGroupOutput := result.(types.RuleGroupSummary)
 
 					ruleGroup, err := svc.GetRuleGroup(ctx, &wafv2.GetRuleGroupInput{
-						Name:	ruleGroupOutput.Name,
-						Id:	ruleGroupOutput.Id,
-						Scope:	c.WAFScope,
+						Name:  ruleGroupOutput.Name,
+						Id:    ruleGroupOutput.Id,
+						Scope: c.WAFScope,
 					})
 					if err != nil {
 						return nil, err

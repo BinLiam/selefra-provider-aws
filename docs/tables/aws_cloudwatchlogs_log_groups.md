@@ -12,15 +12,16 @@ arn
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
 | kms_key_id | string | X | √ |  | 
-| log_group_name | string | X | √ |  | 
-| metric_filter_count | int | X | √ |  | 
-| retention_in_days | int | X | √ |  | 
+| metric_filter_count | big_int | X | √ |  | 
 | account_id | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| tags | json | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 | region | string | X | √ |  | 
-| creation_time | int | X | √ |  | 
-| stored_bytes | int | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| arn | string | √ | √ |  | 
+| creation_time | big_int | X | √ |  | 
+| retention_in_days | big_int | X | √ |  | 
+| stored_bytes | big_int | X | √ |  | 
+| tags | json | X | √ |  | 
+| data_protection_status | string | X | √ |  | 
+| log_group_name | string | X | √ |  | 
 
 

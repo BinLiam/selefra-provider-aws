@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ssm"
 	"github.com/aws/aws-sdk-go-v2/service/ssm/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSsmDocumentsGenerator struct {
@@ -120,8 +120,8 @@ func (x *TableAwsSsmDocumentsGenerator) GetColumns() []*schema.Column {
 					svc := cl.AwsServices().Ssm
 
 					input := ssm.DescribeDocumentPermissionInput{
-						Name:		d.Name,
-						PermissionType:	types.DocumentPermissionTypeShare,
+						Name:           d.Name,
+						PermissionType: types.DocumentPermissionTypeShare,
 					}
 					var permissions []*ssm.DescribeDocumentPermissionOutput
 					for {
@@ -189,11 +189,11 @@ func (x *TableAwsSsmDocumentsGenerator) GetColumns() []*schema.Column {
 					d := result.(*types.DocumentDescription)
 					cl := client.(*aws_client.Client)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ssm",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	fmt.Sprintf("document/%s", aws.ToString(d.Name)),
+						Partition: cl.Partition,
+						Service:   "ssm",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  fmt.Sprintf("document/%s", aws.ToString(d.Name)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

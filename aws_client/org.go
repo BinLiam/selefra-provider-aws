@@ -1,8 +1,8 @@
 package aws_client
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"context"
+	"github.com/selefra/selefra-provider-aws/constants"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
@@ -14,8 +14,8 @@ import (
 func loadOrgAccounts(ctx context.Context, awsConfig *AwsProviderConfig) ([]AwsAccount, *sts.Client, error) {
 	if awsConfig.Organization.AdminAccount == nil {
 		awsConfig.Organization.AdminAccount = &AwsAccount{
-			AccountName:		constants.DefaultAdminAwsAccount,
-			SharedConfigProfile:	constants.Constants_28,
+			AccountName:         constants.DefaultAdminAwsAccount,
+			SharedConfigProfile: constants.Constants_28,
 		}
 	}
 	awsCfg, err := newAwsConfig(ctx, awsConfig, *awsConfig.Organization.AdminAccount, nil)
@@ -55,24 +55,24 @@ func loadAccounts(ctx context.Context, awsConfig *AwsProviderConfig, accountsApi
 			continue
 		}
 		roleArn := arn.ARN{
-			Partition:	constants.Aws,
-			Service:	constants.Iam,
-			Region:		constants.Constants_29,
-			AccountID:	*account.Id,
-			Resource:	constants.Role + awsConfig.Organization.ChildAccountRoleName,
+			Partition: constants.Aws,
+			Service:   constants.Iam,
+			Region:    constants.Constants_29,
+			AccountID: *account.Id,
+			Resource:  constants.Role + awsConfig.Organization.ChildAccountRoleName,
 		}
 		if parsed, err := arn.Parse(aws.ToString(account.Arn)); err == nil {
 			roleArn.Partition = parsed.Partition
 		}
 
 		accounts = append(accounts, AwsAccount{
-			AccountName:		*account.Id,
-			RoleARN:		roleArn.String(),
-			RoleSessionName:	awsConfig.Organization.ChildAccountRoleSessionName,
-			ExternalID:		awsConfig.Organization.ChildAccountExternalID,
-			SharedConfigProfile:	awsConfig.Organization.AdminAccount.SharedConfigProfile,
-			Regions:		awsConfig.Organization.ChildAccountRegions,
-			source:			constants.Org,
+			AccountName:         *account.Id,
+			RoleARN:             roleArn.String(),
+			RoleSessionName:     awsConfig.Organization.ChildAccountRoleSessionName,
+			ExternalID:          awsConfig.Organization.ChildAccountExternalID,
+			SharedConfigProfile: awsConfig.Organization.AdminAccount.SharedConfigProfile,
+			Regions:             awsConfig.Organization.ChildAccountRegions,
+			source:              constants.Org,
 		})
 	}
 	return accounts, err
@@ -85,8 +85,8 @@ func getOUAccounts(ctx context.Context, accountsApi *organizations.Client, ous [
 		var paginationToken *string
 		for {
 			resp, err := accountsApi.ListAccountsForParent(ctx, &organizations.ListAccountsForParentInput{
-				NextToken:	paginationToken,
-				ParentId:	aws.String(ou),
+				NextToken: paginationToken,
+				ParentId:  aws.String(ou),
 			})
 			if err != nil {
 				return nil, err

@@ -11,14 +11,15 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| health_check_ids | string_array | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| arn | string | √ | √ |  | 
 | tags | json | X | √ |  | 
+| health_check_ids | string_array | X | √ |  | 
+| protection_arn | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| application_layer_automatic_response_configuration | json | X | √ |  | 
 | id | string | X | √ |  | 
 | name | string | X | √ |  | 
 | resource_arn | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| application_layer_automatic_response_configuration | json | X | √ |  | 
 
 

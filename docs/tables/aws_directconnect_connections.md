@@ -11,30 +11,31 @@ arn, id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| connection_name | string | X | √ |  | 
+| mac_sec_keys | json | X | √ |  | 
+| region | string | X | √ |  | 
+| vlan | big_int | X | √ |  | 
+| connection_state | string | X | √ |  | 
+| aws_logical_device_id | string | X | √ |  | 
 | encryption_mode | string | X | √ |  | 
 | jumbo_frame_capable | bool | X | √ |  | 
-| owner_account | string | X | √ |  | 
-| aws_logical_device_id | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| has_logical_redundancy | string | X | √ |  | 
-| lag_id | string | X | √ |  | 
-| mac_sec_keys | json | X | √ |  | 
-| port_encryption_status | string | X | √ |  | 
-| vlan | int | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| arn | string | X | √ |  | 
-| aws_device_v2 | string | X | √ |  | 
-| bandwidth | string | X | √ |  | 
 | location | string | X | √ |  | 
-| partner_name | string | X | √ |  | 
+| owner_account | string | X | √ |  | 
 | provider_name | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| aws_device_v2 | string | X | √ |  | 
 | account_id | string | X | √ |  | 
-| connection_state | string | X | √ |  | 
+| has_logical_redundancy | string | X | √ |  | 
+| aws_device | string | X | √ |  | 
+| connection_id | string | X | √ |  | 
+| connection_name | string | X | √ |  | 
+| lag_id | string | X | √ |  | 
 | loa_issue_time | timestamp | X | √ |  | 
 | mac_sec_capable | bool | X | √ |  | 
-| aws_device | string | X | √ |  | 
+| partner_name | string | X | √ |  | 
+| port_encryption_status | string | X | √ |  | 
+| bandwidth | string | X | √ |  | 
+| id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| arn | string | X | √ |  | 
 
 

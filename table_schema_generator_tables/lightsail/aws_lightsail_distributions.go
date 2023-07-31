@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lightsail/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -81,7 +81,7 @@ func (x *TableAwsLightsailDistributionsGenerator) GetDataSource() *schema.DataSo
 
 type DistributionWrapper struct {
 	*types.LightsailDistribution
-	LatestCacheReset	*lightsail.GetDistributionLatestCacheResetOutput
+	LatestCacheReset *lightsail.GetDistributionLatestCacheResetOutput
 }
 
 func fetchCacheReset(ctx context.Context, res chan<- any, c *aws_client.Client, d types.LightsailDistribution) error {

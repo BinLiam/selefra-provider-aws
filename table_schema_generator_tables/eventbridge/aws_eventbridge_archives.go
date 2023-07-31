@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/eventbridge"
 	"github.com/aws/aws-sdk-go-v2/service/eventbridge/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEventbridgeArchivesGenerator struct {
@@ -95,11 +95,11 @@ func (x *TableAwsEventbridgeArchivesGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"events",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"archive/" + aws.ToString(result.(types.Archive).ArchiveName),
+						Partition: cl.Partition,
+						Service:   "events",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "archive/" + aws.ToString(result.(types.Archive).ArchiveName),
 					}
 
 					return a.String(), nil

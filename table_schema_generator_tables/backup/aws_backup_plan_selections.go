@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/backup"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsBackupPlanSelectionsGenerator struct {
@@ -39,8 +39,8 @@ func (x *TableAwsBackupPlanSelectionsGenerator) GetDataSource() *schema.DataSour
 			cl := client.(*aws_client.Client)
 			svc := cl.AwsServices().Backup
 			params := backup.ListBackupSelectionsInput{
-				BackupPlanId:	plan.BackupPlanId,
-				MaxResults:	aws.Int32(1000),
+				BackupPlanId: plan.BackupPlanId,
+				MaxResults:   aws.Int32(1000),
 			}
 			for {
 				result, err := svc.ListBackupSelections(ctx, &params)

@@ -11,14 +11,13 @@ serial_number
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| base32_string_seed | int_array | X | √ |  | 
-| qr_code_png | int_array | X | √ |  | 
-| serial_number | string | √ | √ |  | 
-| tags | json | X | √ |  | 
-| enable_date | timestamp | X | √ |  | 
-| user | json | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| serial_number | string | √ | √ |  | 
+| base32_string_seed | byte_array | X | √ |  | 
+| enable_date | timestamp | X | √ |  | 
+| qr_code_png | byte_array | X | √ |  | 
+| tags | json | X | √ |  | 
+| user | json | X | √ |  | 
 | account_id | string | X | √ |  | 
-| user_tags | json | X | √ |  | 
 
 

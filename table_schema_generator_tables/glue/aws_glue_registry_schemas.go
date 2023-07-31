@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/glue"
 	"github.com/aws/aws-sdk-go-v2/service/glue/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsGlueRegistrySchemasGenerator struct {
@@ -44,8 +44,8 @@ func (x *TableAwsGlueRegistrySchemasGenerator) GetDataSource() *schema.DataSourc
 			cl := client.(*aws_client.Client)
 			svc := cl.AwsServices().Glue
 			input := glue.ListSchemasInput{
-				RegistryId:	&types.RegistryId{RegistryArn: r.RegistryArn},
-				MaxResults:	aws.Int32(100),
+				RegistryId: &types.RegistryId{RegistryArn: r.RegistryArn},
+				MaxResults: aws.Int32(100),
 			}
 			paginator := glue.NewListSchemasPaginator(svc, &input)
 			for paginator.HasMorePages() {

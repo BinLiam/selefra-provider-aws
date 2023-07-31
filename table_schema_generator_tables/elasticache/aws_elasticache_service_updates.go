@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/elasticache"
 	"github.com/aws/aws-sdk-go-v2/service/elasticache/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsElasticacheServiceUpdatesGenerator struct {
@@ -91,11 +91,11 @@ func (x *TableAwsElasticacheServiceUpdatesGenerator) GetColumns() []*schema.Colu
 					cl := client.(*aws_client.Client)
 					item := result.(types.ServiceUpdate)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"elasticache",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"elasticache/" + aws.ToString(item.ServiceUpdateName),
+						Partition: cl.Partition,
+						Service:   "elasticache",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "elasticache/" + aws.ToString(item.ServiceUpdateName),
 					}
 					return a.String(), nil
 				}

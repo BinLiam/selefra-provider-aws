@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/waf"
 	"github.com/aws/aws-sdk-go-v2/service/waf/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafWebAclsGenerator struct {
@@ -92,7 +92,7 @@ func (x *TableAwsWafWebAclsGenerator) GetDataSource() *schema.DataSource {
 
 type WebACLWrapper struct {
 	*types.WebACL
-	LoggingConfiguration	*types.LoggingConfiguration
+	LoggingConfiguration *types.LoggingConfiguration
 }
 
 func (x *TableAwsWafWebAclsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

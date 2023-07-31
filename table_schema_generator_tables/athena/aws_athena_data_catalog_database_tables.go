@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/athena"
 	"github.com/aws/aws-sdk-go-v2/service/athena/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsAthenaDataCatalogDatabaseTablesGenerator struct {
@@ -45,8 +45,8 @@ func (x *TableAwsAthenaDataCatalogDatabaseTablesGenerator) GetDataSource() *sche
 			cl := client.(*aws_client.Client)
 			svc := cl.AwsServices().Athena
 			input := athena.ListTableMetadataInput{
-				CatalogName:	task.ParentTask.ParentRawResult.(types.DataCatalog).Name,
-				DatabaseName:	task.ParentRawResult.(types.Database).Name,
+				CatalogName:  task.ParentTask.ParentRawResult.(types.DataCatalog).Name,
+				DatabaseName: task.ParentRawResult.(types.Database).Name,
 			}
 			for {
 				response, err := svc.ListTableMetadata(ctx, &input)

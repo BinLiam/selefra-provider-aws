@@ -11,20 +11,20 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| cust_subscription_id | string | X | √ |  | 
+| source_type | string | X | √ |  | 
+| status | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| enabled | bool | X | √ |  | 
+| sns_topic_arn | string | X | √ |  | 
+| arn | string | √ | √ | `ARN of the event subscription.` | 
+| event_categories_list | string_array | X | √ |  | 
 | source_ids_list | string_array | X | √ |  | 
 | subscription_creation_time | timestamp | X | √ |  | 
-| account_id | string | X | √ |  | 
-| severity | string | X | √ |  | 
-| source_type | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| arn | string | √ | √ | `ARN of the event subscription.` | 
-| tags | json | X | √ | `Tags` | 
-| cust_subscription_id | string | X | √ |  | 
-| customer_aws_id | string | X | √ |  | 
-| enabled | bool | X | √ |  | 
-| event_categories_list | string_array | X | √ |  | 
-| status | string | X | √ |  | 
+| tags | json | X | √ |  | 
 | region | string | X | √ |  | 
-| sns_topic_arn | string | X | √ |  | 
+| customer_aws_id | string | X | √ |  | 
+| severity | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

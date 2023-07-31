@@ -1,8 +1,8 @@
 package aws_client
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"golang.org/x/sync/semaphore"
 
 	"github.com/selefra/selefra-provider-sdk/provider/schema"

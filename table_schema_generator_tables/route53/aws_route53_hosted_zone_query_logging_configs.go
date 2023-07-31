@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/route53/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator struct {
@@ -65,9 +65,9 @@ func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetDataSource() 
 
 type Route53HostedZoneWrapper struct {
 	types.HostedZone
-	Tags		map[string]string
-	DelegationSetId	*string
-	VPCs		[]types.VPC
+	Tags            map[string]string
+	DelegationSetId *string
+	VPCs            []types.VPC
 }
 
 func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {
@@ -94,11 +94,11 @@ func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetColumns() []*
 					cl := client.(*aws_client.Client)
 					ql := result.(types.QueryLoggingConfig)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("route53"),
-						Region:		"",
-						AccountID:	"",
-						Resource:	fmt.Sprintf("queryloggingconfig/%s", aws.ToString(ql.Id)),
+						Partition: cl.Partition,
+						Service:   string("route53"),
+						Region:    "",
+						AccountID: "",
+						Resource:  fmt.Sprintf("queryloggingconfig/%s", aws.ToString(ql.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

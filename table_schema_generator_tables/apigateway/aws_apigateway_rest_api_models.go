@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/apigateway"
 	"github.com/aws/aws-sdk-go-v2/service/apigateway/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsApigatewayRestApiModelsGenerator struct {
@@ -88,8 +88,8 @@ func (x *TableAwsApigatewayRestApiModelsGenerator) GetColumns() []*schema.Column
 					}
 
 					config := apigateway.GetModelTemplateInput{
-						RestApiId:	api.Id,
-						ModelName:	r.Name,
+						RestApiId: api.Id,
+						ModelName: r.Name,
 					}
 
 					response, err := svc.GetModelTemplate(ctx, &config)
@@ -131,11 +131,11 @@ func (x *TableAwsApigatewayRestApiModelsGenerator) GetColumns() []*schema.Column
 					m := result.(types.Model)
 					rapi := task.ParentRawResult.(types.RestApi)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/restapis/%s/models/%s", aws.ToString(rapi.Id), aws.ToString(m.Name)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/restapis/%s/models/%s", aws.ToString(rapi.Id), aws.ToString(m.Name)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

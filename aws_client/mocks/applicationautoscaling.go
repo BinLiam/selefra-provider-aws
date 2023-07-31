@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	applicationautoscaling "github.com/aws/aws-sdk-go-v2/service/applicationautoscaling"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockApplicationautoscalingClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockApplicationautoscalingClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockApplicationautoscalingClientMockRecorder
 }
 
 type MockApplicationautoscalingClientMockRecorder struct {

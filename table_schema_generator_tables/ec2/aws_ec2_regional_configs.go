@@ -5,9 +5,9 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEc2RegionalConfigsGenerator struct {
@@ -66,8 +66,8 @@ func (x *TableAwsEc2RegionalConfigsGenerator) GetDataSource() *schema.DataSource
 }
 
 type RegionalConfig struct {
-	EbsEncryptionEnabledByDefault	bool
-	EbsDefaultKmsKeyId		*string
+	EbsEncryptionEnabledByDefault bool
+	EbsDefaultKmsKeyId            *string
 }
 
 func (x *TableAwsEc2RegionalConfigsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

@@ -94,11 +94,11 @@ func (x *TableAwsAccessanalyzerAnalyzerFindingsGenerator) GetColumns() []*schema
 				extractor := func() (any, error) {
 					cl := client.(*aws_client.Client)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"accessanalyzer",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"finding_summary/" + aws.ToString(result.(types.FindingSummary).Id),
+						Partition: cl.Partition,
+						Service:   "accessanalyzer",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "finding_summary/" + aws.ToString(result.(types.FindingSummary).Id),
 					}
 					return a.String(), nil
 				}

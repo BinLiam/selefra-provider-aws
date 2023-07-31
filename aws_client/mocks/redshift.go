@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	redshift "github.com/aws/aws-sdk-go-v2/service/redshift"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockRedshiftClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockRedshiftClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockRedshiftClientMockRecorder
 }
 
 type MockRedshiftClientMockRecorder struct {

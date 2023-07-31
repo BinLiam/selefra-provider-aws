@@ -11,16 +11,16 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| type | string | X | √ |  | 
-| vpc_attachments | json | X | √ |  | 
+| vpn_gateway_id | string | X | √ |  | 
 | region | string | X | √ |  | 
 | arn | string | √ | √ |  | 
-| amazon_side_asn | int | X | √ |  | 
-| tags | json | X | √ |  | 
-| vpn_gateway_id | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
 | availability_zone | string | X | √ |  | 
 | state | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| type | string | X | √ |  | 
+| vpc_attachments | json | X | √ |  | 
+| account_id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| amazon_side_asn | big_int | X | √ |  | 
 
 

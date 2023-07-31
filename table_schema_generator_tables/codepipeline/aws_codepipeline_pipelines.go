@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/codepipeline"
 	"github.com/aws/aws-sdk-go-v2/service/codepipeline/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsCodepipelinePipelinesGenerator struct {
@@ -98,11 +98,11 @@ func (x *TableAwsCodepipelinePipelinesGenerator) GetColumns() []*schema.Column {
 					pipeline := result.(*codepipeline.GetPipelineOutput)
 
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"codepipeline",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"pipelines/" + *pipeline.Metadata.PipelineArn,
+						Partition: cl.Partition,
+						Service:   "codepipeline",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "pipelines/" + *pipeline.Metadata.PipelineArn,
 					}
 
 					return a.String(), nil

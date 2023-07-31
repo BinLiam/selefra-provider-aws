@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsS3AccountsGenerator struct {
@@ -68,7 +68,7 @@ func (x *TableAwsS3AccountsGenerator) GetDataSource() *schema.DataSource {
 
 type PublicAccessBlockConfigurationWrapper struct {
 	s3controlTypes.PublicAccessBlockConfiguration
-	ConfigExists	bool
+	ConfigExists bool
 }
 
 func (x *TableAwsS3AccountsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

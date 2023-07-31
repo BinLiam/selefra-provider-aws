@@ -11,20 +11,21 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| tags | json | X | √ |  | 
-| stream_creation_timestamp | timestamp | X | √ |  | 
-| consumer_count | int | X | √ |  | 
-| stream_mode_details | json | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| arn | string | √ | √ |  | 
-| region | string | X | √ |  | 
-| enhanced_monitoring | json | X | √ |  | 
 | encryption_type | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| retention_period_hours | int | X | √ |  | 
-| open_shard_count | int | X | √ |  | 
-| stream_status | string | X | √ |  | 
-| key_id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| stream_arn | string | X | √ |  | 
+| retention_period_hours | big_int | X | √ |  | 
+| stream_creation_timestamp | timestamp | X | √ |  | 
 | stream_name | string | X | √ |  | 
+| open_shard_count | big_int | X | √ |  | 
+| stream_mode_details | json | X | √ |  | 
+| stream_status | string | X | √ |  | 
+| consumer_count | big_int | X | √ |  | 
+| key_id | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| region | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| tags | json | X | √ |  | 
+| enhanced_monitoring | json | X | √ |  | 
 
 

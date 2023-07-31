@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lambda/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsLambdaFunctionAliasesGenerator struct {
@@ -71,8 +71,8 @@ func (x *TableAwsLambdaFunctionAliasesGenerator) GetDataSource() *schema.DataSou
 					p := task.ParentRawResult.(*lambda.GetFunctionOutput)
 
 					urlConfig, err := svc.GetFunctionUrlConfig(ctx, &lambda.GetFunctionUrlConfigInput{
-						FunctionName:	p.Configuration.FunctionName,
-						Qualifier:	alias.Name,
+						FunctionName: p.Configuration.FunctionName,
+						Qualifier:    alias.Name,
 					})
 					if err != nil && !c.IsNotFoundError(err) {
 						return nil, err
@@ -92,7 +92,7 @@ func (x *TableAwsLambdaFunctionAliasesGenerator) GetDataSource() *schema.DataSou
 
 type AliasWrapper struct {
 	*types.AliasConfiguration
-	UrlConfig	*lambda.GetFunctionUrlConfigOutput
+	UrlConfig *lambda.GetFunctionUrlConfigOutput
 }
 
 func (x *TableAwsLambdaFunctionAliasesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/servicequotas/types"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsServicequotasQuotasGenerator struct {
@@ -43,8 +43,8 @@ func (x *TableAwsServicequotasQuotasGenerator) GetDataSource() *schema.DataSourc
 			svc := client.(*aws_client.Client).AwsServices().Servicequotas
 			service := task.ParentRawResult.(types.ServiceInfo)
 			config := servicequotas.ListServiceQuotasInput{
-				ServiceCode:	service.ServiceCode,
-				MaxResults:	defaultMaxResults,
+				ServiceCode: service.ServiceCode,
+				MaxResults:  defaultMaxResults,
 			}
 			quotasPaginator := servicequotas.NewListServiceQuotasPaginator(svc, &config)
 			for quotasPaginator.HasMorePages() {

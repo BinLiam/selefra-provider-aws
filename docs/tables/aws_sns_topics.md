@@ -11,22 +11,22 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| arn | string | √ | √ |  | 
-| subscriptions_pending | int | X | √ |  | 
+| kms_master_key_id | string | X | √ |  | 
 | fifo_topic | bool | X | √ |  | 
 | content_based_deduplication | bool | X | √ |  | 
-| region | string | X | √ |  | 
-| effective_delivery_policy | json | X | √ |  | 
-| display_name | string | X | √ |  | 
-| subscriptions_confirmed | int | X | √ |  | 
-| tags | json | X | √ |  | 
-| subscriptions_deleted | int | X | √ |  | 
-| kms_master_key_id | string | X | √ |  | 
 | unknown_fields | json | X | √ |  | 
+| subscriptions_confirmed | big_int | X | √ |  | 
+| arn | string | √ | √ |  | 
+| effective_delivery_policy | json | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
+| display_name | string | X | √ |  | 
 | policy | json | X | √ |  | 
-| owner | string | X | √ |  | 
+| subscriptions_pending | big_int | X | √ |  | 
+| account_id | string | X | √ |  | 
+| tags | json | X | √ |  | 
 | delivery_policy | json | X | √ |  | 
+| owner | string | X | √ |  | 
+| subscriptions_deleted | big_int | X | √ |  | 
+| region | string | X | √ |  | 
 
 

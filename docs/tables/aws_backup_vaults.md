@@ -11,21 +11,22 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| notifications | json | X | √ |  | 
-| creator_request_id | string | X | √ |  | 
-| encryption_key_arn | string | X | √ |  | 
-| locked | bool | X | √ |  | 
-| number_of_recovery_points | int | X | √ |  | 
-| region | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| creation_date | timestamp | X | √ |  | 
-| min_retention_days | int | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 | access_policy | json | X | √ |  | 
-| tags | json | X | √ |  | 
-| lock_date | timestamp | X | √ |  | 
+| encryption_key_arn | string | X | √ |  | 
+| region | string | X | √ |  | 
 | account_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| backup_vault_arn | string | X | √ |  | 
+| min_retention_days | big_int | X | √ |  | 
+| locked | bool | X | √ |  | 
+| tags | json | X | √ |  | 
+| creator_request_id | string | X | √ |  | 
+| lock_date | timestamp | X | √ |  | 
+| max_retention_days | big_int | X | √ |  | 
+| number_of_recovery_points | big_int | X | √ |  | 
+| notifications | json | X | √ |  | 
 | backup_vault_name | string | X | √ |  | 
-| max_retention_days | int | X | √ |  | 
+| creation_date | timestamp | X | √ |  | 
 
 

@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcsClusterContainerInstancesGenerator struct {
@@ -50,9 +50,9 @@ func (x *TableAwsEcsClusterContainerInstancesGenerator) GetDataSource() *schema.
 					return nil
 				}
 				describeServicesInput := ecs.DescribeContainerInstancesInput{
-					Cluster:		cluster.ClusterArn,
-					ContainerInstances:	listContainerInstances.ContainerInstanceArns,
-					Include:		[]types.ContainerInstanceField{types.ContainerInstanceFieldTags},
+					Cluster:            cluster.ClusterArn,
+					ContainerInstances: listContainerInstances.ContainerInstanceArns,
+					Include:            []types.ContainerInstanceField{types.ContainerInstanceFieldTags},
 				}
 				describeContainerInstances, err := svc.DescribeContainerInstances(ctx, &describeServicesInput)
 				if err != nil {

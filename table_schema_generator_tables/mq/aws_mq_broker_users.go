@@ -5,9 +5,9 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/mq"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsMqBrokerUsersGenerator struct {
@@ -39,8 +39,8 @@ func (x *TableAwsMqBrokerUsersGenerator) GetDataSource() *schema.DataSource {
 			svc := c.AwsServices().Mq
 			for _, us := range broker.Users {
 				input := mq.DescribeUserInput{
-					BrokerId:	broker.BrokerId,
-					Username:	us.Username,
+					BrokerId: broker.BrokerId,
+					Username: us.Username,
 				}
 				output, err := svc.DescribeUser(ctx, &input)
 				if err != nil {

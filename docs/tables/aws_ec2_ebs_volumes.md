@@ -11,25 +11,25 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| arn | string | √ | √ |  | 
-| outpost_arn | string | X | √ |  | 
 | snapshot_id | string | X | √ |  | 
-| state | string | X | √ |  | 
-| size | int | X | √ |  | 
-| tags | json | X | √ |  | 
-| throughput | int | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
+| volume_id | string | X | √ |  | 
+| volume_type | string | X | √ |  | 
+| arn | string | √ | √ |  | 
 | region | string | X | √ |  | 
+| state | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| throughput | big_int | X | √ |  | 
+| account_id | string | X | √ |  | 
+| size | big_int | X | √ |  | 
+| availability_zone | string | X | √ |  | 
+| kms_key_id | string | X | √ |  | 
+| multi_attach_enabled | bool | X | √ |  | 
+| outpost_arn | string | X | √ |  | 
+| iops | big_int | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | attachments | json | X | √ |  | 
 | create_time | timestamp | X | √ |  | 
-| kms_key_id | string | X | √ |  | 
-| volume_type | string | X | √ |  | 
-| availability_zone | string | X | √ |  | 
 | encrypted | bool | X | √ |  | 
 | fast_restored | bool | X | √ |  | 
-| iops | int | X | √ |  | 
-| multi_attach_enabled | bool | X | √ |  | 
-| volume_id | string | X | √ |  | 
 
 

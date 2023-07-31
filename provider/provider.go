@@ -1,22 +1,23 @@
 package provider
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"context"
+
 	"github.com/selefra/selefra-provider-aws/aws_client"
+	"github.com/selefra/selefra-provider-aws/constants"
 
 	"github.com/selefra/selefra-provider-sdk/provider"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/spf13/viper"
 )
 
-var Version = "v0.0.5"
+var Version = "v0.1.0"
 
 func GetProvider() *provider.Provider {
 	return &provider.Provider{
-		Name:		constants.Aws,
-		Version:	Version,
-		TableList:	GenTables(),
+		Name:      constants.Aws,
+		Version:   Version,
+		TableList: GenTables(),
 		ClientMeta: schema.ClientMeta{
 			InitClient: func(ctx context.Context, clientMeta *schema.ClientMeta, config *viper.Viper) ([]any, *schema.Diagnostics) {
 				var awsConfig aws_client.AwsProviderConfig
@@ -70,7 +71,7 @@ func GetProvider() *provider.Provider {
 				constants.NA,
 				constants.Notsupported,
 			},
-			DataSourcePullResultAutoExpand:	true,
+			DataSourcePullResultAutoExpand: true,
 		},
 		ErrorsHandlerMeta: schema.ErrorsHandlerMeta{
 			IgnoredErrors: []schema.IgnoredError{schema.IgnoredErrorAll},

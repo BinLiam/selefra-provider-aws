@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	wafregional "github.com/aws/aws-sdk-go-v2/service/wafregional"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockWafregionalClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockWafregionalClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockWafregionalClientMockRecorder
 }
 
 type MockWafregionalClientMockRecorder struct {

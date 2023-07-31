@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEc2VpcEndpointServiceConfigurationsGenerator struct {
@@ -98,11 +98,11 @@ func (x *TableAwsEc2VpcEndpointServiceConfigurationsGenerator) GetColumns() []*s
 					cl := client.(*aws_client.Client)
 					item := result.(types.ServiceConfiguration)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ec2",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"vpc_endpoint_service_configuration/" + aws.ToString(item.ServiceId),
+						Partition: cl.Partition,
+						Service:   "ec2",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "vpc_endpoint_service_configuration/" + aws.ToString(item.ServiceId),
 					}
 					return a.String(), nil
 				}

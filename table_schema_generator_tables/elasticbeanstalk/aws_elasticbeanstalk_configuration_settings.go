@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk"
 	"github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsElasticbeanstalkConfigurationSettingsGenerator struct {
@@ -43,8 +43,8 @@ func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetDataSource()
 			svc := cl.AwsServices().Elasticbeanstalk
 
 			configOptionsIn := elasticbeanstalk.DescribeConfigurationSettingsInput{
-				ApplicationName:	p.ApplicationName,
-				EnvironmentName:	p.EnvironmentName,
+				ApplicationName: p.ApplicationName,
+				EnvironmentName: p.EnvironmentName,
 			}
 			output, err := svc.DescribeConfigurationSettings(ctx, &configOptionsIn)
 			if err != nil {
@@ -57,16 +57,16 @@ func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetDataSource()
 			}
 
 			arnStr := arn.ARN{
-				Partition:	cl.Partition,
-				Service:	"elasticbeanstalk",
-				Region:		cl.Region,
-				AccountID:	cl.AccountID,
-				Resource:	fmt.Sprintf("application/%s", aws.ToString(p.ApplicationName)),
+				Partition: cl.Partition,
+				Service:   "elasticbeanstalk",
+				Region:    cl.Region,
+				AccountID: cl.AccountID,
+				Resource:  fmt.Sprintf("application/%s", aws.ToString(p.ApplicationName)),
 			}.String()
 
 			for _, option := range output.ConfigurationSettings {
 				resultChannel <- ConfigurationSettingsDescriptionWrapper{
-					ConfigurationSettingsDescription:	option, ApplicationArn: arnStr,
+					ConfigurationSettingsDescription: option, ApplicationArn: arnStr,
 				}
 			}
 
@@ -77,7 +77,7 @@ func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetDataSource()
 
 type ConfigurationSettingsDescriptionWrapper struct {
 	types.ConfigurationSettingsDescription
-	ApplicationArn	string
+	ApplicationArn string
 }
 
 func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

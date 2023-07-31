@@ -11,11 +11,12 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| tags | json | X | √ |  | 
 | arn | string | √ | √ |  | 
-| policy_name | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| policy_arn | string | X | √ |  | 
+| policy_name | string | X | √ |  | 
 | account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
-| tags | json | X | √ |  | 
 
 

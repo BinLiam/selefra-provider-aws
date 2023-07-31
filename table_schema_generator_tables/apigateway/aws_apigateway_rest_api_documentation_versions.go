@@ -94,11 +94,11 @@ func (x *TableAwsApigatewayRestApiDocumentationVersionsGenerator) GetColumns() [
 					v := result.(types.DocumentationVersion)
 					rapi := task.ParentRawResult.(types.RestApi)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/restapis/%s/documentation/versions/%s", aws.ToString(rapi.Id), aws.ToString(v.Version)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/restapis/%s/documentation/versions/%s", aws.ToString(rapi.Id), aws.ToString(v.Version)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

@@ -46,8 +46,8 @@ func (x *TableAwsApigatewayv2ApiRouteResponsesGenerator) GetDataSource() *schema
 			r := task.ParentRawResult.(types.Route)
 			p := task.ParentTask.ParentRawResult.(types.Api)
 			config := apigatewayv2.GetRouteResponsesInput{
-				ApiId:		p.ApiId,
-				RouteId:	r.RouteId,
+				ApiId:   p.ApiId,
+				RouteId: r.RouteId,
 			}
 			c := client.(*aws_client.Client)
 			svc := c.AwsServices().Apigatewayv2
@@ -107,11 +107,11 @@ func (x *TableAwsApigatewayv2ApiRouteResponsesGenerator) GetColumns() []*schema.
 					route := task.ParentRawResult.(types.Route)
 					p := task.ParentTask.ParentTask.ParentRawResult.(types.Api)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/apis/%s/routes/%s/routeresponses/%s", aws.ToString(p.ApiId), aws.ToString(route.RouteId), aws.ToString(r.RouteResponseId)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/apis/%s/routes/%s/routeresponses/%s", aws.ToString(p.ApiId), aws.ToString(route.RouteId), aws.ToString(r.RouteResponseId)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

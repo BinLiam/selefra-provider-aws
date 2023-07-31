@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecrpublic"
 	"github.com/aws/aws-sdk-go-v2/service/ecrpublic/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcrpublicRepositoryImagesGenerator struct {
@@ -44,8 +44,8 @@ func (x *TableAwsEcrpublicRepositoryImagesGenerator) GetDataSource() *schema.Dat
 			maxResults := int32(1000)
 			p := task.ParentRawResult.(types.Repository)
 			config := ecrpublic.DescribeImagesInput{
-				RepositoryName:	p.RepositoryName,
-				MaxResults:	&maxResults,
+				RepositoryName: p.RepositoryName,
+				MaxResults:     &maxResults,
 			}
 			c := client.(*aws_client.Client)
 			svc := c.AwsServices().Ecrpublic
@@ -87,11 +87,11 @@ func (x *TableAwsEcrpublicRepositoryImagesGenerator) GetColumns() []*schema.Colu
 					item := result.(types.ImageDetail)
 
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ecr-public",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"repository_image/" + *item.RegistryId + "/" + *item.ImageDigest,
+						Partition: cl.Partition,
+						Service:   "ecr-public",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "repository_image/" + *item.RegistryId + "/" + *item.ImageDigest,
 					}
 					return a.String(), nil
 				}

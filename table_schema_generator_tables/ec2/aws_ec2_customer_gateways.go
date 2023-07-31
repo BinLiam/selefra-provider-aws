@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEc2CustomerGatewaysGenerator struct {
@@ -84,11 +84,11 @@ func (x *TableAwsEc2CustomerGatewaysGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					cg := result.(types.CustomerGateway)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ec2",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"customer-gateway/" + aws.ToString(cg.CustomerGatewayId),
+						Partition: cl.Partition,
+						Service:   "ec2",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "customer-gateway/" + aws.ToString(cg.CustomerGatewayId),
 					}
 					return a.String(), nil
 				}

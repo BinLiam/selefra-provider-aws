@@ -92,11 +92,11 @@ func (x *TableAwsApigatewayRestApiRequestValidatorsGenerator) GetColumns() []*sc
 					r := result.(types.RequestValidator)
 					rapi := task.ParentRawResult.(types.RestApi)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/restapis/%s/requestvalidators/%s", aws.ToString(rapi.Id), aws.ToString(r.Id)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/restapis/%s/requestvalidators/%s", aws.ToString(rapi.Id), aws.ToString(r.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

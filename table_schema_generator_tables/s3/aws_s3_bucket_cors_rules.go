@@ -63,24 +63,24 @@ func (x *TableAwsS3BucketCorsRulesGenerator) GetDataSource() *schema.DataSource 
 }
 
 type WrappedBucket struct {
-	CreationDate	*time.Time
+	CreationDate *time.Time
 
-	Name	*string
+	Name *string
 
-	ReplicationRole		*string
-	ReplicationRules	[]types.ReplicationRule
-	Region			string
-	LoggingTargetBucket	*string
-	LoggingTargetPrefix	*string
-	Policy			map[string]any
-	VersioningStatus	types.BucketVersioningStatus
-	VersioningMfaDelete	types.MFADeleteStatus
-	BlockPublicAcls		bool
-	BlockPublicPolicy	bool
-	IgnorePublicAcls	bool
-	RestrictPublicBuckets	bool
-	Tags			map[string]*string
-	OwnershipControls	[]string
+	ReplicationRole       *string
+	ReplicationRules      []types.ReplicationRule
+	Region                string
+	LoggingTargetBucket   *string
+	LoggingTargetPrefix   *string
+	Policy                map[string]any
+	VersioningStatus      types.BucketVersioningStatus
+	VersioningMfaDelete   types.MFADeleteStatus
+	BlockPublicAcls       bool
+	BlockPublicPolicy     bool
+	IgnorePublicAcls      bool
+	RestrictPublicBuckets bool
+	Tags                  map[string]*string
+	OwnershipControls     []string
 }
 
 func (x *TableAwsS3BucketCorsRulesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

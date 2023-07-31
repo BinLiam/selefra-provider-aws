@@ -88,11 +88,11 @@ func (x *TableAwsApigatewayv2DomainNamesGenerator) GetColumns() []*schema.Column
 				extractor := func() (any, error) {
 					cl := client.(*aws_client.Client)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/domainnames/%s", aws.ToString(result.(types.DomainName).DomainName)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/domainnames/%s", aws.ToString(result.(types.DomainName).DomainName)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

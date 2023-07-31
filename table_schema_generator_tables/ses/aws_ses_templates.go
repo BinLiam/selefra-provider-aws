@@ -9,10 +9,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/sesv2"
 	"github.com/aws/aws-sdk-go-v2/service/sesv2/types"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSesTemplatesGenerator struct {
@@ -63,11 +63,11 @@ func (x *TableAwsSesTemplatesGenerator) GetDataSource() *schema.DataSource {
 						return nil, err
 					}
 					return &Template{
-						TemplateName:		getOutput.TemplateName,
-						Text:			getOutput.TemplateContent.Text,
-						Html:			getOutput.TemplateContent.Html,
-						Subject:		getOutput.TemplateContent.Subject,
-						CreatedTimestamp:	templateMeta.CreatedTimestamp,
+						TemplateName:     getOutput.TemplateName,
+						Text:             getOutput.TemplateContent.Text,
+						Html:             getOutput.TemplateContent.Html,
+						Subject:          getOutput.TemplateContent.Subject,
+						CreatedTimestamp: templateMeta.CreatedTimestamp,
 					}, nil
 
 				})
@@ -83,15 +83,15 @@ func (x *TableAwsSesTemplatesGenerator) GetDataSource() *schema.DataSource {
 }
 
 type Template struct {
-	TemplateName	*string
+	TemplateName *string
 
-	Html	*string
+	Html *string
 
-	Subject	*string
+	Subject *string
 
-	Text	*string
+	Text *string
 
-	CreatedTimestamp	*time.Time
+	CreatedTimestamp *time.Time
 }
 
 func (x *TableAwsSesTemplatesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {
@@ -108,11 +108,11 @@ func (x *TableAwsSesTemplatesGenerator) GetColumns() []*schema.Column {
 				cl := client.(*aws_client.Client)
 				idParts := []string{"template", *result.(*Template).TemplateName}
 				return arn.ARN{
-					Partition:	cl.Partition,
-					Service:	"ses",
-					Region:		cl.Region,
-					AccountID:	cl.AccountID,
-					Resource:	strings.Join(idParts, "/"),
+					Partition: cl.Partition,
+					Service:   "ses",
+					Region:    cl.Region,
+					AccountID: cl.AccountID,
+					Resource:  strings.Join(idParts, "/"),
 				}.String(), nil
 			})).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("template_name").ColumnType(schema.ColumnTypeString).Build(),

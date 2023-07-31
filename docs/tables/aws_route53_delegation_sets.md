@@ -14,8 +14,8 @@ arn
 | name_servers | string_array | X | √ |  | 
 | caller_reference | string | X | √ |  | 
 | id | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 | account_id | string | X | √ |  | 
 | arn | string | √ | √ | `The Amazon Resource Name (ARN) for the resource.` | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

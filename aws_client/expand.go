@@ -1,8 +1,8 @@
 package aws_client
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"github.com/aws/aws-sdk-go-v2/service/wafv2/types"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-utils/pkg/if_expression"
 	"math/rand"
@@ -37,7 +37,7 @@ func ExpandByPartition() func(ctx context.Context, clientMeta *schema.ClientMeta
 				Client: awsClient.Copy(func(client *Client) {
 					client.Partition = partition
 				}),
-				Task:	task.Clone(),
+				Task: task.Clone(),
 			})
 		}
 		return clientTaskContextSlice
@@ -58,7 +58,7 @@ func ExpandByPartitionAndRegion(awsServiceName string) func(ctx context.Context,
 						client.Partition = partition
 						client.Region = region
 					}),
-					Task:	task.Clone(),
+					Task: task.Clone(),
 				})
 			}
 		}
@@ -79,7 +79,7 @@ func ExpandByPartitionAndRegionAndScope(awsServiceName string) func(ctx context.
 						client.Region = region
 						client.WAFScope = types.ScopeCloudfront
 					}),
-					Task:	task,
+					Task: task,
 				})
 
 				if !isSupportedServiceForRegion(awsServiceName, region) {
@@ -90,7 +90,7 @@ func ExpandByPartitionAndRegionAndScope(awsServiceName string) func(ctx context.
 						client.Partition = partition
 						client.Region = region
 					}),
-					Task:	task.Clone(),
+					Task: task.Clone(),
 				})
 			}
 		}

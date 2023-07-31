@@ -1,8 +1,8 @@
 package faker
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"fmt"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"math/rand"
 	"reflect"
 	"time"

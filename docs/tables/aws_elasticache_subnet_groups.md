@@ -11,13 +11,14 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| subnets | json | X | √ |  | 
 | vpc_id | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| arn | string | √ | √ |  | 
+| subnets | json | X | √ |  | 
 | cache_subnet_group_description | string | X | √ |  | 
 | cache_subnet_group_name | string | X | √ |  | 
+| supported_network_types | string_array | X | √ |  | 
+| account_id | string | X | √ |  | 
+| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| arn | string | √ | √ |  | 
 
 

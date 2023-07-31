@@ -81,11 +81,11 @@ func (x *TableAwsApigatewayApiKeysGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					ak := result.(types.ApiKey)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("apigateway"),
-						Region:		cl.Region,
-						AccountID:	"",
-						Resource:	fmt.Sprintf("/apikeys/%s", aws.ToString(ak.Id)),
+						Partition: cl.Partition,
+						Service:   string("apigateway"),
+						Region:    cl.Region,
+						AccountID: "",
+						Resource:  fmt.Sprintf("/apikeys/%s", aws.ToString(ak.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

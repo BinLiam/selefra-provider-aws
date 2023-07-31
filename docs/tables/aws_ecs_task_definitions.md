@@ -12,32 +12,33 @@ arn
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
 | status | string | X | √ |  | 
-| cpu | string | X | √ |  | 
+| execution_role_arn | string | X | √ |  | 
+| ipc_mode | string | X | √ |  | 
+| region | string | X | √ |  | 
+| inference_accelerators | json | X | √ |  | 
+| ephemeral_storage | json | X | √ |  | 
 | family | string | X | √ |  | 
-| network_mode | string | X | √ |  | 
+| memory | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| cpu | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| task_definition_arn | string | X | √ |  | 
+| proxy_configuration | json | X | √ |  | 
+| registered_at | timestamp | X | √ |  | 
+| compatibilities | string_array | X | √ |  | 
+| placement_constraints | json | X | √ |  | 
 | requires_attributes | json | X | √ |  | 
 | runtime_platform | json | X | √ |  | 
-| region | string | X | √ |  | 
-| compatibilities | string_array | X | √ |  | 
-| ipc_mode | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| inference_accelerators | json | X | √ |  | 
-| requires_compatibilities | string_array | X | √ |  | 
-| revision | int | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| container_definitions | json | X | √ |  | 
-| ephemeral_storage | json | X | √ |  | 
-| pid_mode | string | X | √ |  | 
-| task_role_arn | string | X | √ |  | 
-| account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
-| placement_constraints | json | X | √ |  | 
-| registered_at | timestamp | X | √ |  | 
+| container_definitions | json | X | √ |  | 
 | volumes | json | X | √ |  | 
-| deregistered_at | timestamp | X | √ |  | 
-| execution_role_arn | string | X | √ |  | 
-| memory | string | X | √ |  | 
+| requires_compatibilities | string_array | X | √ |  | 
+| network_mode | string | X | √ |  | 
+| pid_mode | string | X | √ |  | 
 | registered_by | string | X | √ |  | 
-| proxy_configuration | json | X | √ |  | 
+| revision | big_int | X | √ |  | 
+| task_role_arn | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| deregistered_at | timestamp | X | √ |  | 
 
 

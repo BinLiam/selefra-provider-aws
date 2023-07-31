@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/timestreamwrite"
 	"github.com/aws/aws-sdk-go-v2/service/timestreamwrite/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsTimestreamTablesGenerator struct {
@@ -41,8 +41,8 @@ func (x *TableAwsTimestreamTablesGenerator) GetDataSource() *schema.DataSource {
 	return &schema.DataSource{
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			input := &timestreamwrite.ListTablesInput{
-				DatabaseName:	task.ParentRawResult.(types.Database).DatabaseName,
-				MaxResults:	aws.Int32(20),
+				DatabaseName: task.ParentRawResult.(types.Database).DatabaseName,
+				MaxResults:   aws.Int32(20),
 			}
 			paginator := timestreamwrite.NewListTablesPaginator(client.(*aws_client.Client).AwsServices().Timestreamwrite, input)
 			for paginator.HasMorePages() {

@@ -11,19 +11,20 @@ account_id, id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
-| policies | json | X | √ |  | 
 | id | string | X | √ |  | 
-| tags | json | X | √ |  | 
 | path | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| description | string | X | √ |  | 
-| max_session_duration | int | X | √ |  | 
-| permissions_boundary | json | X | √ |  | 
-| assume_role_policy_document | json | X | √ |  | 
-| arn | string | X | √ |  | 
+| role_id | string | X | √ |  | 
 | role_name | string | X | √ |  | 
-| create_date | timestamp | X | √ |  | 
+| description | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| assume_role_policy_document | json | X | √ |  | 
 | role_last_used | json | X | √ |  | 
+| tags | json | X | √ |  | 
+| policies | json | X | √ |  | 
+| arn | string | X | √ |  | 
+| create_date | timestamp | X | √ |  | 
+| max_session_duration | big_int | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| permissions_boundary | json | X | √ |  | 
 
 

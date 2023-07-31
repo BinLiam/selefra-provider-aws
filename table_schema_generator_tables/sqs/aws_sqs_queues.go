@@ -57,8 +57,8 @@ func (x *TableAwsSqsQueuesGenerator) GetDataSource() *schema.DataSource {
 					qURL := result.(string)
 
 					input := sqs.GetQueueAttributesInput{
-						QueueUrl:	aws.String(qURL),
-						AttributeNames:	[]types.QueueAttributeName{types.QueueAttributeNameAll},
+						QueueUrl:       aws.String(qURL),
+						AttributeNames: []types.QueueAttributeName{types.QueueAttributeNameAll},
 					}
 					out, err := svc.GetQueueAttributes(ctx, &input)
 					if err != nil {
@@ -87,51 +87,51 @@ func (x *TableAwsSqsQueuesGenerator) GetDataSource() *schema.DataSource {
 }
 
 type Queue struct {
-	URL	string
+	URL string
 
-	ApproximateNumberOfMessages	*int32
+	ApproximateNumberOfMessages *int32
 
-	ApproximateNumberOfMessagesDelayed	*int32
+	ApproximateNumberOfMessagesDelayed *int32
 
-	ApproximateNumberOfMessagesNotVisible	*int32
+	ApproximateNumberOfMessagesNotVisible *int32
 
-	CreatedTimestamp	*int32
+	CreatedTimestamp *int32
 
-	DelaySeconds	*int32
+	DelaySeconds *int32
 
-	LastModifiedTimestamp	*int32
+	LastModifiedTimestamp *int32
 
-	MaximumMessageSize	*int32
+	MaximumMessageSize *int32
 
-	MessageRetentionPeriod	*int32
+	MessageRetentionPeriod *int32
 
-	Policy	*string
+	Policy *string
 
-	Arn	*string	`mapstructure:"QueueArn"`
+	Arn *string `mapstructure:"QueueArn"`
 
-	ReceiveMessageWaitTimeSeconds	*int32
+	ReceiveMessageWaitTimeSeconds *int32
 
-	RedrivePolicy	*string
+	RedrivePolicy *string
 
-	VisibilityTimeout	*int32
+	VisibilityTimeout *int32
 
-	KmsMasterKeyId	*string
+	KmsMasterKeyId *string
 
-	KmsDataKeyReusePeriodSeconds	*int32
+	KmsDataKeyReusePeriodSeconds *int32
 
-	SqsManagedSseEnabled	*bool
+	SqsManagedSseEnabled *bool
 
-	FifoQueue	*bool
+	FifoQueue *bool
 
-	ContentBasedDeduplication	*bool
+	ContentBasedDeduplication *bool
 
-	DeduplicationScope	*string
+	DeduplicationScope *string
 
-	FifoThroughputLimit	*string
+	FifoThroughputLimit *string
 
-	RedriveAllowPolicy	*string
+	RedriveAllowPolicy *string
 
-	UnknownFields	map[string]any	`mapstructure:",remain"`
+	UnknownFields map[string]any `mapstructure:",remain"`
 }
 
 func (x *TableAwsSqsQueuesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

@@ -11,33 +11,33 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| tags | json | X | √ |  | 
-| description | string | X | √ |  | 
-| execution_property | json | X | √ |  | 
-| max_capacity | float | X | √ |  | 
-| name | string | X | √ |  | 
-| worker_type | string | X | √ |  | 
-| command | json | X | √ |  | 
-| default_arguments | json | X | √ |  | 
-| execution_class | string | X | √ |  | 
-| security_configuration | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| role | string | X | √ |  | 
-| created_on | timestamp | X | √ |  | 
-| source_control_details | json | X | √ |  | 
-| region | string | X | √ |  | 
-| allocated_capacity | int | X | √ |  | 
 | last_modified_on | timestamp | X | √ |  | 
-| max_retries | int | X | √ |  | 
-| notification_property | json | X | √ |  | 
-| non_overridable_arguments | json | X | √ |  | 
-| timeout | int | X | √ |  | 
-| log_uri | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| number_of_workers | big_int | X | √ |  | 
+| worker_type | string | X | √ |  | 
+| allocated_capacity | big_int | X | √ |  | 
+| glue_version | string | X | √ |  | 
+| execution_class | string | X | √ |  | 
+| timeout | big_int | X | √ |  | 
+| tags | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | code_gen_configuration_nodes | json | X | √ |  | 
 | connections | json | X | √ |  | 
-| glue_version | string | X | √ |  | 
-| number_of_workers | int | X | √ |  | 
+| max_capacity | float | X | √ |  | 
+| arn | string | √ | √ |  | 
+| created_on | timestamp | X | √ |  | 
+| execution_property | json | X | √ |  | 
+| log_uri | string | X | √ |  | 
+| security_configuration | string | X | √ |  | 
+| command | json | X | √ |  | 
+| description | string | X | √ |  | 
+| name | string | X | √ |  | 
+| non_overridable_arguments | json | X | √ |  | 
+| role | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| source_control_details | json | X | √ |  | 
+| default_arguments | json | X | √ |  | 
+| max_retries | big_int | X | √ |  | 
+| notification_property | json | X | √ |  | 
+| region | string | X | √ |  | 
 
 

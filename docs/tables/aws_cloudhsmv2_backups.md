@@ -11,20 +11,21 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| copy_timestamp | timestamp | X | √ |  | 
-| delete_timestamp | timestamp | X | √ |  | 
-| source_region | string | X | √ |  | 
-| source_backup | string | X | √ |  | 
-| region | string | X | √ |  | 
-| create_timestamp | timestamp | X | √ |  | 
-| never_expires | bool | X | √ |  | 
-| tags | json | X | √ |  | 
-| cluster_id | string | X | √ |  | 
-| backup_state | string | X | √ |  | 
 | source_cluster | string | X | √ |  | 
+| backup_id | string | X | √ |  | 
+| copy_timestamp | timestamp | X | √ |  | 
+| tag_list | json | X | √ |  | 
+| delete_timestamp | timestamp | X | √ |  | 
+| source_backup | string | X | √ |  | 
+| source_region | string | X | √ |  | 
 | account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
-| backup_id | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| backup_state | string | X | √ |  | 
+| cluster_id | string | X | √ |  | 
+| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| create_timestamp | timestamp | X | √ |  | 
+| never_expires | bool | X | √ |  | 
 
 

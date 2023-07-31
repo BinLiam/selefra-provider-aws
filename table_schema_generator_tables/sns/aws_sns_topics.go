@@ -9,9 +9,9 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSnsTopicsGenerator struct {
@@ -83,31 +83,31 @@ func (x *TableAwsSnsTopicsGenerator) GetDataSource() *schema.DataSource {
 }
 
 type Topic struct {
-	DeliveryPolicy	*string
+	DeliveryPolicy *string
 
-	DisplayName	*string
+	DisplayName *string
 
-	Owner	*string
+	Owner *string
 
-	Policy	*string
+	Policy *string
 
-	SubscriptionsConfirmed	*int
+	SubscriptionsConfirmed *int
 
-	SubscriptionsDeleted	*int
+	SubscriptionsDeleted *int
 
-	SubscriptionsPending	*int
+	SubscriptionsPending *int
 
-	Arn	*string	`mapstructure:"TopicArn"`
+	Arn *string `mapstructure:"TopicArn"`
 
-	EffectiveDeliveryPolicy	*string
+	EffectiveDeliveryPolicy *string
 
-	KmsMasterKeyId	*string
+	KmsMasterKeyId *string
 
-	FifoTopic	*bool
+	FifoTopic *bool
 
-	ContentBasedDeduplication	*bool
+	ContentBasedDeduplication *bool
 
-	UnknownFields	map[string]any	`mapstructure:",remain"`
+	UnknownFields map[string]any `mapstructure:",remain"`
 }
 
 func (x *TableAwsSnsTopicsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

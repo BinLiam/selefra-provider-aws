@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	savingsplans "github.com/aws/aws-sdk-go-v2/service/savingsplans"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockSavingsplansClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockSavingsplansClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockSavingsplansClientMockRecorder
 }
 
 type MockSavingsplansClientMockRecorder struct {

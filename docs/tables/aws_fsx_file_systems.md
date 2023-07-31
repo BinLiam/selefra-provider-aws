@@ -11,29 +11,30 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| kms_key_id | string | X | √ |  | 
-| lifecycle | string | X | √ |  | 
-| network_interface_ids | string_array | X | √ |  | 
-| vpc_id | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| tags | json | X | √ |  | 
-| administrative_actions | json | X | √ |  | 
+| failure_details | json | X | √ |  | 
+| lustre_configuration | json | X | √ |  | 
+| resource_arn | string | X | √ |  | 
 | windows_configuration | json | X | √ |  | 
 | account_id | string | X | √ |  | 
-| creation_time | timestamp | X | √ |  | 
-| dns_name | string | X | √ |  | 
-| file_system_type_version | string | X | √ |  | 
-| lustre_configuration | json | X | √ |  | 
-| open_zfs_configuration | json | X | √ |  | 
-| subnet_ids | string_array | X | √ |  | 
 | region | string | X | √ |  | 
-| failure_details | json | X | √ |  | 
-| file_system_id | string | X | √ |  | 
-| storage_capacity | int | X | √ |  | 
-| storage_type | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
-| file_system_type | string | X | √ |  | 
-| ontap_configuration | json | X | √ |  | 
+| creation_time | timestamp | X | √ |  | 
+| kms_key_id | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| administrative_actions | json | X | √ |  | 
+| lifecycle | string | X | √ |  | 
+| network_interface_ids | string_array | X | √ |  | 
+| open_zfs_configuration | json | X | √ |  | 
 | owner_id | string | X | √ |  | 
+| subnet_ids | string_array | X | √ |  | 
+| vpc_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| dns_name | string | X | √ |  | 
+| file_system_type | string | X | √ |  | 
+| file_system_type_version | string | X | √ |  | 
+| ontap_configuration | json | X | √ |  | 
+| storage_capacity | big_int | X | √ |  | 
+| storage_type | string | X | √ |  | 
+| file_system_id | string | X | √ |  | 
 
 

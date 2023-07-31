@@ -11,15 +11,15 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| joined_timestamp | timestamp | X | √ |  | 
-| name | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
 | arn | string | √ | √ |  | 
-| joined_method | string | X | √ |  | 
+| name | string | X | √ |  | 
+| status | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | email | string | X | √ |  | 
 | id | string | X | √ |  | 
-| status | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| tags | json | X | √ |  | 
+| joined_method | string | X | √ |  | 
+| joined_timestamp | timestamp | X | √ |  | 
 
 

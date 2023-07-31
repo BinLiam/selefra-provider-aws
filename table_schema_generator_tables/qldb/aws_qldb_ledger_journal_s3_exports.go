@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/qldb"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQldbLedgerJournalS3ExportsGenerator struct {
@@ -38,8 +38,8 @@ func (x *TableAwsQldbLedgerJournalS3ExportsGenerator) GetDataSource() *schema.Da
 			ledger := task.ParentRawResult.(*qldb.DescribeLedgerOutput)
 			cl := client.(*aws_client.Client)
 			config := &qldb.ListJournalS3ExportsForLedgerInput{
-				Name:		ledger.Name,
-				MaxResults:	aws.Int32(100),
+				Name:       ledger.Name,
+				MaxResults: aws.Int32(100),
 			}
 			for {
 				response, err := cl.AwsServices().Qldb.ListJournalS3ExportsForLedger(ctx, config)

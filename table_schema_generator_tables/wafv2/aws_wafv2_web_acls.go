@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/wafv2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafv2WebAclsGenerator struct {
@@ -46,8 +46,8 @@ func (x *TableAwsWafv2WebAclsGenerator) GetDataSource() *schema.DataSource {
 			service := c.AwsServices().Wafv2
 
 			config := wafv2.ListWebACLsInput{
-				Scope:	c.WAFScope,
-				Limit:	aws.Int32(100),
+				Scope: c.WAFScope,
+				Limit: aws.Int32(100),
 			}
 			for {
 				output, err := service.ListWebACLs(ctx, &config)
@@ -88,8 +88,8 @@ func (x *TableAwsWafv2WebAclsGenerator) GetDataSource() *schema.DataSource {
 						webAclLoggingConfiguration = loggingConfigurationOutput.LoggingConfiguration
 					}
 					return &WebACLWrapper{
-						WebACL:			webAclOutput.WebACL,
-						LoggingConfiguration:	webAclLoggingConfiguration,
+						WebACL:               webAclOutput.WebACL,
+						LoggingConfiguration: webAclLoggingConfiguration,
 					}, nil
 
 				})
@@ -105,7 +105,7 @@ func (x *TableAwsWafv2WebAclsGenerator) GetDataSource() *schema.DataSource {
 
 type WebACLWrapper struct {
 	*types.WebACL
-	LoggingConfiguration	*types.LoggingConfiguration
+	LoggingConfiguration *types.LoggingConfiguration
 }
 
 func (x *TableAwsWafv2WebAclsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {
@@ -128,8 +128,8 @@ func (x *TableAwsWafv2WebAclsGenerator) GetColumns() []*schema.Column {
 					if cl.WAFScope == types.ScopeCloudfront {
 						cloudfrontService := cl.AwsServices().Cloudfront
 						params := &cloudfront.ListDistributionsByWebACLIdInput{
-							WebACLId:	webACL.Id,
-							MaxItems:	aws.Int32(100),
+							WebACLId: webACL.Id,
+							MaxItems: aws.Int32(100),
 						}
 						for {
 							output, err := cloudfrontService.ListDistributionsByWebACLId(ctx, params, func(options *cloudfront.Options) {

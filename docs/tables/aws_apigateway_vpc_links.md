@@ -1,19 +1,26 @@
 # Table: aws_apigateway_vpc_links
 
+## Primary Keys 
+
+```
+account_id, arn
+```
+
+
 ## Columns 
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| id | string | X | √ |  | 
-| status | string | X | √ |  | 
 | status_message | string | X | √ |  | 
-| target_arns | string_array | X | √ |  | 
+| region | string | X | √ |  | 
 | arn | string | X | √ |  | 
-| description | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| id | string | X | √ |  | 
 | name | string | X | √ |  | 
+| status | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| description | string | X | √ |  | 
 | tags | json | X | √ |  | 
-| selefra_id | string | √ | √ | random id | 
+| target_arns | string_array | X | √ |  | 
 
 

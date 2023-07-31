@@ -67,8 +67,8 @@ func (x *TableAwsKafkaClusterOperationsGenerator) GetDataSource() *schema.DataSo
 
 func getListClusterOperationsInput(task *schema.DataSourcePullTask) kafka.ListClusterOperationsInput {
 	return kafka.ListClusterOperationsInput{
-		ClusterArn:	task.ParentRawResult.(*types.Cluster).ClusterArn,
-		MaxResults:	100,
+		ClusterArn: task.ParentRawResult.(*types.Cluster).ClusterArn,
+		MaxResults: 100,
 	}
 }
 

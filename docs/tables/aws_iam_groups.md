@@ -11,13 +11,14 @@ account_id, id
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| policies | json | X | √ |  | 
-| id | string | X | √ |  | 
-| arn | string | X | √ |  | 
-| create_date | timestamp | X | √ |  | 
+| group_id | string | X | √ |  | 
 | group_name | string | X | √ |  | 
 | path | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| policies | json | X | √ |  | 
+| arn | string | X | √ |  | 
 | account_id | string | X | √ |  | 
+| id | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| create_date | timestamp | X | √ |  | 
 
 

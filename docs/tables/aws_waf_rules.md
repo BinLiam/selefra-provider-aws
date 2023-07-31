@@ -11,11 +11,13 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
 | tags | json | X | √ |  | 
-| name | string | X | √ |  | 
-| rule_id | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| predicates | json | X | √ |  | 
+| rule_id | string | X | √ |  | 
+| metric_name | string | X | √ |  | 
+| name | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 
 

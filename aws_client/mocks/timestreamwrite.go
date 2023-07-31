@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	timestreamwrite "github.com/aws/aws-sdk-go-v2/service/timestreamwrite"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockTimestreamwriteClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockTimestreamwriteClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockTimestreamwriteClientMockRecorder
 }
 
 type MockTimestreamwriteClientMockRecorder struct {

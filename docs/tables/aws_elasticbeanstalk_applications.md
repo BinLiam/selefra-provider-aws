@@ -11,16 +11,18 @@ arn, date_created
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| date_updated | timestamp | X | √ |  | 
-| description | string | X | √ |  | 
+| date_created | timestamp | X | √ |  | 
+| resource_lifecycle_config | json | X | √ |  | 
 | versions | string_array | X | √ |  | 
 | account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| date_created | timestamp | X | √ |  | 
-| configuration_templates | string_array | X | √ |  | 
-| arn | string | X | √ |  | 
-| application_name | string | X | √ |  | 
-| resource_lifecycle_config | json | X | √ |  | 
+| tags | json | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| application_name | string | X | √ |  | 
+| configuration_templates | string_array | X | √ |  | 
+| date_updated | timestamp | X | √ |  | 
+| description | string | X | √ |  | 
+| region | string | X | √ |  | 
+| arn | string | X | √ |  | 
+| application_arn | string | X | √ |  | 
 
 

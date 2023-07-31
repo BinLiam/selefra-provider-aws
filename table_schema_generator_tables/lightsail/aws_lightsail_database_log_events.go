@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lightsail/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -76,16 +76,16 @@ var MaxGoroutines = 10
 type LogEventWrapper struct {
 	types.LogEvent
 
-	LogStreamName	string
+	LogStreamName string
 }
 
 func fetchLogEvents(ctx context.Context, res chan<- any, c *aws_client.Client, database, stream string, startTime, endTime time.Time) error {
 	svc := c.AwsServices().Lightsail
 	input := lightsail.GetRelationalDatabaseLogEventsInput{
-		RelationalDatabaseName:	&database,
-		LogStreamName:		&stream,
-		StartTime:		&startTime,
-		EndTime:		&endTime,
+		RelationalDatabaseName: &database,
+		LogStreamName:          &stream,
+		StartTime:              &startTime,
+		EndTime:                &endTime,
 	}
 	for {
 		response, err := svc.GetRelationalDatabaseLogEvents(ctx, &input)
@@ -94,8 +94,8 @@ func fetchLogEvents(ctx context.Context, res chan<- any, c *aws_client.Client, d
 		}
 		for _, e := range response.ResourceLogEvents {
 			res <- LogEventWrapper{
-				LogEvent:	e,
-				LogStreamName:	stream,
+				LogEvent:      e,
+				LogStreamName: stream,
 			}
 		}
 		if aws.ToString(response.NextForwardToken) == "" || len(response.ResourceLogEvents) == 0 {

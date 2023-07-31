@@ -11,7 +11,7 @@ import (
 
 type retryer struct {
 	aws.Retryer
-	logger	zerolog.Logger
+	logger zerolog.Logger
 }
 
 func newRetryer(logger zerolog.Logger, maxRetries int, maxBackoff int) func() aws.Retryer {
@@ -21,7 +21,7 @@ func newRetryer(logger zerolog.Logger, maxRetries int, maxBackoff int) func() aw
 				o.MaxAttempts = maxRetries
 				o.MaxBackoff = time.Second * time.Duration(maxBackoff)
 			}),
-			logger:	logger,
+			logger: logger,
 		}
 	}
 }

@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	elasticloadbalancing "github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockElasticloadbalancingClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockElasticloadbalancingClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockElasticloadbalancingClientMockRecorder
 }
 
 type MockElasticloadbalancingClientMockRecorder struct {

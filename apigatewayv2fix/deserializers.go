@@ -1,11 +1,11 @@
 package apigatewayv2fix
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"io"
 	"strings"
 
@@ -64,8 +64,8 @@ func (m *awsRestjson1_deserializeOpGetDomainNames) HandleDeserialize(ctx context
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return out, metadata, err
 	}
@@ -75,8 +75,8 @@ func (m *awsRestjson1_deserializeOpGetDomainNames) HandleDeserialize(ctx context
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		return out, metadata, &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.FailedtodecoderesponsebodywithinvalidJSONw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.FailedtodecoderesponsebodywithinvalidJSONw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 	}
 
@@ -109,8 +109,8 @@ func awsRestjson1_deserializeOpErrorGetDomainNames(response *smithyhttp.Response
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -135,8 +135,8 @@ func awsRestjson1_deserializeOpErrorGetDomainNames(response *smithyhttp.Response
 
 	default:
 		genericError := &smithy.GenericAPIError{
-			Code:		errorCode,
-			Message:	errorMessage,
+			Code:    errorCode,
+			Message: errorMessage,
 		}
 		return genericError
 
@@ -201,8 +201,8 @@ func awsRestjson1_deserializeErrorBadRequestException(response *smithyhttp.Respo
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -213,8 +213,8 @@ func awsRestjson1_deserializeErrorBadRequestException(response *smithyhttp.Respo
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -237,8 +237,8 @@ func awsRestjson1_deserializeErrorNotFoundException(response *smithyhttp.Respons
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -249,8 +249,8 @@ func awsRestjson1_deserializeErrorNotFoundException(response *smithyhttp.Respons
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -273,8 +273,8 @@ func awsRestjson1_deserializeErrorTooManyRequestsException(response *smithyhttp.
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}
@@ -285,8 +285,8 @@ func awsRestjson1_deserializeErrorTooManyRequestsException(response *smithyhttp.
 		var snapshot bytes.Buffer
 		io.Copy(&snapshot, ringBuffer)
 		err = &smithy.DeserializationError{
-			Err:		fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
-			Snapshot:	snapshot.Bytes(),
+			Err:      fmt.Errorf(constants.Failedtodecoderesponsebodyw, err),
+			Snapshot: snapshot.Bytes(),
 		}
 		return err
 	}

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecr"
 	"github.com/aws/aws-sdk-go-v2/service/ecr/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcrRepositoryImageScanFindingsGenerator struct {
@@ -40,12 +40,12 @@ func (x *TableAwsEcrRepositoryImageScanFindingsGenerator) GetDataSource() *schem
 			repo := task.ParentTask.ParentRawResult.(types.Repository)
 			for _, tag := range image.ImageTags {
 				config := ecr.DescribeImageScanFindingsInput{
-					RepositoryName:	repo.RepositoryName,
+					RepositoryName: repo.RepositoryName,
 					ImageId: &types.ImageIdentifier{
-						ImageDigest:	image.ImageDigest,
-						ImageTag:	aws.String(tag),
+						ImageDigest: image.ImageDigest,
+						ImageTag:    aws.String(tag),
 					},
-					MaxResults:	aws.Int32(1000),
+					MaxResults: aws.Int32(1000),
 				}
 
 				paginator := ecr.NewDescribeImageScanFindingsPaginator(client.(*aws_client.Client).AwsServices().Ecr, &config)
@@ -56,12 +56,12 @@ func (x *TableAwsEcrRepositoryImageScanFindingsGenerator) GetDataSource() *schem
 
 					}
 					resultChannel <- ImageScanWrapper{
-						ImageScanFindings:	output.ImageScanFindings,
-						ImageTag:		aws.String(tag),
-						ImageDigest:		image.ImageDigest,
-						ImageScanStatus:	output.ImageScanStatus,
-						RegistryId:		repo.RegistryId,
-						RepositoryName:		repo.RepositoryName,
+						ImageScanFindings: output.ImageScanFindings,
+						ImageTag:          aws.String(tag),
+						ImageDigest:       image.ImageDigest,
+						ImageScanStatus:   output.ImageScanStatus,
+						RegistryId:        repo.RegistryId,
+						RepositoryName:    repo.RepositoryName,
 					}
 				}
 			}
@@ -72,16 +72,16 @@ func (x *TableAwsEcrRepositoryImageScanFindingsGenerator) GetDataSource() *schem
 }
 
 type ImageScanWrapper struct {
-	ImageTag	*string
-	ImageDigest	*string
+	ImageTag    *string
+	ImageDigest *string
 
 	*types.ImageScanFindings
 
 	*types.ImageScanStatus
 
-	RegistryId	*string
+	RegistryId *string
 
-	RepositoryName	*string
+	RepositoryName *string
 }
 
 func (x *TableAwsEcrRepositoryImageScanFindingsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

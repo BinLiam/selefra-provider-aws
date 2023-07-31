@@ -11,27 +11,27 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| name | string | X | √ |  | 
-| resource_type | string | X | √ |  | 
-| support_code | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| configuration_options | json | X | √ |  | 
 | created_at | timestamp | X | √ |  | 
-| https_redirection_enabled | bool | X | √ |  | 
 | instance_health_summary | json | X | √ |  | 
-| public_ports | int_array | X | √ |  | 
-| health_check_path | string | X | √ |  | 
-| ip_address_type | string | X | √ |  | 
-| state | string | X | √ |  | 
 | tls_certificate_summaries | json | X | √ |  | 
-| account_id | string | X | √ |  | 
+| tags | json | X | √ |  | 
 | region | string | X | √ |  | 
-| arn | string | √ | √ |  | 
 | dns_name | string | X | √ |  | 
-| instance_port | int | X | √ |  | 
-| location | json | X | √ |  | 
-| protocol | string | X | √ |  | 
-| tls_policy_name | string | X | √ |  | 
+| health_check_path | string | X | √ |  | 
+| https_redirection_enabled | bool | X | √ |  | 
+| resource_type | string | X | √ |  | 
+| state | string | X | √ |  | 
+| support_code | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| configuration_options | json | X | √ |  | 
+| instance_port | big_int | X | √ |  | 
+| ip_address_type | string | X | √ |  | 
+| location | json | X | √ |  | 
+| name | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| protocol | string | X | √ |  | 
+| public_ports | int_array | X | √ |  | 
+| tls_policy_name | string | X | √ |  | 
 
 

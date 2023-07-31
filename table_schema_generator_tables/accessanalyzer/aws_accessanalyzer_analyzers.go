@@ -48,10 +48,10 @@ func (x *TableAwsAccessanalyzerAnalyzersGenerator) GetDataSource() *schema.DataS
 				response, err := svc.ListAnalyzers(ctx, &config, func(options *accessanalyzer.Options) {
 					options.APIOptions = append(options.APIOptions, func(stack *middleware.Stack) error {
 						if err := stack.Initialize.Add(&awsmiddleware.RegisterServiceMetadata{
-							Region:		c.Region,
-							ServiceID:	accessanalyzer.ServiceID,
-							SigningName:	"access-analyzer",
-							OperationName:	"ListAnalyzers",
+							Region:        c.Region,
+							ServiceID:     accessanalyzer.ServiceID,
+							SigningName:   "access-analyzer",
+							OperationName: "ListAnalyzers",
 						}, middleware.Before); err != nil {
 							return nil
 						}

@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/cloudhsmv2"
 	"github.com/aws/aws-sdk-go-v2/service/cloudhsmv2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsCloudhsmv2BackupsGenerator struct {
@@ -88,11 +88,11 @@ func (x *TableAwsCloudhsmv2BackupsGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					item := result.(types.Backup)
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"hsm",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"backup/" + aws.ToString(item.BackupId),
+						Partition: cl.Partition,
+						Service:   "hsm",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "backup/" + aws.ToString(item.BackupId),
 					}
 					return a.String(), nil
 				}

@@ -12,9 +12,10 @@ account_id, region, registry_id
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
 | registry_id | string | X | √ |  | 
-| policy_text | json | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| result_metadata | json | X | √ |  | 
 | account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| policy_text | json | X | √ |  | 
 
 

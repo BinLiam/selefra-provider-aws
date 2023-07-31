@@ -1,13 +1,21 @@
 # Table: aws_cloudfront_cache_policies
 
+## Primary Keys 
+
+```
+arn
+```
+
+
 ## Columns 
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
-| arn | string | X | √ |  | 
+| id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | cache_policy | json | X | √ |  | 
 | type | string | X | √ |  | 
-| selefra_id | string | √ | √ | random id | 
+| account_id | string | X | √ |  | 
 
 

@@ -14,9 +14,9 @@ arn
 | account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
 | tags | json | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | arn | string | √ | √ |  | 
 | name | string | X | √ |  | 
 | policy | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

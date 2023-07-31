@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	lightsail "github.com/aws/aws-sdk-go-v2/service/lightsail"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockLightsailClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockLightsailClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockLightsailClientMockRecorder
 }
 
 type MockLightsailClientMockRecorder struct {

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/scheduler"
 	"github.com/aws/aws-sdk-go-v2/service/scheduler/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSchedulerSchedulesGenerator struct {
@@ -58,8 +58,8 @@ func (x *TableAwsSchedulerSchedulesGenerator) GetDataSource() *schema.DataSource
 					scheduleSummary := result.(types.ScheduleSummary)
 
 					describeTaskDefinitionOutput, err := svc.GetSchedule(ctx, &scheduler.GetScheduleInput{
-						Name:		scheduleSummary.Name,
-						GroupName:	scheduleSummary.GroupName,
+						Name:      scheduleSummary.Name,
+						GroupName: scheduleSummary.GroupName,
 					})
 					if err != nil {
 						return nil, err

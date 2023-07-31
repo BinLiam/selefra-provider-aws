@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/databasemigrationservice"
 	"github.com/aws/aws-sdk-go-v2/service/databasemigrationservice/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsDmsReplicationInstancesGenerator struct {
@@ -72,8 +72,8 @@ func (x *TableAwsDmsReplicationInstancesGenerator) GetDataSource() *schema.DataS
 
 			for _, replicationInstance := range describeReplicationInstancesOutput.ReplicationInstances {
 				wrapper := ReplicationInstanceWrapper{
-					ReplicationInstance:	replicationInstance,
-					Tags:			replicationInstanceTags[*replicationInstance.ReplicationInstanceArn],
+					ReplicationInstance: replicationInstance,
+					Tags:                replicationInstanceTags[*replicationInstance.ReplicationInstanceArn],
 				}
 				resultChannel <- wrapper
 			}
@@ -84,7 +84,7 @@ func (x *TableAwsDmsReplicationInstancesGenerator) GetDataSource() *schema.DataS
 
 type ReplicationInstanceWrapper struct {
 	types.ReplicationInstance
-	Tags	map[string]any
+	Tags map[string]any
 }
 
 func (x *TableAwsDmsReplicationInstancesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

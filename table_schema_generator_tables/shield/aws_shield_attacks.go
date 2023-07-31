@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/shield"
 	"github.com/aws/aws-sdk-go-v2/service/shield/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsShieldAttacksGenerator struct {
@@ -46,8 +46,8 @@ func (x *TableAwsShieldAttacksGenerator) GetDataSource() *schema.DataSource {
 			end := time.Now()
 			start := end.Add(-time.Hour * 24)
 			config := shield.ListAttacksInput{
-				EndTime:	&types.TimeRange{ToExclusive: &end},
-				StartTime:	&types.TimeRange{FromInclusive: &start},
+				EndTime:   &types.TimeRange{ToExclusive: &end},
+				StartTime: &types.TimeRange{FromInclusive: &start},
 			}
 			for {
 				output, err := svc.ListAttacks(ctx, &config)

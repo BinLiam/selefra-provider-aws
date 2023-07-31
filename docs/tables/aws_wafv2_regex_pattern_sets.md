@@ -11,14 +11,14 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| tags | json | X | √ |  | 
-| id | string | X | √ |  | 
-| name | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| regular_expression_list | json | X | √ |  | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
 | arn | string | √ | √ |  | 
+| id | string | X | √ |  | 
+| regular_expression_list | json | X | √ |  | 
+| region | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | description | string | X | √ |  | 
+| name | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 
 

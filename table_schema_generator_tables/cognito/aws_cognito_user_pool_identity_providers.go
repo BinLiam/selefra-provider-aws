@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider"
 	"github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsCognitoUserPoolIdentityProvidersGenerator struct {
@@ -54,8 +54,8 @@ func (x *TableAwsCognitoUserPoolIdentityProvidersGenerator) GetDataSource() *sch
 					pool := task.ParentRawResult.(*types.UserPoolType)
 
 					pd, err := svc.DescribeIdentityProvider(ctx, &cognitoidentityprovider.DescribeIdentityProviderInput{
-						ProviderName:	item.ProviderName,
-						UserPoolId:	pool.Id,
+						ProviderName: item.ProviderName,
+						UserPoolId:   pool.Id,
 					})
 					if err != nil {
 						return nil, err

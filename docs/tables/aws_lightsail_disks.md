@@ -11,25 +11,25 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| gb_in_use | int | X | √ |  | 
-| is_system_disk | bool | X | √ |  | 
-| path | string | X | √ |  | 
-| state | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| tags | json | X | √ |  | 
 | created_at | timestamp | X | √ |  | 
-| size_in_gb | int | X | √ |  | 
+| name | string | X | √ |  | 
+| tags | json | X | √ |  | 
 | account_id | string | X | √ |  | 
-| iops | int | X | √ |  | 
-| resource_type | string | X | √ |  | 
-| attachment_state | string | X | √ |  | 
-| is_attached | bool | X | √ |  | 
-| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | add_ons | json | X | √ |  | 
 | attached_to | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| arn | string | √ | √ |  | 
+| path | string | X | √ |  | 
+| resource_type | string | X | √ |  | 
+| size_in_gb | big_int | X | √ |  | 
+| state | string | X | √ |  | 
+| is_attached | bool | X | √ |  | 
+| gb_in_use | big_int | X | √ |  | 
+| iops | big_int | X | √ |  | 
+| is_system_disk | bool | X | √ |  | 
 | location | json | X | √ |  | 
-| name | string | X | √ |  | 
 | support_code | string | X | √ |  | 
+| region | string | X | √ |  | 
+| attachment_state | string | X | √ |  | 
 
 

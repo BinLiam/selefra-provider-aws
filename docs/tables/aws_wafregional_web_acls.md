@@ -11,15 +11,16 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| rules | json | X | √ |  | 
 | name | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| web_acl_arn | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
 | resources_for_web_acl | string_array | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 | default_action | json | X | √ |  | 
-| rules | json | X | √ |  | 
 | web_acl_id | string | X | √ |  | 
 | metric_name | string | X | √ |  | 
-| account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
 | tags | json | X | √ | `Web ACL tags.` | 
 

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
 	"github.com/aws/aws-sdk-go-v2/service/quicksight/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQuicksightIngestionsGenerator struct {
@@ -45,8 +45,8 @@ func (x *TableAwsQuicksightIngestionsGenerator) GetDataSource() *schema.DataSour
 			cl := client.(*aws_client.Client)
 			svc := cl.AwsServices().Quicksight
 			input := quicksight.ListIngestionsInput{
-				AwsAccountId:	aws.String(cl.AccountID),
-				DataSetId:	item.DataSetId,
+				AwsAccountId: aws.String(cl.AccountID),
+				DataSetId:    item.DataSetId,
 			}
 			paginator := quicksight.NewListIngestionsPaginator(svc, &input)
 			for paginator.HasMorePages() {

@@ -44,8 +44,8 @@ func (x *TableAwsAmpRuleGroupsNamespacesGenerator) GetDataSource() *schema.DataS
 
 			p := amp.NewListRuleGroupsNamespacesPaginator(svc,
 				&amp.ListRuleGroupsNamespacesInput{
-					WorkspaceId:	task.ParentRawResult.(*types.WorkspaceDescription).WorkspaceId,
-					MaxResults:	aws.Int32(int32(1000)),
+					WorkspaceId: task.ParentRawResult.(*types.WorkspaceDescription).WorkspaceId,
+					MaxResults:  aws.Int32(int32(1000)),
 				},
 			)
 			for p.HasMorePages() {

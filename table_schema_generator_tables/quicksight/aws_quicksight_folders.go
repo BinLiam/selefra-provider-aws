@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/quicksight/types"
 	"github.com/aws/smithy-go"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsQuicksightFoldersGenerator struct {
@@ -64,8 +64,8 @@ func (x *TableAwsQuicksightFoldersGenerator) GetDataSource() *schema.DataSource 
 					item := result.(types.FolderSummary)
 
 					out, err := svc.DescribeFolder(ctx, &quicksight.DescribeFolderInput{
-						AwsAccountId:	aws.String(cl.AccountID),
-						FolderId:	item.FolderId,
+						AwsAccountId: aws.String(cl.AccountID),
+						FolderId:     item.FolderId,
 					})
 					if err != nil {
 						return nil, err

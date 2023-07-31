@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecr"
 	"github.com/aws/aws-sdk-go-v2/service/ecr/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcrRepositoriesGenerator struct {
@@ -95,8 +95,8 @@ func (x *TableAwsEcrRepositoriesGenerator) GetColumns() []*schema.Column {
 					repo := result.(types.Repository)
 
 					input := ecr.GetRepositoryPolicyInput{
-						RepositoryName:	repo.RepositoryName,
-						RegistryId:	repo.RegistryId,
+						RepositoryName: repo.RepositoryName,
+						RegistryId:     repo.RegistryId,
 					}
 					output, err := svc.GetRepositoryPolicy(ctx, &input)
 					if err != nil {

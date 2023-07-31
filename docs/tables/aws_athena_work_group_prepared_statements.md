@@ -4,15 +4,15 @@
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| region | string | X | √ |  | 
+| statement_name | string | X | √ |  | 
+| work_group_name | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 | description | string | X | √ |  | 
 | last_modified_time | timestamp | X | √ |  | 
-| work_group_name | string | X | √ |  | 
-| aws_athena_work_groups_selefra_id | string | X | X | fk to aws_athena_work_groups.selefra_id | 
-| account_id | string | X | √ |  | 
-| work_group_arn | string | X | √ |  | 
 | query_statement | string | X | √ |  | 
-| statement_name | string | X | √ |  | 
+| region | string | X | √ |  | 
+| work_group_arn | string | X | √ |  | 
 | selefra_id | string | √ | √ | random id | 
+| aws_athena_work_groups_selefra_id | string | X | X | fk to aws_athena_work_groups.selefra_id | 
 
 

@@ -13,16 +13,16 @@ arn
 |  ----  | ----  | ----  | ----  | ---- | 
 | catalog_id | string | X | √ |  | 
 | create_table_default_permissions | json | X | √ |  | 
+| create_time | timestamp | X | √ |  | 
+| location_uri | string | X | √ |  | 
+| target_database | json | X | √ |  | 
+| name | string | X | √ |  | 
 | description | string | X | √ |  | 
 | parameters | json | X | √ |  | 
-| target_database | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
 | arn | string | √ | √ |  | 
-| name | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| location_uri | string | X | √ |  | 
-| account_id | string | X | √ |  | 
 | tags | json | X | √ |  | 
-| create_time | timestamp | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
 
 

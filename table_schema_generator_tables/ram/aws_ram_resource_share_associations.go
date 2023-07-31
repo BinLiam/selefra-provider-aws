@@ -42,8 +42,8 @@ func (x *TableAwsRamResourceShareAssociationsGenerator) GetDataSource() *schema.
 	return &schema.DataSource{
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			err := fetchRamResourceShareAssociationsByType(ctx, client, &ram.GetResourceShareAssociationsInput{
-				AssociationType:	types.ResourceShareAssociationTypeResource,
-				MaxResults:		aws.Int32(500),
+				AssociationType: types.ResourceShareAssociationTypeResource,
+				MaxResults:      aws.Int32(500),
 			}, resultChannel)
 			if err != nil {
 				return schema.NewDiagnosticsErrorPullTable(task.Table, err)
@@ -51,8 +51,8 @@ func (x *TableAwsRamResourceShareAssociationsGenerator) GetDataSource() *schema.
 			}
 
 			err = fetchRamResourceShareAssociationsByType(ctx, client, &ram.GetResourceShareAssociationsInput{
-				AssociationType:	types.ResourceShareAssociationTypePrincipal,
-				MaxResults:		aws.Int32(500),
+				AssociationType: types.ResourceShareAssociationTypePrincipal,
+				MaxResults:      aws.Int32(500),
 			}, resultChannel)
 			if err != nil {
 				return schema.NewDiagnosticsErrorPullTable(task.Table, err)

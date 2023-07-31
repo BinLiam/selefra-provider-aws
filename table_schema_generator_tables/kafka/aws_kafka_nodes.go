@@ -71,8 +71,8 @@ func (x *TableAwsKafkaNodesGenerator) GetDataSource() *schema.DataSource {
 
 func getListNodesInput(task *schema.DataSourcePullTask) kafka.ListNodesInput {
 	return kafka.ListNodesInput{
-		ClusterArn:	task.ParentRawResult.(*types.Cluster).ClusterArn,
-		MaxResults:	100,
+		ClusterArn: task.ParentRawResult.(*types.Cluster).ClusterArn,
+		MaxResults: 100,
 	}
 }
 

@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/route53"
 	"github.com/aws/aws-sdk-go-v2/service/route53/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsRoute53HealthChecksGenerator struct {
@@ -57,8 +57,8 @@ func (x *TableAwsRoute53HealthChecksGenerator) GetDataSource() *schema.DataSourc
 				}
 				for _, h := range healthChecks {
 					wrapper := Route53HealthCheckWrapper{
-						HealthCheck:	h,
-						Tags:		aws_client.TagsToMap(getRoute53tagsByResourceID(*h.Id, tagsResponse.ResourceTagSets)),
+						HealthCheck: h,
+						Tags:        aws_client.TagsToMap(getRoute53tagsByResourceID(*h.Id, tagsResponse.ResourceTagSets)),
 					}
 					resultChannel <- wrapper
 				}
@@ -98,7 +98,7 @@ func (x *TableAwsRoute53HealthChecksGenerator) GetDataSource() *schema.DataSourc
 
 type Route53HealthCheckWrapper struct {
 	types.HealthCheck
-	Tags	map[string]string
+	Tags map[string]string
 }
 
 func getRoute53tagsByResourceID(id string, set []types.ResourceTagSet) []types.Tag {
@@ -132,11 +132,11 @@ func (x *TableAwsRoute53HealthChecksGenerator) GetColumns() []*schema.Column {
 
 				cl := client.(*aws_client.Client)
 				return arn.ARN{
-					Partition:	cl.Partition,
-					Service:	"route53",
-					Region:		"",
-					AccountID:	"",
-					Resource:	strings.Join(ids, "/"),
+					Partition: cl.Partition,
+					Service:   "route53",
+					Region:    "",
+					AccountID: "",
+					Resource:  strings.Join(ids, "/"),
 				}.String(), nil
 			})).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("cloud_watch_alarm_configuration_dimensions").ColumnType(schema.ColumnTypeJSON).

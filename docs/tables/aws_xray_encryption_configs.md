@@ -1,4 +1,4 @@
-# Table: aws_xray_encryption_config
+# Table: aws_xray_encryption_configs
 
 ## Columns 
 
@@ -7,8 +7,8 @@
 | key_id | string | X | √ |  | 
 | status | string | X | √ |  | 
 | type | string | X | √ |  | 
-| selefra_id | string | √ | √ | random id | 
 | account_id | string | X | √ |  | 
 | region | string | X | √ |  | 
+| selefra_id | string | √ | √ | random id | 
 
 

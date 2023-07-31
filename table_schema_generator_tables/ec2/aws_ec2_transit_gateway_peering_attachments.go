@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEc2TransitGatewayPeeringAttachmentsGenerator struct {
@@ -41,8 +41,8 @@ func (x *TableAwsEc2TransitGatewayPeeringAttachmentsGenerator) GetDataSource() *
 			config := ec2.DescribeTransitGatewayPeeringAttachmentsInput{
 				Filters: []types.Filter{
 					{
-						Name:	aws.String("transit-gateway-id"),
-						Values:	[]string{*r.TransitGatewayId},
+						Name:   aws.String("transit-gateway-id"),
+						Values: []string{*r.TransitGatewayId},
 					},
 				},
 			}

@@ -6,9 +6,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcsClustersGenerator struct {
@@ -51,8 +51,8 @@ func (x *TableAwsEcsClustersGenerator) GetDataSource() *schema.DataSource {
 					return nil
 				}
 				describeClusterOutput, err := svc.DescribeClusters(ctx, &ecs.DescribeClustersInput{
-					Clusters:	listClustersOutput.ClusterArns,
-					Include:	[]types.ClusterField{types.ClusterFieldTags},
+					Clusters: listClustersOutput.ClusterArns,
+					Include:  []types.ClusterField{types.ClusterFieldTags},
 				})
 				if err != nil {
 					return schema.NewDiagnosticsErrorPullTable(task.Table, err)

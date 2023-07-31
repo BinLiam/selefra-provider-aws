@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/route53/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
 
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsRoute53HostedZoneTrafficPolicyInstancesGenerator struct {
@@ -94,11 +94,11 @@ func (x *TableAwsRoute53HostedZoneTrafficPolicyInstancesGenerator) GetColumns() 
 					cl := client.(*aws_client.Client)
 					tp := result.(types.TrafficPolicyInstance)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	string("route53"),
-						Region:		"",
-						AccountID:	"",
-						Resource:	fmt.Sprintf("trafficpolicyinstance/%s", aws.ToString(tp.Id)),
+						Partition: cl.Partition,
+						Service:   string("route53"),
+						Region:    "",
+						AccountID: "",
+						Resource:  fmt.Sprintf("trafficpolicyinstance/%s", aws.ToString(tp.Id)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

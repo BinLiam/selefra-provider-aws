@@ -11,30 +11,31 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| vpc_id | string | X | √ |  | 
 | selefra_id | string | √ | √ | primary keys value md5 | 
+| db_cluster_snapshot_arn | string | X | √ |  | 
+| source_db_cluster_snapshot_arn | string | X | √ |  | 
+| storage_encrypted | bool | X | √ |  | 
+| snapshot_type | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
 | attributes | json | X | √ |  | 
-| allocated_storage | int | X | √ |  | 
-| db_cluster_identifier | string | X | √ |  | 
+| engine | string | X | √ |  | 
+| engine_version | string | X | √ |  | 
+| kms_key_id | string | X | √ |  | 
 | license_model | string | X | √ |  | 
+| snapshot_create_time | timestamp | X | √ |  | 
 | status | string | X | √ |  | 
+| region | string | X | √ |  | 
+| tags | json | X | √ |  | 
 | availability_zones | string_array | X | √ |  | 
 | cluster_create_time | timestamp | X | √ |  | 
-| kms_key_id | string | X | √ |  | 
-| snapshot_create_time | timestamp | X | √ |  | 
-| snapshot_type | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| engine_version | string | X | √ |  | 
-| iam_database_authentication_enabled | bool | X | √ |  | 
-| percent_progress | int | X | √ |  | 
-| storage_encrypted | bool | X | √ |  | 
-| source_db_cluster_snapshot_arn | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| db_cluster_snapshot_identifier | string | X | √ |  | 
-| engine | string | X | √ |  | 
+| db_cluster_identifier | string | X | √ |  | 
 | master_username | string | X | √ |  | 
-| port | int | X | √ |  | 
+| percent_progress | big_int | X | √ |  | 
+| port | big_int | X | √ |  | 
+| vpc_id | string | X | √ |  | 
+| allocated_storage | big_int | X | √ |  | 
+| db_cluster_snapshot_identifier | string | X | √ |  | 
+| iam_database_authentication_enabled | bool | X | √ |  | 
 
 

@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/wafv2"
 	"github.com/aws/aws-sdk-go-v2/service/wafv2/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsWafv2ManagedRuleGroupsGenerator struct {
@@ -93,9 +93,9 @@ func (x *TableAwsWafv2ManagedRuleGroupsGenerator) GetColumns() []*schema.Column 
 					service := c.AwsServices().Wafv2
 
 					output, err := service.DescribeManagedRuleGroup(ctx, &wafv2.DescribeManagedRuleGroupInput{
-						Name:		managedRuleGroupSum.Name,
-						VendorName:	managedRuleGroupSum.VendorName,
-						Scope:		c.WAFScope,
+						Name:       managedRuleGroupSum.Name,
+						VendorName: managedRuleGroupSum.VendorName,
+						Scope:      c.WAFScope,
 					}, func(options *wafv2.Options) {
 						options.Region = c.Region
 					})

@@ -1,8 +1,8 @@
 package mocks
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	context "context"
+	"github.com/selefra/selefra-provider-aws/constants"
 	reflect "reflect"
 
 	fsx "github.com/aws/aws-sdk-go-v2/service/fsx"
@@ -10,8 +10,8 @@ import (
 )
 
 type MockFsxClient struct {
-	ctrl		*gomock.Controller
-	recorder	*MockFsxClientMockRecorder
+	ctrl     *gomock.Controller
+	recorder *MockFsxClientMockRecorder
 }
 
 type MockFsxClientMockRecorder struct {

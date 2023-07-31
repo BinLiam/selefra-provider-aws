@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/iot"
 	"github.com/aws/aws-sdk-go-v2/service/iot/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsIotCaCertificatesGenerator struct {
@@ -113,8 +113,8 @@ func (x *TableAwsIotCaCertificatesGenerator) GetColumns() []*schema.Column {
 					cl := client.(*aws_client.Client)
 					svc := cl.AwsServices().Iot
 					input := iot.ListCertificatesByCAInput{
-						CaCertificateId:	i.CertificateId,
-						PageSize:		aws.Int32(250),
+						CaCertificateId: i.CertificateId,
+						PageSize:        aws.Int32(250),
 					}
 
 					var certs []string

@@ -1,9 +1,9 @@
 package aws_client
 
 import (
-	"github.com/selefra/selefra-provider-aws/constants"
 	"context"
 	"errors"
+	"github.com/selefra/selefra-provider-aws/constants"
 	"reflect"
 	"regexp"
 	"strings"
@@ -25,12 +25,12 @@ var notFoundErrorSubstrings = []string{
 }
 
 var accessDeniedErrorStrings = map[string]struct{}{
-	constants.AuthorizationError:			{},
-	constants.AccessDenied:				{},
-	constants.AccessDeniedException:			{},
-	constants.InsufficientPrivilegesException:	{},
-	constants.UnauthorizedOperation:			{},
-	constants.Unauthorized:				{},
+	constants.AuthorizationError:              {},
+	constants.AccessDenied:                    {},
+	constants.AccessDeniedException:           {},
+	constants.InsufficientPrivilegesException: {},
+	constants.UnauthorizedOperation:           {},
+	constants.Unauthorized:                    {},
 }
 
 func isNotFoundError(err error) bool {
@@ -122,11 +122,11 @@ func IsInvalidParameterValueError(err error) bool {
 
 func makeARN(service string, partition, accountID, region string, idParts ...string) arn.ARN {
 	return arn.ARN{
-		Partition:	partition,
-		Service:	string(service),
-		Region:		region,
-		AccountID:	accountID,
-		Resource:	strings.Join(idParts, constants.Constants_26),
+		Partition: partition,
+		Service:   string(service),
+		Region:    region,
+		AccountID: accountID,
+		Resource:  strings.Join(idParts, constants.Constants_26),
 	}
 }
 
@@ -135,20 +135,20 @@ type AwsService struct {
 }
 
 type SupportedServiceRegionsData struct {
-	Partitions		map[string]AwsPartition	`json:"partitions"`
-	regionVsPartition	map[string]string
+	Partitions        map[string]AwsPartition `json:"partitions"`
+	regionVsPartition map[string]string
 }
 
 var MAX_GOROUTINES = 10
 
 var (
-	PartitionServiceRegionFile	= constants.Datapartitionserviceregionjson
-	defaultPartition		= constants.Aws
+	PartitionServiceRegionFile = constants.Datapartitionserviceregionjson
+	defaultPartition           = constants.Aws
 )
 
 var (
-	readOnce		sync.Once
-	supportedServiceRegion	*SupportedServiceRegionsData
+	readOnce               sync.Once
+	supportedServiceRegion *SupportedServiceRegionsData
 )
 
 func IgnoreCommonErrors(err error) bool {

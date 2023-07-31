@@ -63,7 +63,7 @@ func (x *TableAwsIamOpenidConnectIdentityProvidersGenerator) GetDataSource() *sc
 
 type IamOpenIdIdentityProviderWrapper struct {
 	*iam.GetOpenIDConnectProviderOutput
-	Arn	string
+	Arn string
 }
 
 func (x *TableAwsIamOpenidConnectIdentityProvidersGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

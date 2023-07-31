@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcsTaskDefinitionsGenerator struct {
@@ -55,8 +55,8 @@ func (x *TableAwsEcsTaskDefinitionsGenerator) GetDataSource() *schema.DataSource
 					taskArn := result.(string)
 
 					describeTaskDefinitionOutput, err := svc.DescribeTaskDefinition(ctx, &ecs.DescribeTaskDefinitionInput{
-						TaskDefinition:	aws.String(taskArn),
-						Include:	[]types.TaskDefinitionField{types.TaskDefinitionFieldTags},
+						TaskDefinition: aws.String(taskArn),
+						Include:        []types.TaskDefinitionField{types.TaskDefinitionFieldTags},
 					})
 					if err != nil {
 						return nil, err
@@ -65,8 +65,8 @@ func (x *TableAwsEcsTaskDefinitionsGenerator) GetDataSource() *schema.DataSource
 						return nil, errors.New("nil TaskDefinition encountered")
 					}
 					return TaskDefinitionWrapper{
-						TaskDefinition:	describeTaskDefinitionOutput.TaskDefinition,
-						Tags:		describeTaskDefinitionOutput.Tags,
+						TaskDefinition: describeTaskDefinitionOutput.TaskDefinition,
+						Tags:           describeTaskDefinitionOutput.Tags,
 					}, nil
 
 				})
@@ -82,7 +82,7 @@ func (x *TableAwsEcsTaskDefinitionsGenerator) GetDataSource() *schema.DataSource
 
 type TaskDefinitionWrapper struct {
 	*types.TaskDefinition
-	Tags	[]types.Tag
+	Tags []types.Tag
 }
 
 func (x *TableAwsEcsTaskDefinitionsGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

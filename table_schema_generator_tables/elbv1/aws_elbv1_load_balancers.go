@@ -63,9 +63,9 @@ func (x *TableAwsElbv1LoadBalancersGenerator) GetDataSource() *schema.DataSource
 					}
 
 					wrapper := ELBv1LoadBalancerWrapper{
-						LoadBalancerDescription:	lb,
-						Tags:				aws_client.TagsToMap(getTagsByLoadBalancerName(*lb.LoadBalancerName, tagsResponse.TagDescriptions)),
-						Attributes:			loadBalancerAttributes.LoadBalancerAttributes,
+						LoadBalancerDescription: lb,
+						Tags:                    aws_client.TagsToMap(getTagsByLoadBalancerName(*lb.LoadBalancerName, tagsResponse.TagDescriptions)),
+						Attributes:              loadBalancerAttributes.LoadBalancerAttributes,
 					}
 
 					resultChannel <- wrapper
@@ -148,11 +148,11 @@ func (x *TableAwsElbv1LoadBalancersGenerator) GetColumns() []*schema.Column {
 
 				cl := client.(*aws_client.Client)
 				return arn.ARN{
-					Partition:	cl.Partition,
-					Service:	"elasticloadbalancing",
-					Region:		cl.Region,
-					AccountID:	cl.AccountID,
-					Resource:	strings.Join(ids, "/"),
+					Partition: cl.Partition,
+					Service:   "elasticloadbalancing",
+					Region:    cl.Region,
+					AccountID: cl.AccountID,
+					Resource:  strings.Join(ids, "/"),
 				}.String(), nil
 			})).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("selefra_id").ColumnType(schema.ColumnTypeString).SetUnique().Description("primary keys value md5").

@@ -78,7 +78,7 @@ func (x *TableAwsIamUserAccessKeysGenerator) GetDataSource() *schema.DataSource 
 
 type AccessKeyWrapper struct {
 	types.AccessKeyMetadata
-	LastRotated	time.Time
+	LastRotated time.Time
 }
 
 func (x *TableAwsIamUserAccessKeysGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

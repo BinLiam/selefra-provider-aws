@@ -11,21 +11,21 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| description | string | X | √ |  | 
 | tags | json | X | √ |  | 
 | policy | json | X | √ |  | 
-| available_labels | json | X | √ |  | 
-| consumed_labels | json | X | √ |  | 
-| label_namespace | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| capacity | big_int | X | √ |  | 
+| name | string | X | √ |  | 
+| rules | json | X | √ |  | 
 | account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| consumed_labels | json | X | √ |  | 
+| custom_response_bodies | json | X | √ |  | 
+| label_namespace | string | X | √ |  | 
 | arn | string | √ | √ |  | 
 | id | string | X | √ |  | 
-| custom_response_bodies | json | X | √ |  | 
-| capacity | int | X | √ |  | 
-| name | string | X | √ |  | 
 | visibility_config | json | X | √ |  | 
-| description | string | X | √ |  | 
-| rules | json | X | √ |  | 
+| available_labels | json | X | √ |  | 
+| region | string | X | √ |  | 
 
 

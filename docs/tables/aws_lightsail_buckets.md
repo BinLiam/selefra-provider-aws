@@ -4,24 +4,24 @@
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| tags | json | X | √ |  | 
-| object_versioning | string | X | √ |  | 
-| resource_type | string | X | √ |  | 
-| state | json | X | √ |  | 
 | access_log_config | json | X | √ |  | 
-| created_at | timestamp | X | √ |  | 
+| bundle_id | string | X | √ |  | 
+| account_id | string | X | √ |  | 
 | selefra_id | string | √ | √ | random id | 
-| url | string | X | √ |  | 
-| access_rules | json | X | √ |  | 
+| able_to_update_bundle | bool | X | √ |  | 
 | arn | string | X | √ |  | 
-| location | json | X | √ |  | 
+| created_at | timestamp | X | √ |  | 
 | readonly_access_accounts | string_array | X | √ |  | 
+| state | json | X | √ |  | 
+| access_rules | json | X | √ |  | 
+| location | json | X | √ |  | 
+| object_versioning | string | X | √ |  | 
+| url | string | X | √ |  | 
+| region | string | X | √ |  | 
+| name | string | X | √ |  | 
+| resource_type | string | X | √ |  | 
 | resources_receiving_access | json | X | √ |  | 
 | support_code | string | X | √ |  | 
-| able_to_update_bundle | bool | X | √ |  | 
-| bundle_id | string | X | √ |  | 
-| name | string | X | √ |  | 
+| tags | json | X | √ |  | 
 
 

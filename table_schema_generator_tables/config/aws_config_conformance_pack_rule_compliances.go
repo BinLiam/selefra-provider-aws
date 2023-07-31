@@ -50,7 +50,7 @@ func (x *TableAwsConfigConformancePackRuleCompliancesGenerator) GetDataSource() 
 				}
 				for _, conformancePackRuleCompliance := range resp.ConformancePackRuleComplianceList {
 					detailParams := &configservice.GetConformancePackComplianceDetailsInput{
-						ConformancePackName:	conformancePackDetail.ConformancePackName,
+						ConformancePackName: conformancePackDetail.ConformancePackName,
 						Filters: &types.ConformancePackEvaluationFilters{
 							ConfigRuleNames: []string{*conformancePackRuleCompliance.ConfigRuleName},
 						},
@@ -63,13 +63,13 @@ func (x *TableAwsConfigConformancePackRuleCompliancesGenerator) GetDataSource() 
 						}
 						for _, conformancePackComplianceDetail := range output.ConformancePackRuleEvaluationResults {
 							resultChannel <- ConformancePackComplianceWrapper{
-								ComplianceType:			conformancePackRuleCompliance.ComplianceType,
-								ConfigRuleName:			conformancePackRuleCompliance.ConfigRuleName,
-								Controls:			conformancePackRuleCompliance.Controls,
-								ConfigRuleInvokedTime:		conformancePackComplianceDetail.ConfigRuleInvokedTime,
-								EvaluationResultIdentifier:	conformancePackComplianceDetail.EvaluationResultIdentifier,
-								ResultRecordedTime:		conformancePackComplianceDetail.ResultRecordedTime,
-								Annotation:			conformancePackComplianceDetail.Annotation,
+								ComplianceType:             conformancePackRuleCompliance.ComplianceType,
+								ConfigRuleName:             conformancePackRuleCompliance.ConfigRuleName,
+								Controls:                   conformancePackRuleCompliance.Controls,
+								ConfigRuleInvokedTime:      conformancePackComplianceDetail.ConfigRuleInvokedTime,
+								EvaluationResultIdentifier: conformancePackComplianceDetail.EvaluationResultIdentifier,
+								ResultRecordedTime:         conformancePackComplianceDetail.ResultRecordedTime,
+								Annotation:                 conformancePackComplianceDetail.Annotation,
 							}
 						}
 						if output.NextToken == nil {
@@ -89,19 +89,19 @@ func (x *TableAwsConfigConformancePackRuleCompliancesGenerator) GetDataSource() 
 }
 
 type ConformancePackComplianceWrapper struct {
-	ComplianceType	types.ConformancePackComplianceType
+	ComplianceType types.ConformancePackComplianceType
 
-	ConfigRuleName	*string
+	ConfigRuleName *string
 
-	Controls	[]string
+	Controls []string
 
-	ConfigRuleInvokedTime	*time.Time
+	ConfigRuleInvokedTime *time.Time
 
-	EvaluationResultIdentifier	*types.EvaluationResultIdentifier
+	EvaluationResultIdentifier *types.EvaluationResultIdentifier
 
-	ResultRecordedTime	*time.Time
+	ResultRecordedTime *time.Time
 
-	Annotation	*string
+	Annotation *string
 }
 
 func (x *TableAwsConfigConformancePackRuleCompliancesGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {

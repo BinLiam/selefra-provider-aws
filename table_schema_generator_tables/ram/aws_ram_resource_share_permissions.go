@@ -42,8 +42,8 @@ func (x *TableAwsRamResourceSharePermissionsGenerator) GetDataSource() *schema.D
 	return &schema.DataSource{
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			input := &ram.ListResourceSharePermissionsInput{
-				MaxResults:		aws.Int32(500),
-				ResourceShareArn:	task.ParentRawResult.(types.ResourceShare).ResourceShareArn,
+				MaxResults:       aws.Int32(500),
+				ResourceShareArn: task.ParentRawResult.(types.ResourceShare).ResourceShareArn,
 			}
 			paginator := ram.NewListResourceSharePermissionsPaginator(client.(*aws_client.Client).AwsServices().RAM, input)
 			for paginator.HasMorePages() {
@@ -99,8 +99,8 @@ func (x *TableAwsRamResourceSharePermissionsGenerator) GetColumns() []*schema.Co
 						return nil, err
 					}
 					input := &ram.GetPermissionInput{
-						PermissionArn:		permission.Arn,
-						PermissionVersion:	aws.Int32(int32(version)),
+						PermissionArn:     permission.Arn,
+						PermissionVersion: aws.Int32(int32(version)),
 					}
 					response, err := client.(*aws_client.Client).AwsServices().RAM.GetPermission(ctx, input)
 					if err != nil {

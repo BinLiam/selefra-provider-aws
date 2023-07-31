@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kms"
 	"github.com/aws/aws-sdk-go-v2/service/kms/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsKmsKeyGrantsGenerator struct {
@@ -43,8 +43,8 @@ func (x *TableAwsKmsKeyGrantsGenerator) GetDataSource() *schema.DataSource {
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			k := task.ParentRawResult.(*types.KeyMetadata)
 			config := kms.ListGrantsInput{
-				KeyId:	k.Arn,
-				Limit:	aws.Int32(100),
+				KeyId: k.Arn,
+				Limit: aws.Int32(100),
 			}
 
 			c := client.(*aws_client.Client)

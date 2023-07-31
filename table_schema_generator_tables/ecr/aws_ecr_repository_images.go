@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ecr"
 	"github.com/aws/aws-sdk-go-v2/service/ecr/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsEcrRepositoryImagesGenerator struct {
@@ -42,8 +42,8 @@ func (x *TableAwsEcrRepositoryImagesGenerator) GetDataSource() *schema.DataSourc
 	return &schema.DataSource{
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			config := ecr.DescribeImagesInput{
-				RepositoryName:	task.ParentRawResult.(types.Repository).RepositoryName,
-				MaxResults:	aws.Int32(1000),
+				RepositoryName: task.ParentRawResult.(types.Repository).RepositoryName,
+				MaxResults:     aws.Int32(1000),
 			}
 			paginator := ecr.NewDescribeImagesPaginator(client.(*aws_client.Client).AwsServices().Ecr, &config)
 			for paginator.HasMorePages() {
@@ -93,11 +93,11 @@ func (x *TableAwsEcrRepositoryImagesGenerator) GetColumns() []*schema.Column {
 					item := result.(types.ImageDetail)
 
 					a := arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ecr",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	"repository_image/" + *item.RegistryId + "/" + *item.ImageDigest,
+						Partition: cl.Partition,
+						Service:   "ecr",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  "repository_image/" + *item.RegistryId + "/" + *item.ImageDigest,
 					}
 					return a.String(), nil
 				}

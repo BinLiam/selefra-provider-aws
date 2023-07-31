@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lightsail"
 	"github.com/aws/aws-sdk-go-v2/service/lightsail/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsLightsailDatabaseEventsGenerator struct {
@@ -38,8 +38,8 @@ func (x *TableAwsLightsailDatabaseEventsGenerator) GetDataSource() *schema.DataS
 		Pull: func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask, resultChannel chan<- any) *schema.Diagnostics {
 			r := task.ParentRawResult.(types.RelationalDatabase)
 			input := lightsail.GetRelationalDatabaseEventsInput{
-				RelationalDatabaseName:	r.Name,
-				DurationInMinutes:	aws.Int32(20160),
+				RelationalDatabaseName: r.Name,
+				DurationInMinutes:      aws.Int32(20160),
 			}
 			c := client.(*aws_client.Client)
 			svc := c.AwsServices().Lightsail

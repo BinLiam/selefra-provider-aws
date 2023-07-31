@@ -9,9 +9,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ssm"
 	"github.com/aws/aws-sdk-go-v2/service/ssm/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsSsmInstancesGenerator struct {
@@ -119,11 +119,11 @@ func (x *TableAwsSsmInstancesGenerator) GetColumns() []*schema.Column {
 					instance := result.(types.InstanceInformation)
 					cl := client.(*aws_client.Client)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"ssm",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	fmt.Sprintf("managed-instance/%s", aws.ToString(instance.InstanceId)),
+						Partition: cl.Partition,
+						Service:   "ssm",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  fmt.Sprintf("managed-instance/%s", aws.ToString(instance.InstanceId)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

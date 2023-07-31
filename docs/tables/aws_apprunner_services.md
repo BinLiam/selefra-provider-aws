@@ -11,23 +11,25 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| observability_configuration | json | X | √ |  | 
-| region | string | X | √ |  | 
-| auto_scaling_configuration_summary | json | X | √ |  | 
-| updated_at | timestamp | X | √ |  | 
-| encryption_configuration | json | X | √ |  | 
-| health_check_configuration | json | X | √ |  | 
-| account_id | string | X | √ |  | 
-| created_at | timestamp | X | √ |  | 
-| source_configuration | json | X | √ |  | 
-| status | string | X | √ |  | 
-| service_id | string | X | √ |  | 
-| service_url | string | X | √ |  | 
 | network_configuration | json | X | √ |  | 
 | service_name | string | X | √ |  | 
-| deleted_at | timestamp | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
+| source_configuration | json | X | √ |  | 
+| account_id | string | X | √ |  | 
 | arn | string | √ | √ |  | 
+| encryption_configuration | json | X | √ |  | 
+| auto_scaling_configuration_summary | json | X | √ |  | 
+| created_at | timestamp | X | √ |  | 
 | instance_configuration | json | X | √ |  | 
+| service_arn | string | X | √ |  | 
+| service_id | string | X | √ |  | 
+| status | string | X | √ |  | 
+| updated_at | timestamp | X | √ |  | 
+| service_url | string | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| deleted_at | timestamp | X | √ |  | 
+| region | string | X | √ |  | 
+| tags | json | X | √ |  | 
+| health_check_configuration | json | X | √ |  | 
+| observability_configuration | json | X | √ |  | 
 
 

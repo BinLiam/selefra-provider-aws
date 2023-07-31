@@ -11,17 +11,18 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
+| lifecycle_transition_reason | json | X | √ |  | 
+| resource_arn | string | X | √ |  | 
+| snapshot_id | string | X | √ |  | 
+| volume_id | string | X | √ |  | 
+| account_id | string | X | √ |  | 
+| arn | string | √ | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| administrative_actions | json | X | √ |  | 
 | creation_time | timestamp | X | √ |  | 
 | lifecycle | string | X | √ |  | 
 | name | string | X | √ |  | 
-| volume_id | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
-| lifecycle_transition_reason | json | X | √ |  | 
-| snapshot_id | string | X | √ |  | 
-| account_id | string | X | √ |  | 
-| region | string | X | √ |  | 
-| arn | string | √ | √ |  | 
 | tags | json | X | √ |  | 
-| administrative_actions | json | X | √ |  | 
+| region | string | X | √ |  | 
 
 

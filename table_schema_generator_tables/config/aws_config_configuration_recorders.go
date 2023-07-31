@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/configservice"
 	"github.com/aws/aws-sdk-go-v2/service/configservice/types"
 	"github.com/selefra/selefra-provider-aws/aws_client"
-	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 	"github.com/selefra/selefra-provider-sdk/provider/schema"
 	"github.com/selefra/selefra-provider-sdk/provider/transformer/column_value_extractor"
+	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 )
 
 type TableAwsConfigConfigurationRecordersGenerator struct {
@@ -76,14 +76,14 @@ func (x *TableAwsConfigConfigurationRecordersGenerator) GetDataSource() *schema.
 					if *s.Name == *configurationRecorder.Name {
 						configurationRecorderStatus = s
 						resultChannel <- ConfigurationRecorderWrapper{
-							ConfigurationRecorder:		configurationRecorder,
-							StatusLastErrorCode:		configurationRecorderStatus.LastErrorCode,
-							StatusLastErrorMessage:		configurationRecorderStatus.LastErrorMessage,
-							StatusLastStartTime:		configurationRecorderStatus.LastStartTime,
-							StatusLastStatus:		configurationRecorderStatus.LastStatus,
-							StatusLastStatusChangeTime:	configurationRecorderStatus.LastStatusChangeTime,
-							StatusLastStopTime:		configurationRecorderStatus.LastStopTime,
-							StatusRecording:		configurationRecorderStatus.Recording,
+							ConfigurationRecorder:      configurationRecorder,
+							StatusLastErrorCode:        configurationRecorderStatus.LastErrorCode,
+							StatusLastErrorMessage:     configurationRecorderStatus.LastErrorMessage,
+							StatusLastStartTime:        configurationRecorderStatus.LastStartTime,
+							StatusLastStatus:           configurationRecorderStatus.LastStatus,
+							StatusLastStatusChangeTime: configurationRecorderStatus.LastStatusChangeTime,
+							StatusLastStopTime:         configurationRecorderStatus.LastStopTime,
+							StatusRecording:            configurationRecorderStatus.Recording,
 						}
 
 						break
@@ -97,13 +97,13 @@ func (x *TableAwsConfigConfigurationRecordersGenerator) GetDataSource() *schema.
 
 type ConfigurationRecorderWrapper struct {
 	types.ConfigurationRecorder
-	StatusLastErrorCode		*string
-	StatusLastErrorMessage		*string
-	StatusLastStartTime		*time.Time
-	StatusLastStatus		types.RecorderStatus
-	StatusLastStatusChangeTime	*time.Time
-	StatusLastStopTime		*time.Time
-	StatusRecording			bool
+	StatusLastErrorCode        *string
+	StatusLastErrorMessage     *string
+	StatusLastStartTime        *time.Time
+	StatusLastStatus           types.RecorderStatus
+	StatusLastStatusChangeTime *time.Time
+	StatusLastStopTime         *time.Time
+	StatusRecording            bool
 }
 
 func (x *TableAwsConfigConfigurationRecordersGenerator) GetExpandClientTask() func(ctx context.Context, clientMeta *schema.ClientMeta, client any, task *schema.DataSourcePullTask) []*schema.ClientTaskContext {
@@ -132,11 +132,11 @@ func (x *TableAwsConfigConfigurationRecordersGenerator) GetColumns() []*schema.C
 					cl := client.(*aws_client.Client)
 					cfg := result.(ConfigurationRecorderWrapper)
 					return arn.ARN{
-						Partition:	cl.Partition,
-						Service:	"config",
-						Region:		cl.Region,
-						AccountID:	cl.AccountID,
-						Resource:	fmt.Sprintf("config-recorder/%s", aws.ToString(cfg.Name)),
+						Partition: cl.Partition,
+						Service:   "config",
+						Region:    cl.Region,
+						AccountID: cl.AccountID,
+						Resource:  fmt.Sprintf("config-recorder/%s", aws.ToString(cfg.Name)),
 					}.String(), nil
 				}
 				extractResultValue, err := extractor()

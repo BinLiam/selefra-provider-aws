@@ -11,14 +11,10 @@ arn
 
 |  Column Name   |  Data Type  | Uniq | Nullable | Description | 
 |  ----  | ----  | ----  | ----  | ---- | 
-| client_id_list | string_array | X | √ |  | 
-| thumbprint_list | string_array | X | √ |  | 
-| url | string | X | √ |  | 
-| selefra_id | string | √ | √ | primary keys value md5 | 
 | account_id | string | X | √ |  | 
-| arn | string | √ | √ |  | 
-| result_metadata | json | X | √ |  | 
 | tags | json | X | √ |  | 
-| create_date | timestamp | X | √ |  | 
+| selefra_id | string | √ | √ | primary keys value md5 | 
+| get_open_id_connect_provider_output | json | X | √ |  | 
+| arn | string | √ | √ |  | 
 
 
