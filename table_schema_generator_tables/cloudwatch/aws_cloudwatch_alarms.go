@@ -22,7 +22,7 @@ func (x *TableAwsCloudwatchAlarmsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudwatchAlarmsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricAlarm.html"
 }
 
 func (x *TableAwsCloudwatchAlarmsGenerator) GetVersion() uint64 {

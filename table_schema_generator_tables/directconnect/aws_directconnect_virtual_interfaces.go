@@ -23,7 +23,7 @@ func (x *TableAwsDirectconnectVirtualInterfacesGenerator) GetTableName() string 
 }
 
 func (x *TableAwsDirectconnectVirtualInterfacesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html"
 }
 
 func (x *TableAwsDirectconnectVirtualInterfacesGenerator) GetVersion() uint64 {

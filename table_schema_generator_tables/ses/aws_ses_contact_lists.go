@@ -21,7 +21,7 @@ func (x *TableAwsSesContactListsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSesContactListsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetContactList.html"
 }
 
 func (x *TableAwsSesContactListsGenerator) GetVersion() uint64 {

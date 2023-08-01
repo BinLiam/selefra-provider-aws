@@ -22,7 +22,7 @@ func (x *TableAwsSsoadminAccountAssignmentsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsoadminAccountAssignmentsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_AccountAssignment.html"
 }
 
 func (x *TableAwsSsoadminAccountAssignmentsGenerator) GetVersion() uint64 {

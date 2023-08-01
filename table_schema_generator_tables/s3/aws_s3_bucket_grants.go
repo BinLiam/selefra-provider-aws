@@ -23,7 +23,7 @@ func (x *TableAwsS3BucketGrantsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsS3BucketGrantsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonS3/latest/API/API_Grant.html"
 }
 
 func (x *TableAwsS3BucketGrantsGenerator) GetVersion() uint64 {

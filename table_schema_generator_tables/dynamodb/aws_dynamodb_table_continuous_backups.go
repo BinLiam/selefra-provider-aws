@@ -21,7 +21,7 @@ func (x *TableAwsDynamodbTableContinuousBackupsGenerator) GetTableName() string 
 }
 
 func (x *TableAwsDynamodbTableContinuousBackupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ContinuousBackupsDescription.html"
 }
 
 func (x *TableAwsDynamodbTableContinuousBackupsGenerator) GetVersion() uint64 {

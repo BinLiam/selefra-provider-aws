@@ -20,7 +20,7 @@ func (x *TableAwsKmsAliasesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKmsAliasesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/kms/latest/APIReference/API_AliasListEntry.html"
 }
 
 func (x *TableAwsKmsAliasesGenerator) GetVersion() uint64 {

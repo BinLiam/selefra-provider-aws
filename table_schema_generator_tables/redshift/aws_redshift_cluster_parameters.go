@@ -22,7 +22,7 @@ func (x *TableAwsRedshiftClusterParametersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRedshiftClusterParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/redshift/latest/APIReference/API_Parameter.html"
 }
 
 func (x *TableAwsRedshiftClusterParametersGenerator) GetVersion() uint64 {

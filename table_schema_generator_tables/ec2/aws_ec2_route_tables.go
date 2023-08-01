@@ -23,7 +23,7 @@ func (x *TableAwsEc2RouteTablesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2RouteTablesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RouteTable.html"
 }
 
 func (x *TableAwsEc2RouteTablesGenerator) GetVersion() uint64 {

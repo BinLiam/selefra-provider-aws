@@ -21,7 +21,7 @@ func (x *TableAwsLightsailInstanceSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailInstanceSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_InstanceSnapshot.html"
 }
 
 func (x *TableAwsLightsailInstanceSnapshotsGenerator) GetVersion() uint64 {

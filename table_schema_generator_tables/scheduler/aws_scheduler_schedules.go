@@ -22,7 +22,7 @@ func (x *TableAwsSchedulerSchedulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSchedulerSchedulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/scheduler/latest/APIReference/API_GetScheduleOutput.html"
 }
 
 func (x *TableAwsSchedulerSchedulesGenerator) GetVersion() uint64 {

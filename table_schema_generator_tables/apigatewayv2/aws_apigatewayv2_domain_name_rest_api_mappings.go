@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayv2DomainNameRestApiMappingsGenerator) GetTableName() 
 }
 
 func (x *TableAwsApigatewayv2DomainNameRestApiMappingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_ApiMapping.html"
 }
 
 func (x *TableAwsApigatewayv2DomainNameRestApiMappingsGenerator) GetVersion() uint64 {

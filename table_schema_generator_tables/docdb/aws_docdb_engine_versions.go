@@ -22,7 +22,7 @@ func (x *TableAwsDocdbEngineVersionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbEngineVersionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBEngineVersion.html"
 }
 
 func (x *TableAwsDocdbEngineVersionsGenerator) GetVersion() uint64 {

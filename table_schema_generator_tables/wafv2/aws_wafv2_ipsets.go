@@ -23,7 +23,7 @@ func (x *TableAwsWafv2IpsetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafv2IpsetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_IPSet.html"
 }
 
 func (x *TableAwsWafv2IpsetsGenerator) GetVersion() uint64 {

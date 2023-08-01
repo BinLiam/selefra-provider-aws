@@ -23,7 +23,7 @@ func (x *TableAwsWorkspacesDirectoriesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWorkspacesDirectoriesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/workspaces/latest/api/API_WorkspaceDirectory.html"
 }
 
 func (x *TableAwsWorkspacesDirectoriesGenerator) GetVersion() uint64 {

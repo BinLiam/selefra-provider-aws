@@ -21,7 +21,7 @@ func (x *TableAwsBackupPlanSelectionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupPlanSelectionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_GetBackupSelection.html"
 }
 
 func (x *TableAwsBackupPlanSelectionsGenerator) GetVersion() uint64 {

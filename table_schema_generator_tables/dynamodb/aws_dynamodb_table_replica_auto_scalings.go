@@ -22,7 +22,7 @@ func (x *TableAwsDynamodbTableReplicaAutoScalingsGenerator) GetTableName() strin
 }
 
 func (x *TableAwsDynamodbTableReplicaAutoScalingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ReplicaAutoScalingDescription.html"
 }
 
 func (x *TableAwsDynamodbTableReplicaAutoScalingsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsKinesisStreamsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKinesisStreamsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_StreamDescriptionSummary.html"
 }
 
 func (x *TableAwsKinesisStreamsGenerator) GetVersion() uint64 {

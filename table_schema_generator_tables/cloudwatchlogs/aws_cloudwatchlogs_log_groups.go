@@ -21,7 +21,7 @@ func (x *TableAwsCloudwatchlogsLogGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudwatchlogsLogGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LogGroup.html"
 }
 
 func (x *TableAwsCloudwatchlogsLogGroupsGenerator) GetVersion() uint64 {

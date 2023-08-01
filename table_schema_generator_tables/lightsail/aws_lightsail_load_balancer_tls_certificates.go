@@ -21,7 +21,7 @@ func (x *TableAwsLightsailLoadBalancerTlsCertificatesGenerator) GetTableName() s
 }
 
 func (x *TableAwsLightsailLoadBalancerTlsCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_LoadBalancerTlsCertificate.html"
 }
 
 func (x *TableAwsLightsailLoadBalancerTlsCertificatesGenerator) GetVersion() uint64 {

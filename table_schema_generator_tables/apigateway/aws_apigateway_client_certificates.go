@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayClientCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayClientCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_ClientCertificate.html"
 }
 
 func (x *TableAwsApigatewayClientCertificatesGenerator) GetVersion() uint64 {

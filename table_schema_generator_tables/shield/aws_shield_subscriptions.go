@@ -20,7 +20,7 @@ func (x *TableAwsShieldSubscriptionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsShieldSubscriptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_Subscription.html"
 }
 
 func (x *TableAwsShieldSubscriptionsGenerator) GetVersion() uint64 {

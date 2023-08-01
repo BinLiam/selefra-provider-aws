@@ -23,7 +23,7 @@ func (x *TableAwsEc2NetworkInterfacesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2NetworkInterfacesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html"
 }
 
 func (x *TableAwsEc2NetworkInterfacesGenerator) GetVersion() uint64 {

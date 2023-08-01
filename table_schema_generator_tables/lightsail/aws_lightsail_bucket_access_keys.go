@@ -21,7 +21,7 @@ func (x *TableAwsLightsailBucketAccessKeysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailBucketAccessKeysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_AccessKey.html"
 }
 
 func (x *TableAwsLightsailBucketAccessKeysGenerator) GetVersion() uint64 {

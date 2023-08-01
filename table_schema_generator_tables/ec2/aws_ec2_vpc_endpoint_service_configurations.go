@@ -23,7 +23,7 @@ func (x *TableAwsEc2VpcEndpointServiceConfigurationsGenerator) GetTableName() st
 }
 
 func (x *TableAwsEc2VpcEndpointServiceConfigurationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ServiceConfiguration.html"
 }
 
 func (x *TableAwsEc2VpcEndpointServiceConfigurationsGenerator) GetVersion() uint64 {

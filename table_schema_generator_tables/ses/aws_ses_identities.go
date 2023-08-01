@@ -22,7 +22,7 @@ func (x *TableAwsSesIdentitiesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSesIdentitiesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html"
 }
 
 func (x *TableAwsSesIdentitiesGenerator) GetVersion() uint64 {

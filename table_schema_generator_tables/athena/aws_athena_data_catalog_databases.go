@@ -22,7 +22,7 @@ func (x *TableAwsAthenaDataCatalogDatabasesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAthenaDataCatalogDatabasesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/athena/latest/APIReference/API_Database.html"
 }
 
 func (x *TableAwsAthenaDataCatalogDatabasesGenerator) GetVersion() uint64 {

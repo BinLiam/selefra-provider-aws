@@ -21,7 +21,7 @@ func (x *TableAwsAutoscalingGroupScalingPoliciesGenerator) GetTableName() string
 }
 
 func (x *TableAwsAutoscalingGroupScalingPoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_ScalingPolicy.html"
 }
 
 func (x *TableAwsAutoscalingGroupScalingPoliciesGenerator) GetVersion() uint64 {

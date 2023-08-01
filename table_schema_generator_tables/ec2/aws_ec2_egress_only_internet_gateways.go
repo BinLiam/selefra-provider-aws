@@ -23,7 +23,7 @@ func (x *TableAwsEc2EgressOnlyInternetGatewaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2EgressOnlyInternetGatewaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EgressOnlyInternetGateway.html"
 }
 
 func (x *TableAwsEc2EgressOnlyInternetGatewaysGenerator) GetVersion() uint64 {

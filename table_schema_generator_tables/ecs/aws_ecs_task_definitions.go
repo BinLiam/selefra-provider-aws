@@ -23,7 +23,7 @@ func (x *TableAwsEcsTaskDefinitionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEcsTaskDefinitionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskDefinition.html"
 }
 
 func (x *TableAwsEcsTaskDefinitionsGenerator) GetVersion() uint64 {

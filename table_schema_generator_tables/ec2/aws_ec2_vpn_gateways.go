@@ -23,7 +23,7 @@ func (x *TableAwsEc2VpnGatewaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2VpnGatewaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnGateway.html"
 }
 
 func (x *TableAwsEc2VpnGatewaysGenerator) GetVersion() uint64 {

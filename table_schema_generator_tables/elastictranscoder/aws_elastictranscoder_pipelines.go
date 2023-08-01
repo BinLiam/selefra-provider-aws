@@ -20,7 +20,7 @@ func (x *TableAwsElastictranscoderPipelinesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElastictranscoderPipelinesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/list-pipelines.html"
 }
 
 func (x *TableAwsElastictranscoderPipelinesGenerator) GetVersion() uint64 {

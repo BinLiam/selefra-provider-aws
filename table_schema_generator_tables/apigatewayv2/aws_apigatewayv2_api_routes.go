@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayv2ApiRoutesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayv2ApiRoutesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_Route.html"
 }
 
 func (x *TableAwsApigatewayv2ApiRoutesGenerator) GetVersion() uint64 {

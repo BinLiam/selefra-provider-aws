@@ -21,7 +21,7 @@ func (x *TableAwsEc2SubnetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2SubnetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html"
 }
 
 func (x *TableAwsEc2SubnetsGenerator) GetVersion() uint64 {

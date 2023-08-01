@@ -23,7 +23,7 @@ func (x *TableAwsEc2KeyPairsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2KeyPairsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_KeyPairInfo.html"
 }
 
 func (x *TableAwsEc2KeyPairsGenerator) GetVersion() uint64 {

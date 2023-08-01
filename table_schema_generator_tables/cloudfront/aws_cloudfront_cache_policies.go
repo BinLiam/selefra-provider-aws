@@ -24,7 +24,7 @@ func (x *TableAwsCloudfrontCachePoliciesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudfrontCachePoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CachePolicySummary.html"
 }
 
 func (x *TableAwsCloudfrontCachePoliciesGenerator) GetVersion() uint64 {

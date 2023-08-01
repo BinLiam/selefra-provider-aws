@@ -22,7 +22,7 @@ func (x *TableAwsEc2TransitGatewayRouteTablesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2TransitGatewayRouteTablesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayRouteTable.html"
 }
 
 func (x *TableAwsEc2TransitGatewayRouteTablesGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsCloudfrontDistributionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudfrontDistributionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Distribution.html"
 }
 
 func (x *TableAwsCloudfrontDistributionsGenerator) GetVersion() uint64 {

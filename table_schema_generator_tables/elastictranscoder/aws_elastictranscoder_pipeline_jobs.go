@@ -21,7 +21,7 @@ func (x *TableAwsElastictranscoderPipelineJobsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElastictranscoderPipelineJobsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/list-jobs-by-pipeline.html"
 }
 
 func (x *TableAwsElastictranscoderPipelineJobsGenerator) GetVersion() uint64 {

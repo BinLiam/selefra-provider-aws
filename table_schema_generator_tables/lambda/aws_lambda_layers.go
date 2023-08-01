@@ -21,7 +21,7 @@ func (x *TableAwsLambdaLayersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLambdaLayersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lambda/latest/dg/API_LayersListItem.html"
 }
 
 func (x *TableAwsLambdaLayersGenerator) GetVersion() uint64 {

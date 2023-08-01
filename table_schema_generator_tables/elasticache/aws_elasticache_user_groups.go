@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheUserGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheUserGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_UserGroup.html"
 }
 
 func (x *TableAwsElasticacheUserGroupsGenerator) GetVersion() uint64 {

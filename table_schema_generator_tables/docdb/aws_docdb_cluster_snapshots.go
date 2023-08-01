@@ -21,7 +21,7 @@ func (x *TableAwsDocdbClusterSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbClusterSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterSnapshot.html"
 }
 
 func (x *TableAwsDocdbClusterSnapshotsGenerator) GetVersion() uint64 {

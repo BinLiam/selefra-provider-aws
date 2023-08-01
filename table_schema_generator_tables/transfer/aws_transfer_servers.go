@@ -22,7 +22,7 @@ func (x *TableAwsTransferServersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsTransferServersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/transfer/latest/userguide/API_DescribedServer.html"
 }
 
 func (x *TableAwsTransferServersGenerator) GetVersion() uint64 {

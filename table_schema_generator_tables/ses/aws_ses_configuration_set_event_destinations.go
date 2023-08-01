@@ -20,7 +20,7 @@ func (x *TableAwsSesConfigurationSetEventDestinationsGenerator) GetTableName() s
 }
 
 func (x *TableAwsSesConfigurationSetEventDestinationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_EventDestination.html"
 }
 
 func (x *TableAwsSesConfigurationSetEventDestinationsGenerator) GetVersion() uint64 {

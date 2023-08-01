@@ -23,7 +23,7 @@ func (x *TableAwsDirectconnectLagsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDirectconnectLagsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Lag.html"
 }
 
 func (x *TableAwsDirectconnectLagsGenerator) GetVersion() uint64 {

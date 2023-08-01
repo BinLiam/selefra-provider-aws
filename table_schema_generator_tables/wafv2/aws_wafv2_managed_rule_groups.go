@@ -22,7 +22,7 @@ func (x *TableAwsWafv2ManagedRuleGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafv2ManagedRuleGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_ManagedRuleGroupSummary.html"
 }
 
 func (x *TableAwsWafv2ManagedRuleGroupsGenerator) GetVersion() uint64 {

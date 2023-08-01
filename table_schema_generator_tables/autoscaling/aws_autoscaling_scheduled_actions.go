@@ -21,7 +21,7 @@ func (x *TableAwsAutoscalingScheduledActionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAutoscalingScheduledActionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_ScheduledUpdateGroupAction.html"
 }
 
 func (x *TableAwsAutoscalingScheduledActionsGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsBackupVaultRecoveryPointsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupVaultRecoveryPointsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_RecoveryPointByBackupVault.html"
 }
 
 func (x *TableAwsBackupVaultRecoveryPointsGenerator) GetVersion() uint64 {

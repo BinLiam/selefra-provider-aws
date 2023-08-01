@@ -20,7 +20,7 @@ func (x *TableAwsDirectconnectVirtualGatewaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDirectconnectVirtualGatewaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualGateway.html"
 }
 
 func (x *TableAwsDirectconnectVirtualGatewaysGenerator) GetVersion() uint64 {

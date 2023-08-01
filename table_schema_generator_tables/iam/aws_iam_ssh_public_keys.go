@@ -22,7 +22,7 @@ func (x *TableAwsIamSshPublicKeysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamSshPublicKeysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_SSHPublicKeyMetadata.html"
 }
 
 func (x *TableAwsIamSshPublicKeysGenerator) GetVersion() uint64 {

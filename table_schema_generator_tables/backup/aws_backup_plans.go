@@ -22,7 +22,7 @@ func (x *TableAwsBackupPlansGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupPlansGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_GetBackupPlan.html"
 }
 
 func (x *TableAwsBackupPlansGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsQldbLedgerJournalS3ExportsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsQldbLedgerJournalS3ExportsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/qldb/latest/developerguide/API_JournalS3ExportDescription.html"
 }
 
 func (x *TableAwsQldbLedgerJournalS3ExportsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsApprunnerOperationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApprunnerOperationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_OperationSummary.html"
 }
 
 func (x *TableAwsApprunnerOperationsGenerator) GetVersion() uint64 {

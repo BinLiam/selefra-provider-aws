@@ -21,7 +21,7 @@ func (x *TableAwsIotStreamsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIotStreamsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/iot/latest/apireference/API_StreamInfo.html"
 }
 
 func (x *TableAwsIotStreamsGenerator) GetVersion() uint64 {

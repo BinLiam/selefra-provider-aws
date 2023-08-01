@@ -22,7 +22,7 @@ func (x *TableAwsDocdbPendingMaintenanceActionsGenerator) GetTableName() string 
 }
 
 func (x *TableAwsDocdbPendingMaintenanceActionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_PendingMaintenanceAction.html"
 }
 
 func (x *TableAwsDocdbPendingMaintenanceActionsGenerator) GetVersion() uint64 {

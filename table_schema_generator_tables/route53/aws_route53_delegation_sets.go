@@ -24,7 +24,7 @@ func (x *TableAwsRoute53DelegationSetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRoute53DelegationSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_DelegationSet.html"
 }
 
 func (x *TableAwsRoute53DelegationSetsGenerator) GetVersion() uint64 {

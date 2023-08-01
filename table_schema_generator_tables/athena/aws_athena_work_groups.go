@@ -3,6 +3,7 @@ package athena
 import (
 	"context"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/aws/aws-sdk-go-v2/service/athena"
@@ -23,7 +24,7 @@ func (x *TableAwsAthenaWorkGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAthenaWorkGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/athena/latest/APIReference/API_WorkGroup.html"
 }
 
 func (x *TableAwsAthenaWorkGroupsGenerator) GetVersion() uint64 {

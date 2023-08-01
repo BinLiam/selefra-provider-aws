@@ -20,7 +20,7 @@ func (x *TableAwsLambdaFunctionConcurrencyConfigsGenerator) GetTableName() strin
 }
 
 func (x *TableAwsLambdaFunctionConcurrencyConfigsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lambda/latest/dg/API_ProvisionedConcurrencyConfigListItem.html"
 }
 
 func (x *TableAwsLambdaFunctionConcurrencyConfigsGenerator) GetVersion() uint64 {

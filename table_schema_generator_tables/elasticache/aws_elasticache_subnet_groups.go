@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheSubnetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheSubnetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CacheSubnetGroup.html"
 }
 
 func (x *TableAwsElasticacheSubnetGroupsGenerator) GetVersion() uint64 {

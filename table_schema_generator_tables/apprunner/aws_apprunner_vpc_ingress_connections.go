@@ -21,7 +21,7 @@ func (x *TableAwsApprunnerVpcIngressConnectionsGenerator) GetTableName() string 
 }
 
 func (x *TableAwsApprunnerVpcIngressConnectionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_VpcIngressConnection.html"
 }
 
 func (x *TableAwsApprunnerVpcIngressConnectionsGenerator) GetVersion() uint64 {

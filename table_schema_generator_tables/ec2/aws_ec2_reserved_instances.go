@@ -23,7 +23,7 @@ func (x *TableAwsEc2ReservedInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2ReservedInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReservedInstances.html"
 }
 
 func (x *TableAwsEc2ReservedInstancesGenerator) GetVersion() uint64 {

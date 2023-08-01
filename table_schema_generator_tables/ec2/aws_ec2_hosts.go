@@ -23,7 +23,7 @@ func (x *TableAwsEc2HostsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2HostsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Host.html"
 }
 
 func (x *TableAwsEc2HostsGenerator) GetVersion() uint64 {

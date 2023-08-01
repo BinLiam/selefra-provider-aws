@@ -25,7 +25,7 @@ func (x *TableAwsElbv2LoadBalancersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElbv2LoadBalancersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_LoadBalancer.html"
 }
 
 func (x *TableAwsElbv2LoadBalancersGenerator) GetVersion() uint64 {

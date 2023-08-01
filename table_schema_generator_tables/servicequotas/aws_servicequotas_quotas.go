@@ -22,7 +22,7 @@ func (x *TableAwsServicequotasQuotasGenerator) GetTableName() string {
 }
 
 func (x *TableAwsServicequotasQuotasGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/servicequotas/2019-06-24/apireference/API_ServiceQuota.html"
 }
 
 func (x *TableAwsServicequotasQuotasGenerator) GetVersion() uint64 {

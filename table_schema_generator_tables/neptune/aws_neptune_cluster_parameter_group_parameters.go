@@ -22,7 +22,7 @@ func (x *TableAwsNeptuneClusterParameterGroupParametersGenerator) GetTableName()
 }
 
 func (x *TableAwsNeptuneClusterParameterGroupParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-parameters.html#DescribeDBParameterGroups"
 }
 
 func (x *TableAwsNeptuneClusterParameterGroupParametersGenerator) GetVersion() uint64 {

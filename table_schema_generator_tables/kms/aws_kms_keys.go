@@ -22,7 +22,7 @@ func (x *TableAwsKmsKeysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKmsKeysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/kms/latest/APIReference/API_GrantListEntry.html"
 }
 
 func (x *TableAwsKmsKeysGenerator) GetVersion() uint64 {

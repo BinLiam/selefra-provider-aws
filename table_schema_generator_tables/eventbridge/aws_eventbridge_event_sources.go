@@ -21,7 +21,7 @@ func (x *TableAwsEventbridgeEventSourcesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEventbridgeEventSourcesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_EventSource.html"
 }
 
 func (x *TableAwsEventbridgeEventSourcesGenerator) GetVersion() uint64 {

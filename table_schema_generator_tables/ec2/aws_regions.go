@@ -22,7 +22,7 @@ func (x *TableAwsRegionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRegionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Region.html"
 }
 
 func (x *TableAwsRegionsGenerator) GetVersion() uint64 {

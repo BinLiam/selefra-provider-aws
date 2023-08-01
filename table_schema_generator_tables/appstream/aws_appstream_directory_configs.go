@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamDirectoryConfigsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamDirectoryConfigsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_DirectoryConfig.html"
 }
 
 func (x *TableAwsAppstreamDirectoryConfigsGenerator) GetVersion() uint64 {

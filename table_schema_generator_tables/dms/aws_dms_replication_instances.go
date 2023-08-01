@@ -21,7 +21,7 @@ func (x *TableAwsDmsReplicationInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDmsReplicationInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/dms/latest/APIReference/API_ReplicationInstance.html"
 }
 
 func (x *TableAwsDmsReplicationInstancesGenerator) GetVersion() uint64 {

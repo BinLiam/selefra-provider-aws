@@ -20,7 +20,7 @@ func (x *TableAwsLambdaFunctionEventSourceMappingsGenerator) GetTableName() stri
 }
 
 func (x *TableAwsLambdaFunctionEventSourceMappingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lambda/latest/dg/API_EventSourceMappingConfiguration.html"
 }
 
 func (x *TableAwsLambdaFunctionEventSourceMappingsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsRdsSubnetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsSubnetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBSubnetGroup.html"
 }
 
 func (x *TableAwsRdsSubnetGroupsGenerator) GetVersion() uint64 {

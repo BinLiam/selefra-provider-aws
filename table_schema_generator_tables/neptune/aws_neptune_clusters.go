@@ -22,7 +22,7 @@ func (x *TableAwsNeptuneClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsNeptuneClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-clusters.html#DescribeDBClusters"
 }
 
 func (x *TableAwsNeptuneClustersGenerator) GetVersion() uint64 {

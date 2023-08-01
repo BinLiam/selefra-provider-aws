@@ -21,7 +21,7 @@ func (x *TableAwsEc2ByoipCidrsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2ByoipCidrsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ByoipCidr.html"
 }
 
 func (x *TableAwsEc2ByoipCidrsGenerator) GetVersion() uint64 {

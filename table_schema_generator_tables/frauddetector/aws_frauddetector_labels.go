@@ -20,7 +20,7 @@ func (x *TableAwsFrauddetectorLabelsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFrauddetectorLabelsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/frauddetector/latest/api/API_Label.html"
 }
 
 func (x *TableAwsFrauddetectorLabelsGenerator) GetVersion() uint64 {

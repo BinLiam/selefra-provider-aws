@@ -21,7 +21,7 @@ func (x *TableAwsLightsailDatabaseSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailDatabaseSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_RelationalDatabaseSnapshot.html"
 }
 
 func (x *TableAwsLightsailDatabaseSnapshotsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsSsmParametersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_ParameterMetadata.html"
 }
 
 func (x *TableAwsSsmParametersGenerator) GetVersion() uint64 {

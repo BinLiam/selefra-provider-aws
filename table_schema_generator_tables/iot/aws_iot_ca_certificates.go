@@ -22,7 +22,7 @@ func (x *TableAwsIotCaCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIotCaCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/iot/latest/apireference/API_CACertificateDescription.html"
 }
 
 func (x *TableAwsIotCaCertificatesGenerator) GetVersion() uint64 {

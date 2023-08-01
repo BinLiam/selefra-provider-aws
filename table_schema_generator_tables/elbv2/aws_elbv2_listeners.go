@@ -22,7 +22,7 @@ func (x *TableAwsElbv2ListenersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElbv2ListenersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Listener.html"
 }
 
 func (x *TableAwsElbv2ListenersGenerator) GetVersion() uint64 {

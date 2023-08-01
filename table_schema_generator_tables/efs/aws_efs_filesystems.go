@@ -22,7 +22,7 @@ func (x *TableAwsEfsFilesystemsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEfsFilesystemsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/efs/latest/ug/API_FileSystemDescription.html"
 }
 
 func (x *TableAwsEfsFilesystemsGenerator) GetVersion() uint64 {

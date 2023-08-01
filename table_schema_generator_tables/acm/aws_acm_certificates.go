@@ -21,7 +21,7 @@ func (x *TableAwsAcmCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAcmCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/acm/latest/APIReference/API_CertificateDetail.html"
 }
 
 func (x *TableAwsAcmCertificatesGenerator) GetVersion() uint64 {

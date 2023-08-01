@@ -22,7 +22,7 @@ func (x *TableAwsAthenaWorkGroupPreparedStatementsGenerator) GetTableName() stri
 }
 
 func (x *TableAwsAthenaWorkGroupPreparedStatementsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/athena/latest/APIReference/API_PreparedStatement.html"
 }
 
 func (x *TableAwsAthenaWorkGroupPreparedStatementsGenerator) GetVersion() uint64 {

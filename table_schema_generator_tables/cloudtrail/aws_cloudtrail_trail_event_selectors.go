@@ -21,7 +21,7 @@ func (x *TableAwsCloudtrailTrailEventSelectorsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudtrailTrailEventSelectorsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_EventSelector.html"
 }
 
 func (x *TableAwsCloudtrailTrailEventSelectorsGenerator) GetVersion() uint64 {

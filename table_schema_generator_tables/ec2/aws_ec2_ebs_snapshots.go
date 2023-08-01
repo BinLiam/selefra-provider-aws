@@ -23,7 +23,7 @@ func (x *TableAwsEc2EbsSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2EbsSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Snapshot.html"
 }
 
 func (x *TableAwsEc2EbsSnapshotsGenerator) GetVersion() uint64 {

@@ -24,7 +24,7 @@ func (x *TableAwsDirectconnectGatewaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDirectconnectGatewaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DirectConnectGateway.html"
 }
 
 func (x *TableAwsDirectconnectGatewaysGenerator) GetVersion() uint64 {

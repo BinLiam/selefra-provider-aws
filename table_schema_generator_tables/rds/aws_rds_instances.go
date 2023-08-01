@@ -22,7 +22,7 @@ func (x *TableAwsRdsInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBInstance.html"
 }
 
 func (x *TableAwsRdsInstancesGenerator) GetVersion() uint64 {

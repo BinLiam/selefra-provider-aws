@@ -20,7 +20,7 @@ func (x *TableAwsDocdbSubnetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbSubnetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html"
 }
 
 func (x *TableAwsDocdbSubnetGroupsGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsRamPrincipalsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRamPrincipalsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ram/latest/APIReference/API_Principal.html"
 }
 
 func (x *TableAwsRamPrincipalsGenerator) GetVersion() uint64 {

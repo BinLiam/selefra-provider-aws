@@ -22,7 +22,7 @@ func (x *TableAwsDocdbClusterParametersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbClusterParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Parameter.html"
 }
 
 func (x *TableAwsDocdbClusterParametersGenerator) GetVersion() uint64 {

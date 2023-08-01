@@ -20,7 +20,7 @@ func (x *TableAwsXraySamplingRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsXraySamplingRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/xray/latest/api/API_SamplingRuleRecord.html"
 }
 
 func (x *TableAwsXraySamplingRulesGenerator) GetVersion() uint64 {

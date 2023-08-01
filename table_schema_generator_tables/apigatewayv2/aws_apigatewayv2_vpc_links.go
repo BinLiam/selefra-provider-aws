@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayv2VpcLinksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayv2VpcLinksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_VpcLink.html"
 }
 
 func (x *TableAwsApigatewayv2VpcLinksGenerator) GetVersion() uint64 {

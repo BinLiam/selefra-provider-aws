@@ -22,7 +22,7 @@ func (x *TableAwsAmpWorkspacesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAmpWorkspacesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-APIReference.html#AMP-APIReference-WorkspaceDescription"
 }
 
 func (x *TableAwsAmpWorkspacesGenerator) GetVersion() uint64 {

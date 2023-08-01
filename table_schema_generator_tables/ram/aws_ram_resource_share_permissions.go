@@ -23,7 +23,7 @@ func (x *TableAwsRamResourceSharePermissionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRamResourceSharePermissionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceSharePermissionSummary.html"
 }
 
 func (x *TableAwsRamResourceSharePermissionsGenerator) GetVersion() uint64 {

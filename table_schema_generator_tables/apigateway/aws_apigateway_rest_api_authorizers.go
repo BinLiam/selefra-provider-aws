@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayRestApiAuthorizersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayRestApiAuthorizersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_Authorizer.html"
 }
 
 func (x *TableAwsApigatewayRestApiAuthorizersGenerator) GetVersion() uint64 {

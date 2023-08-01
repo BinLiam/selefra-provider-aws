@@ -22,7 +22,7 @@ func (x *TableAwsIotThingsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIotThingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/iot/latest/apireference/API_ThingAttribute.html"
 }
 
 func (x *TableAwsIotThingsGenerator) GetVersion() uint64 {

@@ -20,7 +20,7 @@ func (x *TableAwsAppstreamStacksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamStacksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_Stack.html"
 }
 
 func (x *TableAwsAppstreamStacksGenerator) GetVersion() uint64 {

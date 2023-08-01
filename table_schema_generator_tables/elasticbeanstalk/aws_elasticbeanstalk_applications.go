@@ -20,7 +20,7 @@ func (x *TableAwsElasticbeanstalkApplicationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticbeanstalkApplicationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ApplicationDescription.html"
 }
 
 func (x *TableAwsElasticbeanstalkApplicationsGenerator) GetVersion() uint64 {

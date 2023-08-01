@@ -20,7 +20,7 @@ func (x *TableAwsOrganizationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsOrganizationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/organizations/latest/APIReference/API_Organization.html"
 }
 
 func (x *TableAwsOrganizationsGenerator) GetVersion() uint64 {

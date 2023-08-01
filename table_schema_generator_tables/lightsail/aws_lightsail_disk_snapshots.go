@@ -21,7 +21,7 @@ func (x *TableAwsLightsailDiskSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailDiskSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_DiskSnapshot.html"
 }
 
 func (x *TableAwsLightsailDiskSnapshotsGenerator) GetVersion() uint64 {

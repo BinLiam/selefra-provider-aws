@@ -21,7 +21,7 @@ func (x *TableAwsFsxFileSystemsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxFileSystemsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_FileSystem.html"
 }
 
 func (x *TableAwsFsxFileSystemsGenerator) GetVersion() uint64 {

@@ -23,7 +23,7 @@ func (x *TableAwsEc2VpcsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2VpcsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Vpc.html"
 }
 
 func (x *TableAwsEc2VpcsGenerator) GetVersion() uint64 {

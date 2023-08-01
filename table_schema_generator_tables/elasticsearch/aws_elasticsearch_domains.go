@@ -21,7 +21,7 @@ func (x *TableAwsElasticsearchDomainsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticsearchDomainsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DomainStatus.html"
 }
 
 func (x *TableAwsElasticsearchDomainsGenerator) GetVersion() uint64 {

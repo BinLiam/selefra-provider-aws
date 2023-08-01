@@ -22,7 +22,7 @@ func (x *TableAwsAutoscalingGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAutoscalingGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_AutoScalingGroup.html"
 }
 
 func (x *TableAwsAutoscalingGroupsGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsLightsailInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_Instance.html"
 }
 
 func (x *TableAwsLightsailInstancesGenerator) GetVersion() uint64 {

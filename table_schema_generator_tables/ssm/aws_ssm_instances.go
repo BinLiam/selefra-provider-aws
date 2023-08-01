@@ -24,7 +24,7 @@ func (x *TableAwsSsmInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_InstanceInformation.html"
 }
 
 func (x *TableAwsSsmInstancesGenerator) GetVersion() uint64 {

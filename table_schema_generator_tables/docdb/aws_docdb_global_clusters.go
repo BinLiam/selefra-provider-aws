@@ -22,7 +22,7 @@ func (x *TableAwsDocdbGlobalClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbGlobalClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_GlobalCluster.html"
 }
 
 func (x *TableAwsDocdbGlobalClustersGenerator) GetVersion() uint64 {

@@ -20,7 +20,7 @@ func (x *TableAwsSsoadminInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsoadminInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_InstanceMetadata.html"
 }
 
 func (x *TableAwsSsoadminInstancesGenerator) GetVersion() uint64 {

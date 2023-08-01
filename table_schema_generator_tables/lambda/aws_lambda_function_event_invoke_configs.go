@@ -20,7 +20,7 @@ func (x *TableAwsLambdaFunctionEventInvokeConfigsGenerator) GetTableName() strin
 }
 
 func (x *TableAwsLambdaFunctionEventInvokeConfigsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lambda/latest/dg/API_FunctionEventInvokeConfig.html"
 }
 
 func (x *TableAwsLambdaFunctionEventInvokeConfigsGenerator) GetVersion() uint64 {

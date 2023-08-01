@@ -20,7 +20,7 @@ func (x *TableAwsSsmInventorySchemasGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmInventorySchemasGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_InventoryItemSchema.html"
 }
 
 func (x *TableAwsSsmInventorySchemasGenerator) GetVersion() uint64 {

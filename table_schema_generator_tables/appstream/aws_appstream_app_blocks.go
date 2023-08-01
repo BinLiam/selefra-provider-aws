@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamAppBlocksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamAppBlocksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_AppBlock.html"
 }
 
 func (x *TableAwsAppstreamAppBlocksGenerator) GetVersion() uint64 {

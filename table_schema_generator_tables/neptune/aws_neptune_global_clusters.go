@@ -21,7 +21,7 @@ func (x *TableAwsNeptuneGlobalClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsNeptuneGlobalClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#DescribeDBInstances"
 }
 
 func (x *TableAwsNeptuneGlobalClustersGenerator) GetVersion() uint64 {

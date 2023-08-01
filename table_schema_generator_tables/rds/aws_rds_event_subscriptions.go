@@ -21,7 +21,7 @@ func (x *TableAwsRdsEventSubscriptionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsEventSubscriptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_EventSubscription.html"
 }
 
 func (x *TableAwsRdsEventSubscriptionsGenerator) GetVersion() uint64 {

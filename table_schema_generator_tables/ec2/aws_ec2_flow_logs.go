@@ -23,7 +23,7 @@ func (x *TableAwsEc2FlowLogsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2FlowLogsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_FlowLog.html"
 }
 
 func (x *TableAwsEc2FlowLogsGenerator) GetVersion() uint64 {

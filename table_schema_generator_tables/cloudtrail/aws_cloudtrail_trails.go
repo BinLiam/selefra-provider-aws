@@ -25,7 +25,7 @@ func (x *TableAwsCloudtrailTrailsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudtrailTrailsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Trail.html"
 }
 
 func (x *TableAwsCloudtrailTrailsGenerator) GetVersion() uint64 {

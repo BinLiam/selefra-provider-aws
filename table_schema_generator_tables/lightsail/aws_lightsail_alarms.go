@@ -21,7 +21,7 @@ func (x *TableAwsLightsailAlarmsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailAlarmsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_Alarm.html"
 }
 
 func (x *TableAwsLightsailAlarmsGenerator) GetVersion() uint64 {

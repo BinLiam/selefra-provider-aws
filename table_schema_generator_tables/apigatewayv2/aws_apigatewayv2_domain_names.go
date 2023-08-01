@@ -3,6 +3,7 @@ package apigatewayv2
 import (
 	"context"
 	"fmt"
+
 	"github.com/selefra/selefra-provider-aws/apigatewayv2fix"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
@@ -25,7 +26,7 @@ func (x *TableAwsApigatewayv2DomainNamesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayv2DomainNamesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_DomainName.html"
 }
 
 func (x *TableAwsApigatewayv2DomainNamesGenerator) GetVersion() uint64 {

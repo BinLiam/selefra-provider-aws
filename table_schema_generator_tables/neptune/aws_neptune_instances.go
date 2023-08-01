@@ -22,7 +22,7 @@ func (x *TableAwsNeptuneInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsNeptuneInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-instances.html#DescribeDBInstances"
 }
 
 func (x *TableAwsNeptuneInstancesGenerator) GetVersion() uint64 {

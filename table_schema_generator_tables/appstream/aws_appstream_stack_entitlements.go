@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamStackEntitlementsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamStackEntitlementsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_Entitlement.html"
 }
 
 func (x *TableAwsAppstreamStackEntitlementsGenerator) GetVersion() uint64 {

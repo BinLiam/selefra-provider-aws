@@ -21,7 +21,7 @@ func (x *TableAwsCodepipelineWebhooksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCodepipelineWebhooksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ListWebhookItem.html"
 }
 
 func (x *TableAwsCodepipelineWebhooksGenerator) GetVersion() uint64 {

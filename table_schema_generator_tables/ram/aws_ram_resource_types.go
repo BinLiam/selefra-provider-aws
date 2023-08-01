@@ -21,7 +21,7 @@ func (x *TableAwsRamResourceTypesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRamResourceTypesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ram/latest/APIReference/API_ServiceNameAndResourceType.html"
 }
 
 func (x *TableAwsRamResourceTypesGenerator) GetVersion() uint64 {

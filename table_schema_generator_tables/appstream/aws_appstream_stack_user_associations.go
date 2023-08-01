@@ -22,7 +22,7 @@ func (x *TableAwsAppstreamStackUserAssociationsGenerator) GetTableName() string 
 }
 
 func (x *TableAwsAppstreamStackUserAssociationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_UserStackAssociation.html"
 }
 
 func (x *TableAwsAppstreamStackUserAssociationsGenerator) GetVersion() uint64 {

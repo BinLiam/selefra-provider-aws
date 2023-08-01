@@ -2,6 +2,7 @@ package accessanalyzer
 
 import (
 	"context"
+
 	"github.com/selefra/selefra-provider-sdk/table_schema_generator"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
@@ -22,7 +23,7 @@ func (x *TableAwsAccessanalyzerAnalyzerArchiveRulesGenerator) GetTableName() str
 }
 
 func (x *TableAwsAccessanalyzerAnalyzerArchiveRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_ArchiveRuleSummary.html"
 }
 
 func (x *TableAwsAccessanalyzerAnalyzerArchiveRulesGenerator) GetVersion() uint64 {

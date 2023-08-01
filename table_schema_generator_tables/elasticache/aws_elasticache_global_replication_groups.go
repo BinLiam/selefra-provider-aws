@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheGlobalReplicationGroupsGenerator) GetTableName() str
 }
 
 func (x *TableAwsElasticacheGlobalReplicationGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_GlobalReplicationGroup.html"
 }
 
 func (x *TableAwsElasticacheGlobalReplicationGroupsGenerator) GetVersion() uint64 {

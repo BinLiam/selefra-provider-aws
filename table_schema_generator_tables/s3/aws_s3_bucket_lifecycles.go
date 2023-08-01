@@ -21,7 +21,7 @@ func (x *TableAwsS3BucketLifecyclesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsS3BucketLifecyclesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonS3/latest/API/API_LifecycleRule.html"
 }
 
 func (x *TableAwsS3BucketLifecyclesGenerator) GetVersion() uint64 {

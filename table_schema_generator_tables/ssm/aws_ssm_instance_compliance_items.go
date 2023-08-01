@@ -24,7 +24,7 @@ func (x *TableAwsSsmInstanceComplianceItemsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmInstanceComplianceItemsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_ComplianceItem.html"
 }
 
 func (x *TableAwsSsmInstanceComplianceItemsGenerator) GetVersion() uint64 {

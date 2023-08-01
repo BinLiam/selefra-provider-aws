@@ -21,7 +21,7 @@ func (x *TableAwsFirehoseDeliveryStreamsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFirehoseDeliveryStreamsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/firehose/latest/APIReference/API_DeliveryStreamDescription.html"
 }
 
 func (x *TableAwsFirehoseDeliveryStreamsGenerator) GetVersion() uint64 {

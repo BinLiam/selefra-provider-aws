@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamUsersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamUsersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_User.html"
 }
 
 func (x *TableAwsAppstreamUsersGenerator) GetVersion() uint64 {

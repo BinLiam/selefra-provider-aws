@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_Snapshot.html"
 }
 
 func (x *TableAwsElasticacheSnapshotsGenerator) GetVersion() uint64 {

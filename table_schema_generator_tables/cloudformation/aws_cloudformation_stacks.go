@@ -21,7 +21,7 @@ func (x *TableAwsCloudformationStacksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudformationStacksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Stack.html"
 }
 
 func (x *TableAwsCloudformationStacksGenerator) GetVersion() uint64 {

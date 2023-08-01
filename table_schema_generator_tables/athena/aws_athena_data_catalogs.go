@@ -3,6 +3,7 @@ package athena
 import (
 	"context"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/aws/aws-sdk-go-v2/service/athena"
@@ -23,7 +24,7 @@ func (x *TableAwsAthenaDataCatalogsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAthenaDataCatalogsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/athena/latest/APIReference/API_DataCatalog.html"
 }
 
 func (x *TableAwsAthenaDataCatalogsGenerator) GetVersion() uint64 {

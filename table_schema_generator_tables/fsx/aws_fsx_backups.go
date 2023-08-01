@@ -21,7 +21,7 @@ func (x *TableAwsFsxBackupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxBackupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_Backup.html"
 }
 
 func (x *TableAwsFsxBackupsGenerator) GetVersion() uint64 {

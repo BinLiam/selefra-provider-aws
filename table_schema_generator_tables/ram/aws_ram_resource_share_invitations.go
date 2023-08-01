@@ -21,7 +21,7 @@ func (x *TableAwsRamResourceShareInvitationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRamResourceShareInvitationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShareInvitation.html"
 }
 
 func (x *TableAwsRamResourceShareInvitationsGenerator) GetVersion() uint64 {

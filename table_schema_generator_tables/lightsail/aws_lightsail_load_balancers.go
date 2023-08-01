@@ -21,7 +21,7 @@ func (x *TableAwsLightsailLoadBalancersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailLoadBalancersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_LoadBalancer.html"
 }
 
 func (x *TableAwsLightsailLoadBalancersGenerator) GetVersion() uint64 {

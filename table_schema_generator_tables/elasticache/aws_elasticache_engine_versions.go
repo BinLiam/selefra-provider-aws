@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheEngineVersionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheEngineVersionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CacheEngineVersion.html"
 }
 
 func (x *TableAwsElasticacheEngineVersionsGenerator) GetVersion() uint64 {

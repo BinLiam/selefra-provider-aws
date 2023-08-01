@@ -23,7 +23,7 @@ func (x *TableAwsCloudwatchlogsMetricFiltersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudwatchlogsMetricFiltersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_MetricFilter.html"
 }
 
 func (x *TableAwsCloudwatchlogsMetricFiltersGenerator) GetVersion() uint64 {

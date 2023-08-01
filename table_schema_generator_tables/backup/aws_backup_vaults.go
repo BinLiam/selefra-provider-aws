@@ -23,7 +23,7 @@ func (x *TableAwsBackupVaultsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupVaultsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BackupVaultListMember.html"
 }
 
 func (x *TableAwsBackupVaultsGenerator) GetVersion() uint64 {

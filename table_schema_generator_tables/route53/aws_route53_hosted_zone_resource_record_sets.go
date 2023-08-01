@@ -21,7 +21,7 @@ func (x *TableAwsRoute53HostedZoneResourceRecordSetsGenerator) GetTableName() st
 }
 
 func (x *TableAwsRoute53HostedZoneResourceRecordSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html"
 }
 
 func (x *TableAwsRoute53HostedZoneResourceRecordSetsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsAutoscalingLaunchConfigurationsGenerator) GetTableName() string
 }
 
 func (x *TableAwsAutoscalingLaunchConfigurationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LaunchConfiguration.html"
 }
 
 func (x *TableAwsAutoscalingLaunchConfigurationsGenerator) GetVersion() uint64 {

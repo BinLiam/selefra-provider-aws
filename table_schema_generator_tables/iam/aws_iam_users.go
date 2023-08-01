@@ -22,7 +22,7 @@ func (x *TableAwsIamUsersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamUsersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_User.html"
 }
 
 func (x *TableAwsIamUsersGenerator) GetVersion() uint64 {

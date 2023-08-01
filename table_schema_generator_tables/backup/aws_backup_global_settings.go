@@ -20,7 +20,7 @@ func (x *TableAwsBackupGlobalSettingsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupGlobalSettingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_DescribeGlobalSettings.html"
 }
 
 func (x *TableAwsBackupGlobalSettingsGenerator) GetVersion() uint64 {

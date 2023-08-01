@@ -22,7 +22,7 @@ func (x *TableAwsAmpRuleGroupsNamespacesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAmpRuleGroupsNamespacesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-APIReference.html#AMP-APIReference-RuleGroupsNamespaceDescription"
 }
 
 func (x *TableAwsAmpRuleGroupsNamespacesGenerator) GetVersion() uint64 {

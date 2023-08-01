@@ -21,7 +21,7 @@ func (x *TableAwsEcsClusterContainerInstancesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEcsClusterContainerInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerInstance.html"
 }
 
 func (x *TableAwsEcsClusterContainerInstancesGenerator) GetVersion() uint64 {

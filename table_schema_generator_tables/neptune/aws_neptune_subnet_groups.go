@@ -22,7 +22,7 @@ func (x *TableAwsNeptuneSubnetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsNeptuneSubnetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-subnets.html#DescribeDBSubnetGroups"
 }
 
 func (x *TableAwsNeptuneSubnetGroupsGenerator) GetVersion() uint64 {

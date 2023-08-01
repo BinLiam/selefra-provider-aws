@@ -3,6 +3,7 @@ package redshift
 import (
 	"context"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/aws/aws-sdk-go-v2/service/redshift"
@@ -23,7 +24,7 @@ func (x *TableAwsRedshiftEventSubscriptionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRedshiftEventSubscriptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/redshift/latest/APIReference/API_EventSubscription.html"
 }
 
 func (x *TableAwsRedshiftEventSubscriptionsGenerator) GetVersion() uint64 {

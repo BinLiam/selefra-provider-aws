@@ -21,7 +21,7 @@ func (x *TableAwsFsxFileCachesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxFileCachesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_FileCache.html"
 }
 
 func (x *TableAwsFsxFileCachesGenerator) GetVersion() uint64 {

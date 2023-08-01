@@ -21,7 +21,7 @@ func (x *TableAwsFsxSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_Snapshot.html"
 }
 
 func (x *TableAwsFsxSnapshotsGenerator) GetVersion() uint64 {

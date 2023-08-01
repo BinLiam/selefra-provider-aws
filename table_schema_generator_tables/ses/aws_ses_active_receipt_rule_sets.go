@@ -19,7 +19,7 @@ func (x *TableAwsSesActiveReceiptRuleSetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSesActiveReceiptRuleSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference/API_DescribeActiveReceiptRuleSet.html"
 }
 
 func (x *TableAwsSesActiveReceiptRuleSetsGenerator) GetVersion() uint64 {

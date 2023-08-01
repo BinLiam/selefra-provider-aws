@@ -22,7 +22,7 @@ func (x *TableAwsRamResourceSharesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRamResourceSharesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ram/latest/APIReference/API_ResourceShare.html"
 }
 
 func (x *TableAwsRamResourceSharesGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsRoute53TrafficPolicyVersionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRoute53TrafficPolicyVersionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_TrafficPolicy.html"
 }
 
 func (x *TableAwsRoute53TrafficPolicyVersionsGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsAthenaWorkGroupNamedQueriesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAthenaWorkGroupNamedQueriesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/athena/latest/APIReference/API_NamedQuery.html"
 }
 
 func (x *TableAwsAthenaWorkGroupNamedQueriesGenerator) GetVersion() uint64 {

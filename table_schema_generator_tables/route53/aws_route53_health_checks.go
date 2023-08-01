@@ -24,7 +24,7 @@ func (x *TableAwsRoute53HealthChecksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRoute53HealthChecksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheck.html"
 }
 
 func (x *TableAwsRoute53HealthChecksGenerator) GetVersion() uint64 {

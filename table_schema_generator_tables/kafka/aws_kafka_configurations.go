@@ -21,7 +21,7 @@ func (x *TableAwsKafkaConfigurationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKafkaConfigurationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-configuration.html"
 }
 
 func (x *TableAwsKafkaConfigurationsGenerator) GetVersion() uint64 {

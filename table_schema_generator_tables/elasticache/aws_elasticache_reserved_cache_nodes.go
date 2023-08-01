@@ -20,7 +20,7 @@ func (x *TableAwsElasticacheReservedCacheNodesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheReservedCacheNodesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ReservedCacheNode.html"
 }
 
 func (x *TableAwsElasticacheReservedCacheNodesGenerator) GetVersion() uint64 {

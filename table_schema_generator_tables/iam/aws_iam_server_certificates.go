@@ -21,7 +21,7 @@ func (x *TableAwsIamServerCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamServerCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_ServerCertificateMetadata.html"
 }
 
 func (x *TableAwsIamServerCertificatesGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsKafkaNodesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKafkaNodesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-nodes.html#ListNodes"
 }
 
 func (x *TableAwsKafkaNodesGenerator) GetVersion() uint64 {

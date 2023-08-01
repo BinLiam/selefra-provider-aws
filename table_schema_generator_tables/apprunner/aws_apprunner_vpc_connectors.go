@@ -20,7 +20,7 @@ func (x *TableAwsApprunnerVpcConnectorsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApprunnerVpcConnectorsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_VpcConnector.html"
 }
 
 func (x *TableAwsApprunnerVpcConnectorsGenerator) GetVersion() uint64 {

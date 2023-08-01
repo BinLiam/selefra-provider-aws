@@ -22,7 +22,7 @@ func (x *TableAwsEc2EipsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2EipsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Address.html"
 }
 
 func (x *TableAwsEc2EipsGenerator) GetVersion() uint64 {

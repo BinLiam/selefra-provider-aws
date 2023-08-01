@@ -20,7 +20,7 @@ func (x *TableAwsAppstreamApplicationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamApplicationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_Application.html"
 }
 
 func (x *TableAwsAppstreamApplicationsGenerator) GetVersion() uint64 {

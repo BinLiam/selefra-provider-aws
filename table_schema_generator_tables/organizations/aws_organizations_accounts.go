@@ -21,7 +21,7 @@ func (x *TableAwsOrganizationsAccountsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsOrganizationsAccountsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/organizations/latest/APIReference/API_Account.html"
 }
 
 func (x *TableAwsOrganizationsAccountsGenerator) GetVersion() uint64 {

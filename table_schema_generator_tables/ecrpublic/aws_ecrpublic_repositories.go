@@ -21,7 +21,7 @@ func (x *TableAwsEcrpublicRepositoriesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEcrpublicRepositoriesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonECRPublic/latest/APIReference/API_Repository.html"
 }
 
 func (x *TableAwsEcrpublicRepositoriesGenerator) GetVersion() uint64 {

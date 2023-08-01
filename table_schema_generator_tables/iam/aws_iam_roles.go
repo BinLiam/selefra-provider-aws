@@ -23,7 +23,7 @@ func (x *TableAwsIamRolesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamRolesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_Role.html"
 }
 
 func (x *TableAwsIamRolesGenerator) GetVersion() uint64 {

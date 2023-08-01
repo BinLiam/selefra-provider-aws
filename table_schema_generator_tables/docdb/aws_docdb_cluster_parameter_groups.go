@@ -21,7 +21,7 @@ func (x *TableAwsDocdbClusterParameterGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbClusterParameterGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterParameterGroup.html"
 }
 
 func (x *TableAwsDocdbClusterParameterGroupsGenerator) GetVersion() uint64 {

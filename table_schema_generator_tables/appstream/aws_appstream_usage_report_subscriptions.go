@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamUsageReportSubscriptionsGenerator) GetTableName() stri
 }
 
 func (x *TableAwsAppstreamUsageReportSubscriptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_UsageReportSubscription.html"
 }
 
 func (x *TableAwsAppstreamUsageReportSubscriptionsGenerator) GetVersion() uint64 {

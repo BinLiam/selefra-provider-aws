@@ -20,7 +20,7 @@ func (x *TableAwsElastictranscoderPresetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElastictranscoderPresetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elastictranscoder/latest/developerguide/list-presets.html"
 }
 
 func (x *TableAwsElastictranscoderPresetsGenerator) GetVersion() uint64 {

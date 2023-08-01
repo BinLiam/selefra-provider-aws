@@ -22,7 +22,7 @@ func (x *TableAwsElasticbeanstalkEnvironmentsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticbeanstalkEnvironmentsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticbeanstalk/latest/APIReference/API_EnvironmentDescription.html"
 }
 
 func (x *TableAwsElasticbeanstalkEnvironmentsGenerator) GetVersion() uint64 {

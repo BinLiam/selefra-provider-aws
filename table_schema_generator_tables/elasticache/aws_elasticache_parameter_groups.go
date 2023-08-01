@@ -21,7 +21,7 @@ func (x *TableAwsElasticacheParameterGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheParameterGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CacheParameterGroup.html"
 }
 
 func (x *TableAwsElasticacheParameterGroupsGenerator) GetVersion() uint64 {

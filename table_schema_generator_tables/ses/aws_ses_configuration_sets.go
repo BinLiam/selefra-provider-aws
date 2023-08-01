@@ -20,7 +20,7 @@ func (x *TableAwsSesConfigurationSetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSesConfigurationSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetConfigurationSet.html"
 }
 
 func (x *TableAwsSesConfigurationSetsGenerator) GetVersion() uint64 {

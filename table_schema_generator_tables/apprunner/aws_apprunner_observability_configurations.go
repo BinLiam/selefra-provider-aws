@@ -21,7 +21,7 @@ func (x *TableAwsApprunnerObservabilityConfigurationsGenerator) GetTableName() s
 }
 
 func (x *TableAwsApprunnerObservabilityConfigurationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_ObservabilityConfiguration.html"
 }
 
 func (x *TableAwsApprunnerObservabilityConfigurationsGenerator) GetVersion() uint64 {

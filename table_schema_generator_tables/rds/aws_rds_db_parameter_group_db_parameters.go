@@ -22,7 +22,7 @@ func (x *TableAwsRdsDbParameterGroupDbParametersGenerator) GetTableName() string
 }
 
 func (x *TableAwsRdsDbParameterGroupDbParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Parameter.html"
 }
 
 func (x *TableAwsRdsDbParameterGroupDbParametersGenerator) GetVersion() uint64 {

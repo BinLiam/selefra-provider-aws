@@ -20,7 +20,7 @@ func (x *TableAwsXrayEncryptionConfigsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsXrayEncryptionConfigsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/xray/latest/api/API_EncryptionConfig.html"
 }
 
 func (x *TableAwsXrayEncryptionConfigsGenerator) GetVersion() uint64 {

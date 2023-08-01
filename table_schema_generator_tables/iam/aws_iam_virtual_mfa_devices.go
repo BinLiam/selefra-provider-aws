@@ -21,7 +21,7 @@ func (x *TableAwsIamVirtualMfaDevicesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamVirtualMfaDevicesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_VirtualMFADevice.html"
 }
 
 func (x *TableAwsIamVirtualMfaDevicesGenerator) GetVersion() uint64 {

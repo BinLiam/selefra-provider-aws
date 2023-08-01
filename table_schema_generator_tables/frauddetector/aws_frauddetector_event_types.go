@@ -20,7 +20,7 @@ func (x *TableAwsFrauddetectorEventTypesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFrauddetectorEventTypesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/frauddetector/latest/api/API_EventType.html"
 }
 
 func (x *TableAwsFrauddetectorEventTypesGenerator) GetVersion() uint64 {

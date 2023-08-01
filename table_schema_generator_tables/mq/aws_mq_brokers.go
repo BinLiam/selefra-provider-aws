@@ -22,7 +22,7 @@ func (x *TableAwsMqBrokersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsMqBrokersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers.html"
 }
 
 func (x *TableAwsMqBrokersGenerator) GetVersion() uint64 {

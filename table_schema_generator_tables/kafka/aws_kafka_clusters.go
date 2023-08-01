@@ -2,6 +2,7 @@ package kafka
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go-v2/service/kafka/types"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
@@ -22,7 +23,7 @@ func (x *TableAwsKafkaClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsKafkaClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/MSK/2.0/APIReference/v2-clusters-clusterarn.html#v2-clusters-clusterarn-properties"
 }
 
 func (x *TableAwsKafkaClustersGenerator) GetVersion() uint64 {

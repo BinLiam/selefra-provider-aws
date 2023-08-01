@@ -23,7 +23,7 @@ func (x *TableAwsEc2SecurityGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2SecurityGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html"
 }
 
 func (x *TableAwsEc2SecurityGroupsGenerator) GetVersion() uint64 {

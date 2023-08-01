@@ -21,7 +21,7 @@ func (x *TableAwsStepfunctionsStateMachinesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsStepfunctionsStateMachinesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/step-functions/latest/apireference/API_DescribeStateMachine.html"
 }
 
 func (x *TableAwsStepfunctionsStateMachinesGenerator) GetVersion() uint64 {

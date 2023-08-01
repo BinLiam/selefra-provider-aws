@@ -20,7 +20,7 @@ func (x *TableAwsMwaaEnvironmentsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsMwaaEnvironmentsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/mwaa/latest/API/API_Environment.html"
 }
 
 func (x *TableAwsMwaaEnvironmentsGenerator) GetVersion() uint64 {

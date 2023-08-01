@@ -21,7 +21,7 @@ func (x *TableAwsFsxVolumesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxVolumesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_Volume.html"
 }
 
 func (x *TableAwsFsxVolumesGenerator) GetVersion() uint64 {

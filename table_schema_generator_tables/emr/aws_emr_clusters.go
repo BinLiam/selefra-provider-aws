@@ -22,7 +22,7 @@ func (x *TableAwsEmrClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEmrClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/emr/latest/APIReference/API_Cluster.html"
 }
 
 func (x *TableAwsEmrClustersGenerator) GetVersion() uint64 {

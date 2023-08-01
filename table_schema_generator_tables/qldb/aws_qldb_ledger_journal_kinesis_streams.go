@@ -21,7 +21,7 @@ func (x *TableAwsQldbLedgerJournalKinesisStreamsGenerator) GetTableName() string
 }
 
 func (x *TableAwsQldbLedgerJournalKinesisStreamsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/qldb/latest/developerguide/API_JournalKinesisStreamDescription.html"
 }
 
 func (x *TableAwsQldbLedgerJournalKinesisStreamsGenerator) GetVersion() uint64 {

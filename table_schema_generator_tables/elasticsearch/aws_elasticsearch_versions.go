@@ -22,7 +22,7 @@ func (x *TableAwsElasticsearchVersionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticsearchVersionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_ListVersions.html"
 }
 
 func (x *TableAwsElasticsearchVersionsGenerator) GetVersion() uint64 {

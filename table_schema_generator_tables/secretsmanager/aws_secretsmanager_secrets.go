@@ -23,7 +23,7 @@ func (x *TableAwsSecretsmanagerSecretsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSecretsmanagerSecretsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_ListSecrets.html"
 }
 
 func (x *TableAwsSecretsmanagerSecretsGenerator) GetVersion() uint64 {

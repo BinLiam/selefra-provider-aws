@@ -23,7 +23,7 @@ func (x *TableAwsShieldAttacksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsShieldAttacksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_AttackDetail.html"
 }
 
 func (x *TableAwsShieldAttacksGenerator) GetVersion() uint64 {

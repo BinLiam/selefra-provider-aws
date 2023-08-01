@@ -21,7 +21,7 @@ func (x *TableAwsAccountAlternateContactsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAccountAlternateContactsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/accounts/latest/reference/API_AlternateContact.html"
 }
 
 func (x *TableAwsAccountAlternateContactsGenerator) GetVersion() uint64 {

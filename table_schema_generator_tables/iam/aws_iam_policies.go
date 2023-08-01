@@ -23,7 +23,7 @@ func (x *TableAwsIamPoliciesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamPoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_ManagedPolicyDetail.html"
 }
 
 func (x *TableAwsIamPoliciesGenerator) GetVersion() uint64 {

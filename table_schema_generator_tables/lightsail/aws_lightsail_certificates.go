@@ -20,7 +20,7 @@ func (x *TableAwsLightsailCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_Certificate.html"
 }
 
 func (x *TableAwsLightsailCertificatesGenerator) GetVersion() uint64 {

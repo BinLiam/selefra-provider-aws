@@ -24,7 +24,7 @@ func (x *TableAwsAutoscalingGroupLifecycleHooksGenerator) GetTableName() string 
 }
 
 func (x *TableAwsAutoscalingGroupLifecycleHooksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_LifecycleHook.html"
 }
 
 func (x *TableAwsAutoscalingGroupLifecycleHooksGenerator) GetVersion() uint64 {

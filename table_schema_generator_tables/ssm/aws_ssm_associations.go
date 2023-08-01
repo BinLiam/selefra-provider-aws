@@ -20,7 +20,7 @@ func (x *TableAwsSsmAssociationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmAssociationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_Association.html"
 }
 
 func (x *TableAwsSsmAssociationsGenerator) GetVersion() uint64 {

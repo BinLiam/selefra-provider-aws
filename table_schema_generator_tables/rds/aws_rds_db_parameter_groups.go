@@ -21,7 +21,7 @@ func (x *TableAwsRdsDbParameterGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsDbParameterGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBParameterGroup.html"
 }
 
 func (x *TableAwsRdsDbParameterGroupsGenerator) GetVersion() uint64 {

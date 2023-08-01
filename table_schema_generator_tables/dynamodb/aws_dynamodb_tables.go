@@ -21,7 +21,7 @@ func (x *TableAwsDynamodbTablesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDynamodbTablesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TableDescription.html"
 }
 
 func (x *TableAwsDynamodbTablesGenerator) GetVersion() uint64 {

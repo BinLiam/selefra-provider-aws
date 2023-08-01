@@ -22,7 +22,7 @@ func (x *TableAwsEventbridgeEventBusRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEventbridgeEventBusRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_Rule.html"
 }
 
 func (x *TableAwsEventbridgeEventBusRulesGenerator) GetVersion() uint64 {

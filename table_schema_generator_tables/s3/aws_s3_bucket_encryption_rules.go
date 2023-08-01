@@ -21,7 +21,7 @@ func (x *TableAwsS3BucketEncryptionRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsS3BucketEncryptionRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ServerSideEncryptionRule.html"
 }
 
 func (x *TableAwsS3BucketEncryptionRulesGenerator) GetVersion() uint64 {

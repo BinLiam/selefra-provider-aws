@@ -21,7 +21,7 @@ func (x *TableAwsIamUserAttachedPoliciesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamUserAttachedPoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachedPolicy.html"
 }
 
 func (x *TableAwsIamUserAttachedPoliciesGenerator) GetVersion() uint64 {

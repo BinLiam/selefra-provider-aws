@@ -23,7 +23,7 @@ func (x *TableAwsEventbridgeReplaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEventbridgeReplaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_Replay.html"
 }
 
 func (x *TableAwsEventbridgeReplaysGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsRdsDbSnapshotsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsDbSnapshotsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBSnapshot.html"
 }
 
 func (x *TableAwsRdsDbSnapshotsGenerator) GetVersion() uint64 {

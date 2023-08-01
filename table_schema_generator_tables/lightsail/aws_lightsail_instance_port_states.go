@@ -21,7 +21,7 @@ func (x *TableAwsLightsailInstancePortStatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailInstancePortStatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_InstancePortState.html"
 }
 
 func (x *TableAwsLightsailInstancePortStatesGenerator) GetVersion() uint64 {

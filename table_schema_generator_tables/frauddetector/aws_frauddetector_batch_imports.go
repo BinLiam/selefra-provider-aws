@@ -20,7 +20,7 @@ func (x *TableAwsFrauddetectorBatchImportsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFrauddetectorBatchImportsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/frauddetector/latest/api/API_BatchImport.html"
 }
 
 func (x *TableAwsFrauddetectorBatchImportsGenerator) GetVersion() uint64 {

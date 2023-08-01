@@ -21,7 +21,7 @@ func (x *TableAwsServicecatalogProvisionedProductsGenerator) GetTableName() stri
 }
 
 func (x *TableAwsServicecatalogProvisionedProductsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionedProductAttribute.html"
 }
 
 func (x *TableAwsServicecatalogProvisionedProductsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsElasticacheClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticacheClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CacheCluster.html"
 }
 
 func (x *TableAwsElasticacheClustersGenerator) GetVersion() uint64 {

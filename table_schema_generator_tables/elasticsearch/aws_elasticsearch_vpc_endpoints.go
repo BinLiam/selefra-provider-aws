@@ -20,7 +20,7 @@ func (x *TableAwsElasticsearchVpcEndpointsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElasticsearchVpcEndpointsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_VpcEndpoint.html"
 }
 
 func (x *TableAwsElasticsearchVpcEndpointsGenerator) GetVersion() uint64 {

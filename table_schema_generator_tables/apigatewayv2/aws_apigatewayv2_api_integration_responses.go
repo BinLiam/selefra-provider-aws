@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayv2ApiIntegrationResponsesGenerator) GetTableName() st
 }
 
 func (x *TableAwsApigatewayv2ApiIntegrationResponsesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_IntegrationResponse.html"
 }
 
 func (x *TableAwsApigatewayv2ApiIntegrationResponsesGenerator) GetVersion() uint64 {

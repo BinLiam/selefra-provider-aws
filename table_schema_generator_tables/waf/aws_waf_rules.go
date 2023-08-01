@@ -24,7 +24,7 @@ func (x *TableAwsWafRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_waf_RuleSummary.html"
 }
 
 func (x *TableAwsWafRulesGenerator) GetVersion() uint64 {

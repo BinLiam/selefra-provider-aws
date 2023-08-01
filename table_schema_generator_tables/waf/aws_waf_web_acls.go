@@ -22,7 +22,7 @@ func (x *TableAwsWafWebAclsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafWebAclsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_waf_WebACLSummary.html"
 }
 
 func (x *TableAwsWafWebAclsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsIotJobsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIotJobsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/iot/latest/apireference/API_Job.html"
 }
 
 func (x *TableAwsIotJobsGenerator) GetVersion() uint64 {

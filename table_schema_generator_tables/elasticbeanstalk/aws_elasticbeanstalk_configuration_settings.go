@@ -24,7 +24,7 @@ func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetTableName() 
 }
 
 func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ConfigurationSettingsDescription.html"
 }
 
 func (x *TableAwsElasticbeanstalkConfigurationSettingsGenerator) GetVersion() uint64 {

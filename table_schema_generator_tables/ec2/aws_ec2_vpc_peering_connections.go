@@ -23,7 +23,7 @@ func (x *TableAwsEc2VpcPeeringConnectionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2VpcPeeringConnectionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpcPeeringConnection.html"
 }
 
 func (x *TableAwsEc2VpcPeeringConnectionsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsInspectorFindingsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsInspectorFindingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/inspector/v1/APIReference/API_Finding.html"
 }
 
 func (x *TableAwsInspectorFindingsGenerator) GetVersion() uint64 {

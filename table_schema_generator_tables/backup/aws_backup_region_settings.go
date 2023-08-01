@@ -20,7 +20,7 @@ func (x *TableAwsBackupRegionSettingsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsBackupRegionSettingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_DescribeRegionSettings.html"
 }
 
 func (x *TableAwsBackupRegionSettingsGenerator) GetVersion() uint64 {

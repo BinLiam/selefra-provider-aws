@@ -23,7 +23,7 @@ func (x *TableAwsAccessanalyzerAnalyzersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAccessanalyzerAnalyzersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_AnalyzerSummary.html"
 }
 
 func (x *TableAwsAccessanalyzerAnalyzersGenerator) GetVersion() uint64 {

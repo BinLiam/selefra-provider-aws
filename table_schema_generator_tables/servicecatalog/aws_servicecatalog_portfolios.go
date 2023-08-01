@@ -21,7 +21,7 @@ func (x *TableAwsServicecatalogPortfoliosGenerator) GetTableName() string {
 }
 
 func (x *TableAwsServicecatalogPortfoliosGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_PortfolioDetail.html"
 }
 
 func (x *TableAwsServicecatalogPortfoliosGenerator) GetVersion() uint64 {

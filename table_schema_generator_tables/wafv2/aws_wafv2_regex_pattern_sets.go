@@ -22,7 +22,7 @@ func (x *TableAwsWafv2RegexPatternSetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafv2RegexPatternSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_RegexPatternSet.html"
 }
 
 func (x *TableAwsWafv2RegexPatternSetsGenerator) GetVersion() uint64 {

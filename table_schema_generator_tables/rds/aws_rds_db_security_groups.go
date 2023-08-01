@@ -21,7 +21,7 @@ func (x *TableAwsRdsDbSecurityGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsDbSecurityGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DBSecurityGroup.html"
 }
 
 func (x *TableAwsRdsDbSecurityGroupsGenerator) GetVersion() uint64 {

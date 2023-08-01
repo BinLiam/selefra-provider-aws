@@ -23,7 +23,7 @@ func (x *TableAwsEc2InstanceTypesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2InstanceTypesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceTypeInfo.html"
 }
 
 func (x *TableAwsEc2InstanceTypesGenerator) GetVersion() uint64 {

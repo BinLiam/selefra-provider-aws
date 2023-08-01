@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayDomainNamesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayDomainNamesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_DomainName.html"
 }
 
 func (x *TableAwsApigatewayDomainNamesGenerator) GetVersion() uint64 {

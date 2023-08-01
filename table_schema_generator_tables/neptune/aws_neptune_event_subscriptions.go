@@ -22,7 +22,7 @@ func (x *TableAwsNeptuneEventSubscriptionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsNeptuneEventSubscriptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/neptune/latest/userguide/api-events.html#DescribeEventSubscriptions"
 }
 
 func (x *TableAwsNeptuneEventSubscriptionsGenerator) GetVersion() uint64 {

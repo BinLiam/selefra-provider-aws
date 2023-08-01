@@ -22,7 +22,7 @@ func (x *TableAwsGuarddutyDetectorsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsGuarddutyDetectorsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetDetector.html"
 }
 
 func (x *TableAwsGuarddutyDetectorsGenerator) GetVersion() uint64 {

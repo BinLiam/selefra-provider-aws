@@ -21,7 +21,7 @@ func (x *TableAwsFrauddetectorRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFrauddetectorRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/frauddetector/latest/api/API_RuleDetail.html"
 }
 
 func (x *TableAwsFrauddetectorRulesGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsEc2TransitGatewayMulticastDomainsGenerator) GetTableName() stri
 }
 
 func (x *TableAwsEc2TransitGatewayMulticastDomainsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayMulticastDomain.html"
 }
 
 func (x *TableAwsEc2TransitGatewayMulticastDomainsGenerator) GetVersion() uint64 {

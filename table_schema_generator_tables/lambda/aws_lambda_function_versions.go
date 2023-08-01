@@ -20,7 +20,7 @@ func (x *TableAwsLambdaFunctionVersionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLambdaFunctionVersionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lambda/latest/dg/API_FunctionConfiguration.html"
 }
 
 func (x *TableAwsLambdaFunctionVersionsGenerator) GetVersion() uint64 {

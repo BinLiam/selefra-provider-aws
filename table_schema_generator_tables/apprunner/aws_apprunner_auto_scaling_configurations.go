@@ -21,7 +21,7 @@ func (x *TableAwsApprunnerAutoScalingConfigurationsGenerator) GetTableName() str
 }
 
 func (x *TableAwsApprunnerAutoScalingConfigurationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_AutoScalingConfiguration.html"
 }
 
 func (x *TableAwsApprunnerAutoScalingConfigurationsGenerator) GetVersion() uint64 {

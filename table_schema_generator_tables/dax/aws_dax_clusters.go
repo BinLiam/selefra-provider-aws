@@ -21,7 +21,7 @@ func (x *TableAwsDaxClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDaxClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_Cluster.html"
 }
 
 func (x *TableAwsDaxClustersGenerator) GetVersion() uint64 {

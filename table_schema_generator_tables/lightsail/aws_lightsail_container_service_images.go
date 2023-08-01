@@ -21,7 +21,7 @@ func (x *TableAwsLightsailContainerServiceImagesGenerator) GetTableName() string
 }
 
 func (x *TableAwsLightsailContainerServiceImagesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_ContainerImage.html"
 }
 
 func (x *TableAwsLightsailContainerServiceImagesGenerator) GetVersion() uint64 {

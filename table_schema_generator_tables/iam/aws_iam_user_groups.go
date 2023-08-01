@@ -21,7 +21,7 @@ func (x *TableAwsIamUserGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamUserGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_Group.html"
 }
 
 func (x *TableAwsIamUserGroupsGenerator) GetVersion() uint64 {

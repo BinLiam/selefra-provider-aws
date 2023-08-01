@@ -25,7 +25,7 @@ func (x *TableAwsRoute53HostedZoneTrafficPolicyInstancesGenerator) GetTableName(
 }
 
 func (x *TableAwsRoute53HostedZoneTrafficPolicyInstancesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_TrafficPolicyInstance.html"
 }
 
 func (x *TableAwsRoute53HostedZoneTrafficPolicyInstancesGenerator) GetVersion() uint64 {

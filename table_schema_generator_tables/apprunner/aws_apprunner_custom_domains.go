@@ -21,7 +21,7 @@ func (x *TableAwsApprunnerCustomDomainsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApprunnerCustomDomainsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_CustomDomain.html"
 }
 
 func (x *TableAwsApprunnerCustomDomainsGenerator) GetVersion() uint64 {

@@ -20,7 +20,7 @@ func (x *TableAwsAccountContactsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAccountContactsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/accounts/latest/reference/API_ContactInformation.html"
 }
 
 func (x *TableAwsAccountContactsGenerator) GetVersion() uint64 {

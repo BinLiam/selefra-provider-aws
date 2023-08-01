@@ -22,7 +22,7 @@ func (x *TableAwsEc2TransitGatewayPeeringAttachmentsGenerator) GetTableName() st
 }
 
 func (x *TableAwsEc2TransitGatewayPeeringAttachmentsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TransitGatewayPeeringAttachment.html"
 }
 
 func (x *TableAwsEc2TransitGatewayPeeringAttachmentsGenerator) GetVersion() uint64 {

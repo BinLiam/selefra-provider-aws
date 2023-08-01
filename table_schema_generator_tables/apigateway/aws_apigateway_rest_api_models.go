@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayRestApiModelsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayRestApiModelsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_Model.html"
 }
 
 func (x *TableAwsApigatewayRestApiModelsGenerator) GetVersion() uint64 {

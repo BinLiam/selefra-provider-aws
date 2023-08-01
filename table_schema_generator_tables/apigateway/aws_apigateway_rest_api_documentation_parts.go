@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayRestApiDocumentationPartsGenerator) GetTableName() st
 }
 
 func (x *TableAwsApigatewayRestApiDocumentationPartsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_DocumentationPart.html"
 }
 
 func (x *TableAwsApigatewayRestApiDocumentationPartsGenerator) GetVersion() uint64 {

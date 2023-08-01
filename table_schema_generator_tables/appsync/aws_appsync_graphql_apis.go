@@ -21,7 +21,7 @@ func (x *TableAwsAppsyncGraphqlApisGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppsyncGraphqlApisGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appsync/latest/APIReference/API_GraphqlApi.html"
 }
 
 func (x *TableAwsAppsyncGraphqlApisGenerator) GetVersion() uint64 {

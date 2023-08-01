@@ -20,7 +20,7 @@ func (x *TableAwsXrayGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsXrayGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/xray/latest/api/API_Group.html"
 }
 
 func (x *TableAwsXrayGroupsGenerator) GetVersion() uint64 {

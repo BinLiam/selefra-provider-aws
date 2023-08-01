@@ -20,7 +20,7 @@ func (x *TableAwsFrauddetectorEntityTypesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFrauddetectorEntityTypesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/frauddetector/latest/api/API_EntityType.html"
 }
 
 func (x *TableAwsFrauddetectorEntityTypesGenerator) GetVersion() uint64 {

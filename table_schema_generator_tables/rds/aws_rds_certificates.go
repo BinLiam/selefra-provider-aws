@@ -21,7 +21,7 @@ func (x *TableAwsRdsCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRdsCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Certificate.html"
 }
 
 func (x *TableAwsRdsCertificatesGenerator) GetVersion() uint64 {

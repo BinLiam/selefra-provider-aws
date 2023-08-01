@@ -21,7 +21,7 @@ func (x *TableAwsFsxDataRepositoryAssociationsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxDataRepositoryAssociationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_DataRepositoryAssociation.html"
 }
 
 func (x *TableAwsFsxDataRepositoryAssociationsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsSsmInstancePatchesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmInstancePatchesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchComplianceData.html"
 }
 
 func (x *TableAwsSsmInstancePatchesGenerator) GetVersion() uint64 {

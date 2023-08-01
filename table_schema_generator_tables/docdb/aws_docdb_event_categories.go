@@ -2,6 +2,7 @@ package docdb
 
 import (
 	"context"
+
 	"github.com/aws/aws-sdk-go-v2/service/docdb/types"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
@@ -22,7 +23,7 @@ func (x *TableAwsDocdbEventCategoriesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbEventCategoriesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_EventCategoriesMap.html"
 }
 
 func (x *TableAwsDocdbEventCategoriesGenerator) GetVersion() uint64 {

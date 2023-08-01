@@ -21,7 +21,7 @@ func (x *TableAwsWafSubscribedRuleGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafSubscribedRuleGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_waf_SubscribedRuleGroupSummary.html"
 }
 
 func (x *TableAwsWafSubscribedRuleGroupsGenerator) GetVersion() uint64 {

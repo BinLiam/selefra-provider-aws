@@ -22,7 +22,7 @@ func (x *TableAwsCognitoUserPoolIdentityProvidersGenerator) GetTableName() strin
 }
 
 func (x *TableAwsCognitoUserPoolIdentityProvidersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_IdentityProviderType.html"
 }
 
 func (x *TableAwsCognitoUserPoolIdentityProvidersGenerator) GetVersion() uint64 {

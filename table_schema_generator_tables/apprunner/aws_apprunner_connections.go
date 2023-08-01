@@ -20,7 +20,7 @@ func (x *TableAwsApprunnerConnectionsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApprunnerConnectionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apprunner/latest/api/API_Connection.html"
 }
 
 func (x *TableAwsApprunnerConnectionsGenerator) GetVersion() uint64 {

@@ -20,7 +20,7 @@ func (x *TableAwsSsmPatchBaselinesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmPatchBaselinesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchBaselineIdentity.html"
 }
 
 func (x *TableAwsSsmPatchBaselinesGenerator) GetVersion() uint64 {

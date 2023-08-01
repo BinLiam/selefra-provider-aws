@@ -21,7 +21,7 @@ func (x *TableAwsSchedulerScheduleGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSchedulerScheduleGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/scheduler/latest/APIReference/API_ScheduleGroupSummary.html"
 }
 
 func (x *TableAwsSchedulerScheduleGroupsGenerator) GetVersion() uint64 {

@@ -21,7 +21,7 @@ func (x *TableAwsSesCustomVerificationEmailTemplatesGenerator) GetTableName() st
 }
 
 func (x *TableAwsSesCustomVerificationEmailTemplatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetCustomVerificationEmailTemplate.html"
 }
 
 func (x *TableAwsSesCustomVerificationEmailTemplatesGenerator) GetVersion() uint64 {

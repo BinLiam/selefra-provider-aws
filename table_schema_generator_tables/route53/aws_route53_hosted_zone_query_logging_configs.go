@@ -25,7 +25,7 @@ func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetTableName() s
 }
 
 func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/Route53/latest/APIReference/API_QueryLoggingConfig.html"
 }
 
 func (x *TableAwsRoute53HostedZoneQueryLoggingConfigsGenerator) GetVersion() uint64 {

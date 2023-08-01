@@ -21,7 +21,7 @@ func (x *TableAwsCloudwatchlogsResourcePoliciesGenerator) GetTableName() string 
 }
 
 func (x *TableAwsCloudwatchlogsResourcePoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_ResourcePolicy.html"
 }
 
 func (x *TableAwsCloudwatchlogsResourcePoliciesGenerator) GetVersion() uint64 {

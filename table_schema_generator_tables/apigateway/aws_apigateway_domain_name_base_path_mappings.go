@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayDomainNameBasePathMappingsGenerator) GetTableName() s
 }
 
 func (x *TableAwsApigatewayDomainNameBasePathMappingsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_BasePathMapping.html"
 }
 
 func (x *TableAwsApigatewayDomainNameBasePathMappingsGenerator) GetVersion() uint64 {

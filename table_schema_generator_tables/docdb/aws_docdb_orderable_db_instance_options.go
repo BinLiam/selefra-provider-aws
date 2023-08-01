@@ -21,7 +21,7 @@ func (x *TableAwsDocdbOrderableDbInstanceOptionsGenerator) GetTableName() string
 }
 
 func (x *TableAwsDocdbOrderableDbInstanceOptionsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_OrderableDBInstanceOption.html"
 }
 
 func (x *TableAwsDocdbOrderableDbInstanceOptionsGenerator) GetVersion() uint64 {

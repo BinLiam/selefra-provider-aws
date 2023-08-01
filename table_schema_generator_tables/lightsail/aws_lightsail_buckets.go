@@ -21,7 +21,7 @@ func (x *TableAwsLightsailBucketsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailBucketsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_Bucket.html"
 }
 
 func (x *TableAwsLightsailBucketsGenerator) GetVersion() uint64 {

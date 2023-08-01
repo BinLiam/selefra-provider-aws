@@ -25,7 +25,7 @@ func (x *TableAwsRedshiftSubnetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsRedshiftSubnetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/redshift/latest/APIReference/API_ClusterSubnetGroup.html"
 }
 
 func (x *TableAwsRedshiftSubnetGroupsGenerator) GetVersion() uint64 {

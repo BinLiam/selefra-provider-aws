@@ -23,7 +23,7 @@ func (x *TableAwsCloudhsmv2BackupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudhsmv2BackupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_Backup.html"
 }
 
 func (x *TableAwsCloudhsmv2BackupsGenerator) GetVersion() uint64 {

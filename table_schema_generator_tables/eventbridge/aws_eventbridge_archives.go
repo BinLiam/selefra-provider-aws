@@ -23,7 +23,7 @@ func (x *TableAwsEventbridgeArchivesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEventbridgeArchivesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_Archive.html"
 }
 
 func (x *TableAwsEventbridgeArchivesGenerator) GetVersion() uint64 {

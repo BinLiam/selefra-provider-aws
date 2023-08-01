@@ -24,7 +24,7 @@ func (x *TableAwsSsmDocumentsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsmDocumentsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DocumentDescription.html"
 }
 
 func (x *TableAwsSsmDocumentsGenerator) GetVersion() uint64 {

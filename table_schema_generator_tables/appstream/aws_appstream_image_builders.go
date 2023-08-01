@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamImageBuildersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsAppstreamImageBuildersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_ImageBuilder.html"
 }
 
 func (x *TableAwsAppstreamImageBuildersGenerator) GetVersion() uint64 {

@@ -3,6 +3,7 @@ package wafregional
 import (
 	"context"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/aws/aws-sdk-go-v2/service/wafregional"
@@ -23,7 +24,7 @@ func (x *TableAwsWafregionalRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsWafregionalRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_Rule.html"
 }
 
 func (x *TableAwsWafregionalRulesGenerator) GetVersion() uint64 {

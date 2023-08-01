@@ -21,7 +21,7 @@ func (x *TableAwsFsxStorageVirtualMachinesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsFsxStorageVirtualMachinesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/fsx/latest/APIReference/API_StorageVirtualMachine.html"
 }
 
 func (x *TableAwsFsxStorageVirtualMachinesGenerator) GetVersion() uint64 {

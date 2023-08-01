@@ -20,7 +20,7 @@ func (x *TableAwsDocdbEventsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbEventsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Event.html"
 }
 
 func (x *TableAwsDocdbEventsGenerator) GetVersion() uint64 {

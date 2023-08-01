@@ -20,7 +20,7 @@ func (x *TableAwsDocdbCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsDocdbCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Certificate.html"
 }
 
 func (x *TableAwsDocdbCertificatesGenerator) GetVersion() uint64 {

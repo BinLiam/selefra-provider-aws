@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayRestApiRequestValidatorsGenerator) GetTableName() str
 }
 
 func (x *TableAwsApigatewayRestApiRequestValidatorsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_RequestValidator.html"
 }
 
 func (x *TableAwsApigatewayRestApiRequestValidatorsGenerator) GetVersion() uint64 {

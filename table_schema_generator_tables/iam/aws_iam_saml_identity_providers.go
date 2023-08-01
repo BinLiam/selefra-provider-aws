@@ -22,7 +22,7 @@ func (x *TableAwsIamSamlIdentityProvidersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIamSamlIdentityProvidersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/IAM/latest/APIReference/API_SAMLProviderListEntry.html"
 }
 
 func (x *TableAwsIamSamlIdentityProvidersGenerator) GetVersion() uint64 {

@@ -24,7 +24,7 @@ func (x *TableAwsApigatewayUsagePlansGenerator) GetTableName() string {
 }
 
 func (x *TableAwsApigatewayUsagePlansGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/apigateway/latest/api/API_UsagePlan.html"
 }
 
 func (x *TableAwsApigatewayUsagePlansGenerator) GetVersion() uint64 {

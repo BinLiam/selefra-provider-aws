@@ -22,7 +22,7 @@ func (x *TableAwsLightsailDatabaseParametersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailDatabaseParametersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_RelationalDatabaseParameter.html"
 }
 
 func (x *TableAwsLightsailDatabaseParametersGenerator) GetVersion() uint64 {

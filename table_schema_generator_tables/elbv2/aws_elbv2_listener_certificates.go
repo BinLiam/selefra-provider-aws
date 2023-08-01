@@ -22,7 +22,7 @@ func (x *TableAwsElbv2ListenerCertificatesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElbv2ListenerCertificatesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Certificate.html"
 }
 
 func (x *TableAwsElbv2ListenerCertificatesGenerator) GetVersion() uint64 {

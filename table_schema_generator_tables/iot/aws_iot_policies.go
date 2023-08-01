@@ -21,7 +21,7 @@ func (x *TableAwsIotPoliciesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsIotPoliciesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/iot/latest/apireference/API_Policy.html"
 }
 
 func (x *TableAwsIotPoliciesGenerator) GetVersion() uint64 {

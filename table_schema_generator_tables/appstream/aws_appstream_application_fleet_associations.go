@@ -21,7 +21,7 @@ func (x *TableAwsAppstreamApplicationFleetAssociationsGenerator) GetTableName() 
 }
 
 func (x *TableAwsAppstreamApplicationFleetAssociationsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_ApplicationFleetAssociation.html"
 }
 
 func (x *TableAwsAppstreamApplicationFleetAssociationsGenerator) GetVersion() uint64 {

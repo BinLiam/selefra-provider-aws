@@ -22,7 +22,7 @@ func (x *TableAwsConfigConformancePacksGenerator) GetTableName() string {
 }
 
 func (x *TableAwsConfigConformancePacksGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/config/latest/APIReference/API_ConformancePackDetail.html"
 }
 
 func (x *TableAwsConfigConformancePacksGenerator) GetVersion() uint64 {

@@ -22,7 +22,7 @@ func (x *TableAwsSsoadminPermissionSetsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsSsoadminPermissionSetsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_PermissionSet.html"
 }
 
 func (x *TableAwsSsoadminPermissionSetsGenerator) GetVersion() uint64 {

@@ -24,7 +24,7 @@ func (x *TableAwsEc2ImagesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2ImagesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Image.html"
 }
 
 func (x *TableAwsEc2ImagesGenerator) GetVersion() uint64 {

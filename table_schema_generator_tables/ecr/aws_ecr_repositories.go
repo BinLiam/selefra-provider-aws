@@ -22,7 +22,7 @@ func (x *TableAwsEcrRepositoriesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEcrRepositoriesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_Repository.html"
 }
 
 func (x *TableAwsEcrRepositoriesGenerator) GetVersion() uint64 {

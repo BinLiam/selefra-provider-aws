@@ -21,7 +21,7 @@ func (x *TableAwsElbv2TargetGroupsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsElbv2TargetGroupsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_TargetGroup.html"
 }
 
 func (x *TableAwsElbv2TargetGroupsGenerator) GetVersion() uint64 {

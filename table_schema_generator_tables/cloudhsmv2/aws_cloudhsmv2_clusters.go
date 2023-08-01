@@ -23,7 +23,7 @@ func (x *TableAwsCloudhsmv2ClustersGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCloudhsmv2ClustersGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_Cluster.html"
 }
 
 func (x *TableAwsCloudhsmv2ClustersGenerator) GetVersion() uint64 {

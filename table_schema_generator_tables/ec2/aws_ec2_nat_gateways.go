@@ -23,7 +23,7 @@ func (x *TableAwsEc2NatGatewaysGenerator) GetTableName() string {
 }
 
 func (x *TableAwsEc2NatGatewaysGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NatGateway.html"
 }
 
 func (x *TableAwsEc2NatGatewaysGenerator) GetVersion() uint64 {

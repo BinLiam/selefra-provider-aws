@@ -23,7 +23,7 @@ func (x *TableAwsS3BucketCorsRulesGenerator) GetTableName() string {
 }
 
 func (x *TableAwsS3BucketCorsRulesGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/AmazonS3/latest/API/API_CORSRule.html"
 }
 
 func (x *TableAwsS3BucketCorsRulesGenerator) GetVersion() uint64 {

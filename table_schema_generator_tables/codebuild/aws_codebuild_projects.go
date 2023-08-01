@@ -21,7 +21,7 @@ func (x *TableAwsCodebuildProjectsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsCodebuildProjectsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_Project.html"
 }
 
 func (x *TableAwsCodebuildProjectsGenerator) GetVersion() uint64 {

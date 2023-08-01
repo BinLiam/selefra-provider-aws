@@ -21,7 +21,7 @@ func (x *TableAwsLightsailStaticIpsGenerator) GetTableName() string {
 }
 
 func (x *TableAwsLightsailStaticIpsGenerator) GetTableDescription() string {
-	return ""
+	return "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_StaticIp.html"
 }
 
 func (x *TableAwsLightsailStaticIpsGenerator) GetVersion() uint64 {
