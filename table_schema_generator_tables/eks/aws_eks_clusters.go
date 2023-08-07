@@ -125,5 +125,10 @@ func (x *TableAwsEksClustersGenerator) GetColumns() []*schema.Column {
 }
 
 func (x *TableAwsEksClustersGenerator) GetSubTables() []*schema.Table {
-	return nil
+	return []*schema.Table{
+		table_schema_generator.GenTableSchema(&TableAwsEksAddonGenerator{}),
+		table_schema_generator.GenTableSchema(&TableAwsEksNodeGroupGenerator{}),
+		table_schema_generator.GenTableSchema(&TableAwsEksFargateProfileGenerator{}),
+		table_schema_generator.GenTableSchema(&TableAwsEksIdentityProviderConfigGenerator{}),
+	}
 }

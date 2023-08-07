@@ -5,18 +5,23 @@ import (
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/account"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/acm"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/amp"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/amplify"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/apigateway"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/apigatewayv2"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/appconfig"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/applicationautoscaling"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/apprunner"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/appstream"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/appsync"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/athena"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/auditmanager"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/autoscaling"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/availability"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/backup"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudformation"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudfront"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudhsmv2"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudsearch"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudtrail"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudwatch"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/cloudwatchlogs"
@@ -62,6 +67,8 @@ import (
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/mq"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/mwaa"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/neptune"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/networkfirewall"
+	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/opensearch"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/organizations"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/qldb"
 	"github.com/selefra/selefra-provider-aws/table_schema_generator_tables/quicksight"
@@ -434,5 +441,31 @@ func GenTables() []*schema.Table {
 		table_schema_generator.GenTableSchema(&elasticbeanstalk.TableAwsElasticbeanstalkApplicationVersionsGenerator{}),
 		table_schema_generator.GenTableSchema(&elasticbeanstalk.TableAwsElasticbeanstalkApplicationsGenerator{}),
 		table_schema_generator.GenTableSchema(&securityhub.TableAwsSecurityhubFindingsGenerator{}),
+
+		table_schema_generator.GenTableSchema(&amplify.TableAwsAmplifyApp{}),
+		table_schema_generator.GenTableSchema(&appconfig.TableAwsAppconfigApplicationGenerator{}),
+		table_schema_generator.GenTableSchema(&auditmanager.TableAwsAuditmanagerAssessmentGenerator{}),
+		table_schema_generator.GenTableSchema(&auditmanager.TableAwsAuditmanagerControlGenerator{}),
+		table_schema_generator.GenTableSchema(&auditmanager.TableAwsAuditmanagerFrameworkGenerator{}),
+		table_schema_generator.GenTableSchema(&availability.TableAwsAvailabilityZoneGenerator{}),
+
+		table_schema_generator.GenTableSchema(&backup.TableAwsBackupFrameworkGenerator{}),
+		table_schema_generator.GenTableSchema(&backup.TableAwsBackupLegalHoldGenerator{}),
+		table_schema_generator.GenTableSchema(&backup.TableAwsBackupProtectedResourceGenerator{}),
+		table_schema_generator.GenTableSchema(&backup.TableAwsBackupReportPlanGenerator{}),
+
+		table_schema_generator.GenTableSchema(&cloudformation.TableAwsCloudformationStackSetGenerator{}),
+		table_schema_generator.GenTableSchema(&cloudfront.TableAwsCloudfrontFunctionGenerator{}),
+		table_schema_generator.GenTableSchema(&cloudfront.TableAwsCloudfrontOriginAccessIdentityGenerator{}),
+		table_schema_generator.GenTableSchema(&cloudfront.TableAwsCloudfrontOriginRequestPolicyGenerator{}),
+		table_schema_generator.GenTableSchema(&cloudfront.TableAwsCloudfrontResponseHeadersPolicyGenerator{}),
+		table_schema_generator.GenTableSchema(&cloudsearch.TableAwsCloudsearchDomainGenerator{}),
+
+		table_schema_generator.GenTableSchema(&eks.TableAwsEksAddonVersionGenerator{}),
+
+		table_schema_generator.GenTableSchema(&networkfirewall.TableAwsNetworkfirewallFirewallGenerator{}),
+		table_schema_generator.GenTableSchema(&networkfirewall.TableAwsNetworkfirewallFirewallPolicyGenerator{}),
+		table_schema_generator.GenTableSchema(&networkfirewall.TableAwsNetworkfirewallRuleGroupGenerator{}),
+		table_schema_generator.GenTableSchema(&opensearch.TableAwsOpensearchDomainGenerator{}),
 	}
 }

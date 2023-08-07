@@ -2,12 +2,18 @@ package aws_client
 
 import (
 	"context"
+
+	"github.com/aws/aws-sdk-go-v2/service/appconfig"
+	"github.com/aws/aws-sdk-go-v2/service/auditmanager"
+	"github.com/aws/aws-sdk-go-v2/service/opensearch"
+
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/feature/s3/manager"
 	"github.com/aws/aws-sdk-go-v2/service/accessanalyzer"
 	"github.com/aws/aws-sdk-go-v2/service/account"
 	"github.com/aws/aws-sdk-go-v2/service/acm"
 	"github.com/aws/aws-sdk-go-v2/service/amp"
+	"github.com/aws/aws-sdk-go-v2/service/amplify"
 	"github.com/aws/aws-sdk-go-v2/service/apigateway"
 	"github.com/aws/aws-sdk-go-v2/service/apigatewayv2"
 	"github.com/aws/aws-sdk-go-v2/service/applicationautoscaling"
@@ -20,6 +26,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/cloudformation"
 	"github.com/aws/aws-sdk-go-v2/service/cloudfront"
 	"github.com/aws/aws-sdk-go-v2/service/cloudhsmv2"
+	"github.com/aws/aws-sdk-go-v2/service/cloudsearch"
 	"github.com/aws/aws-sdk-go-v2/service/cloudtrail"
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatch"
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs"
@@ -41,6 +48,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/eks"
 	"github.com/aws/aws-sdk-go-v2/service/elasticache"
 	"github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk"
+	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
+	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancingv2"
 	"github.com/aws/aws-sdk-go-v2/service/elasticsearchservice"
 	"github.com/aws/aws-sdk-go-v2/service/elastictranscoder"
 	"github.com/aws/aws-sdk-go-v2/service/emr"
@@ -62,7 +71,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/lambda"
 	"github.com/aws/aws-sdk-go-v2/service/lightsail"
 	"github.com/aws/aws-sdk-go-v2/service/mq"
+	"github.com/aws/aws-sdk-go-v2/service/mwaa"
 	"github.com/aws/aws-sdk-go-v2/service/neptune"
+	"github.com/aws/aws-sdk-go-v2/service/networkfirewall"
 	"github.com/aws/aws-sdk-go-v2/service/organizations"
 	"github.com/aws/aws-sdk-go-v2/service/qldb"
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
@@ -81,6 +92,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/securityhub"
 	"github.com/aws/aws-sdk-go-v2/service/servicecatalog"
 	"github.com/aws/aws-sdk-go-v2/service/servicecatalogappregistry"
+	"github.com/aws/aws-sdk-go-v2/service/servicequotas"
 	"github.com/aws/aws-sdk-go-v2/service/ses"
 	"github.com/aws/aws-sdk-go-v2/service/sesv2"
 	"github.com/aws/aws-sdk-go-v2/service/sfn"
@@ -88,6 +100,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/sns"
 	"github.com/aws/aws-sdk-go-v2/service/sqs"
 	"github.com/aws/aws-sdk-go-v2/service/ssm"
+	"github.com/aws/aws-sdk-go-v2/service/ssoadmin"
 	"github.com/aws/aws-sdk-go-v2/service/timestreamwrite"
 	"github.com/aws/aws-sdk-go-v2/service/transfer"
 	"github.com/aws/aws-sdk-go-v2/service/waf"
@@ -97,38 +110,26 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/xray"
 )
 
-import (
-	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
-)
-import (
-	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancingv2"
-)
-import (
-	"github.com/aws/aws-sdk-go-v2/service/mwaa"
-)
-import (
-	"github.com/aws/aws-sdk-go-v2/service/servicequotas"
-)
-import (
-	"github.com/aws/aws-sdk-go-v2/service/ssoadmin"
-)
-
 type AwsServices struct {
 	Account                   AccountClient
 	Accessanalyzer            AccessanalyzerClient
 	Acm                       AcmClient
 	Amp                       AmpClient
+	Amplify                   AmplifyClient
+	Appconfig                 AppconfigClient
 	Apigateway                ApigatewayClient
 	Apigatewayv2              Apigatewayv2Client
 	Applicationautoscaling    ApplicationautoscalingClient
 	Apprunner                 ApprunnerClient
 	Appsync                   AppsyncClient
 	Athena                    AthenaClient
+	Auditmanager              AuditmanagerClient
 	Autoscaling               AutoscalingClient
 	Backup                    BackupClient
 	Cloudformation            CloudformationClient
 	Cloudfront                CloudfrontClient
 	Cloudhsmv2                Cloudhsmv2Client
+	CloudSearch               CloudSearchClient
 	Cloudtrail                CloudtrailClient
 	Cloudwatch                CloudwatchClient
 	Cloudwatchlogs            CloudwatchlogsClient
@@ -174,6 +175,8 @@ type AwsServices struct {
 	Mq                        MqClient
 	Mwaa                      MwaaClient
 	Neptune                   NeptuneClient
+	Networkfirewall           NetworkfirewallClient
+	Opensearch                OpensearchClient
 	Organizations             OrganizationsClient
 	Qldb                      QldbClient
 	Rds                       RdsClient
@@ -215,75 +218,81 @@ type AwsServices struct {
 
 func newAwsService(config aws.Config) *AwsServices {
 	return &AwsServices{
-		Elastictranscoder:         elastictranscoder.NewFromConfig(config),
-		Account:                   account.NewFromConfig(config),
-		Accessanalyzer:            accessanalyzer.NewFromConfig(config),
-		Acm:                       acm.NewFromConfig(config),
-		Apigateway:                apigateway.NewFromConfig(config),
-		Amp:                       amp.NewFromConfig(config),
-		Apigatewayv2:              apigatewayv2.NewFromConfig(config),
-		Applicationautoscaling:    applicationautoscaling.NewFromConfig(config),
-		Apprunner:                 apprunner.NewFromConfig(config),
-		Appsync:                   appsync.NewFromConfig(config),
-		Appstream:                 appstream.NewFromConfig(config),
-		Athena:                    athena.NewFromConfig(config),
-		Autoscaling:               autoscaling.NewFromConfig(config),
-		Backup:                    backup.NewFromConfig(config),
-		Cloudformation:            cloudformation.NewFromConfig(config),
-		Cloudfront:                cloudfront.NewFromConfig(config),
-		Timestreamwrite:           timestreamwrite.NewFromConfig(config),
-		Cloudhsmv2:                cloudhsmv2.NewFromConfig(config),
-		Savingsplans:              savingsplans.NewFromConfig(config),
-		Cloudtrail:                cloudtrail.NewFromConfig(config),
-		Cloudwatch:                cloudwatch.NewFromConfig(config),
-		Cloudwatchlogs:            cloudwatchlogs.NewFromConfig(config),
-		Codebuild:                 codebuild.NewFromConfig(config),
-		Scheduler:                 scheduler.NewFromConfig(config),
-		Codepipeline:              codepipeline.NewFromConfig(config),
-		Sfn:                       sfn.NewFromConfig(config),
-		Cognitoidentity:           cognitoidentity.NewFromConfig(config),
-		Cognitoidentityprovider:   cognitoidentityprovider.NewFromConfig(config),
-		Configservice:             configservice.NewFromConfig(config),
-		Databasemigrationservice:  databasemigrationservice.NewFromConfig(config),
-		Dax:                       dax.NewFromConfig(config),
-		Directconnect:             directconnect.NewFromConfig(config),
-		Docdb:                     docdb.NewFromConfig(config),
-		Dynamodb:                  dynamodb.NewFromConfig(config),
-		Securityhub:               securityhub.NewFromConfig(config),
-		Ec2:                       ec2.NewFromConfig(config),
-		Ecr:                       ecr.NewFromConfig(config),
-		Ecrpublic:                 ecrpublic.NewFromConfig(config),
-		Ecs:                       ecs.NewFromConfig(config),
-		Kafka:                     kafka.NewFromConfig(config),
-		Efs:                       efs.NewFromConfig(config),
-		Eks:                       eks.NewFromConfig(config),
-		Elasticache:               elasticache.NewFromConfig(config),
-		Elasticbeanstalk:          elasticbeanstalk.NewFromConfig(config),
-		Elasticloadbalancing:      elasticloadbalancing.NewFromConfig(config),
-		Elasticloadbalancingv2:    elasticloadbalancingv2.NewFromConfig(config),
-		Elasticsearchservice:      elasticsearchservice.NewFromConfig(config),
-		Emr:                       emr.NewFromConfig(config),
-		Eventbridge:               eventbridge.NewFromConfig(config),
-		Firehose:                  firehose.NewFromConfig(config),
-		Frauddetector:             frauddetector.NewFromConfig(config),
-		Ses:                       ses.NewFromConfig(config),
-		Fsx:                       fsx.NewFromConfig(config),
-		Glacier:                   glacier.NewFromConfig(config),
-		Glue:                      glue.NewFromConfig(config),
-		Guardduty:                 guardduty.NewFromConfig(config),
-		IAM:                       iam.NewFromConfig(config),
-		Identitystore:             identitystore.NewFromConfig(config),
-		Inspector:                 inspector.NewFromConfig(config),
-		Inspector2:                inspector2.NewFromConfig(config),
-		Iot:                       iot.NewFromConfig(config),
-		Kinesis:                   kinesis.NewFromConfig(config),
-		Kms:                       kms.NewFromConfig(config),
-		Lambda:                    lambda.NewFromConfig(config),
-		Lightsail:                 lightsail.NewFromConfig(config),
-		Mq:                        mq.NewFromConfig(config),
-		Mwaa:                      mwaa.NewFromConfig(config),
-		RAM:                       ram.NewFromConfig(config),
-		Neptune:                   neptune.NewFromConfig(config),
+		Elastictranscoder:        elastictranscoder.NewFromConfig(config),
+		Account:                  account.NewFromConfig(config),
+		Accessanalyzer:           accessanalyzer.NewFromConfig(config),
+		Acm:                      acm.NewFromConfig(config),
+		Apigateway:               apigateway.NewFromConfig(config),
+		Amp:                      amp.NewFromConfig(config),
+		Amplify:                  amplify.NewFromConfig(config),
+		Appconfig:                appconfig.NewFromConfig(config),
+		Apigatewayv2:             apigatewayv2.NewFromConfig(config),
+		Applicationautoscaling:   applicationautoscaling.NewFromConfig(config),
+		Apprunner:                apprunner.NewFromConfig(config),
+		Appsync:                  appsync.NewFromConfig(config),
+		Appstream:                appstream.NewFromConfig(config),
+		Athena:                   athena.NewFromConfig(config),
+		Auditmanager:             auditmanager.NewFromConfig(config),
+		Autoscaling:              autoscaling.NewFromConfig(config),
+		Backup:                   backup.NewFromConfig(config),
+		Cloudformation:           cloudformation.NewFromConfig(config),
+		Cloudfront:               cloudfront.NewFromConfig(config),
+		Timestreamwrite:          timestreamwrite.NewFromConfig(config),
+		Cloudhsmv2:               cloudhsmv2.NewFromConfig(config),
+		CloudSearch:              cloudsearch.NewFromConfig(config),
+		Savingsplans:             savingsplans.NewFromConfig(config),
+		Cloudtrail:               cloudtrail.NewFromConfig(config),
+		Cloudwatch:               cloudwatch.NewFromConfig(config),
+		Cloudwatchlogs:           cloudwatchlogs.NewFromConfig(config),
+		Codebuild:                codebuild.NewFromConfig(config),
+		Scheduler:                scheduler.NewFromConfig(config),
+		Codepipeline:             codepipeline.NewFromConfig(config),
+		Sfn:                      sfn.NewFromConfig(config),
+		Cognitoidentity:          cognitoidentity.NewFromConfig(config),
+		Cognitoidentityprovider:  cognitoidentityprovider.NewFromConfig(config),
+		Configservice:            configservice.NewFromConfig(config),
+		Databasemigrationservice: databasemigrationservice.NewFromConfig(config),
+		Dax:                      dax.NewFromConfig(config),
+		Directconnect:            directconnect.NewFromConfig(config),
+		Docdb:                    docdb.NewFromConfig(config),
+		Dynamodb:                 dynamodb.NewFromConfig(config),
+		Securityhub:              securityhub.NewFromConfig(config),
+		Ec2:                      ec2.NewFromConfig(config),
+		Ecr:                      ecr.NewFromConfig(config),
+		Ecrpublic:                ecrpublic.NewFromConfig(config),
+		Ecs:                      ecs.NewFromConfig(config),
+		Kafka:                    kafka.NewFromConfig(config),
+		Efs:                      efs.NewFromConfig(config),
+		Eks:                      eks.NewFromConfig(config),
+		Elasticache:              elasticache.NewFromConfig(config),
+		Elasticbeanstalk:         elasticbeanstalk.NewFromConfig(config),
+		Elasticloadbalancing:     elasticloadbalancing.NewFromConfig(config),
+		Elasticloadbalancingv2:   elasticloadbalancingv2.NewFromConfig(config),
+		Elasticsearchservice:     elasticsearchservice.NewFromConfig(config),
+		Emr:                      emr.NewFromConfig(config),
+		Eventbridge:              eventbridge.NewFromConfig(config),
+		Firehose:                 firehose.NewFromConfig(config),
+		Frauddetector:            frauddetector.NewFromConfig(config),
+		Ses:                      ses.NewFromConfig(config),
+		Fsx:                      fsx.NewFromConfig(config),
+		Glacier:                  glacier.NewFromConfig(config),
+		Glue:                     glue.NewFromConfig(config),
+		Guardduty:                guardduty.NewFromConfig(config),
+		IAM:                      iam.NewFromConfig(config),
+		Identitystore:            identitystore.NewFromConfig(config),
+		Inspector:                inspector.NewFromConfig(config),
+		Inspector2:               inspector2.NewFromConfig(config),
+		Iot:                      iot.NewFromConfig(config),
+		Kinesis:                  kinesis.NewFromConfig(config),
+		Kms:                      kms.NewFromConfig(config),
+		Lambda:                   lambda.NewFromConfig(config),
+		Lightsail:                lightsail.NewFromConfig(config),
+		Mq:                       mq.NewFromConfig(config),
+		Mwaa:                     mwaa.NewFromConfig(config),
+		RAM:                      ram.NewFromConfig(config),
+		Neptune:                  neptune.NewFromConfig(config),
+		Networkfirewall:          networkfirewall.NewFromConfig(config),
+
 		Organizations:             organizations.NewFromConfig(config),
 		Qldb:                      qldb.NewFromConfig(config),
 		Rds:                       rds.NewFromConfig(config),
@@ -524,6 +533,17 @@ type AthenaClient interface {
 	ListWorkGroups(context.Context, *athena.ListWorkGroupsInput, ...func(*athena.Options)) (*athena.ListWorkGroupsOutput, error)
 }
 
+type AuditmanagerClient interface {
+	ListAssessments(ctx context.Context, params *auditmanager.ListAssessmentsInput, optFns ...func(*auditmanager.Options)) (*auditmanager.ListAssessmentsOutput, error)
+	ListControls(ctx context.Context, params *auditmanager.ListControlsInput, optFns ...func(*auditmanager.Options)) (*auditmanager.ListControlsOutput, error)
+	ListAssessmentFrameworks(ctx context.Context, params *auditmanager.ListAssessmentFrameworksInput, optFns ...func(*auditmanager.Options)) (*auditmanager.ListAssessmentFrameworksOutput, error)
+	GetAssessment(ctx context.Context, params *auditmanager.GetAssessmentInput, optFns ...func(*auditmanager.Options)) (*auditmanager.GetAssessmentOutput, error)
+	GetEvidenceFoldersByAssessment(ctx context.Context, params *auditmanager.GetEvidenceFoldersByAssessmentInput, optFns ...func(*auditmanager.Options)) (*auditmanager.GetEvidenceFoldersByAssessmentOutput, error)
+	GetEvidenceByEvidenceFolder(ctx context.Context, params *auditmanager.GetEvidenceByEvidenceFolderInput, optFns ...func(*auditmanager.Options)) (*auditmanager.GetEvidenceByEvidenceFolderOutput, error)
+	GetControl(ctx context.Context, params *auditmanager.GetControlInput, optFns ...func(*auditmanager.Options)) (*auditmanager.GetControlOutput, error)
+	GetAssessmentFramework(ctx context.Context, params *auditmanager.GetAssessmentFrameworkInput, optFns ...func(*auditmanager.Options)) (*auditmanager.GetAssessmentFrameworkOutput, error)
+}
+
 type AutoscalingClient interface {
 	DescribeAccountLimits(context.Context, *autoscaling.DescribeAccountLimitsInput, ...func(*autoscaling.Options)) (*autoscaling.DescribeAccountLimitsOutput, error)
 	DescribeAdjustmentTypes(context.Context, *autoscaling.DescribeAdjustmentTypesInput, ...func(*autoscaling.Options)) (*autoscaling.DescribeAdjustmentTypesOutput, error)
@@ -568,6 +588,7 @@ type BackupClient interface {
 	GetBackupVaultNotifications(context.Context, *backup.GetBackupVaultNotificationsInput, ...func(*backup.Options)) (*backup.GetBackupVaultNotificationsOutput, error)
 	GetRecoveryPointRestoreMetadata(context.Context, *backup.GetRecoveryPointRestoreMetadataInput, ...func(*backup.Options)) (*backup.GetRecoveryPointRestoreMetadataOutput, error)
 	GetSupportedResourceTypes(context.Context, *backup.GetSupportedResourceTypesInput, ...func(*backup.Options)) (*backup.GetSupportedResourceTypesOutput, error)
+	GetLegalHold(ctx context.Context, params *backup.GetLegalHoldInput, optFns ...func(*backup.Options)) (*backup.GetLegalHoldOutput, error)
 	ListBackupJobs(context.Context, *backup.ListBackupJobsInput, ...func(*backup.Options)) (*backup.ListBackupJobsOutput, error)
 	ListBackupPlanTemplates(context.Context, *backup.ListBackupPlanTemplatesInput, ...func(*backup.Options)) (*backup.ListBackupPlanTemplatesOutput, error)
 	ListBackupPlanVersions(context.Context, *backup.ListBackupPlanVersionsInput, ...func(*backup.Options)) (*backup.ListBackupPlanVersionsOutput, error)
@@ -583,6 +604,7 @@ type BackupClient interface {
 	ListReportPlans(context.Context, *backup.ListReportPlansInput, ...func(*backup.Options)) (*backup.ListReportPlansOutput, error)
 	ListRestoreJobs(context.Context, *backup.ListRestoreJobsInput, ...func(*backup.Options)) (*backup.ListRestoreJobsOutput, error)
 	ListTags(context.Context, *backup.ListTagsInput, ...func(*backup.Options)) (*backup.ListTagsOutput, error)
+	ListLegalHolds(ctx context.Context, params *backup.ListLegalHoldsInput, optFns ...func(*backup.Options)) (*backup.ListLegalHoldsOutput, error)
 }
 
 type CloudformationClient interface {
@@ -674,6 +696,11 @@ type Cloudhsmv2Client interface {
 	DescribeBackups(context.Context, *cloudhsmv2.DescribeBackupsInput, ...func(*cloudhsmv2.Options)) (*cloudhsmv2.DescribeBackupsOutput, error)
 	DescribeClusters(context.Context, *cloudhsmv2.DescribeClustersInput, ...func(*cloudhsmv2.Options)) (*cloudhsmv2.DescribeClustersOutput, error)
 	ListTags(context.Context, *cloudhsmv2.ListTagsInput, ...func(*cloudhsmv2.Options)) (*cloudhsmv2.ListTagsOutput, error)
+}
+
+type CloudSearchClient interface {
+	ListDomainNames(ctx context.Context, params *cloudsearch.ListDomainNamesInput, optFns ...func(*cloudsearch.Options)) (*cloudsearch.ListDomainNamesOutput, error)
+	DescribeDomains(ctx context.Context, params *cloudsearch.DescribeDomainsInput, optFns ...func(*cloudsearch.Options)) (*cloudsearch.DescribeDomainsOutput, error)
 }
 
 type CloudtrailClient interface {
@@ -1240,6 +1267,7 @@ type EksClient interface {
 	ListNodegroups(context.Context, *eks.ListNodegroupsInput, ...func(*eks.Options)) (*eks.ListNodegroupsOutput, error)
 	ListTagsForResource(context.Context, *eks.ListTagsForResourceInput, ...func(*eks.Options)) (*eks.ListTagsForResourceOutput, error)
 	ListUpdates(context.Context, *eks.ListUpdatesInput, ...func(*eks.Options)) (*eks.ListUpdatesOutput, error)
+	DescribeAddonConfiguration(ctx context.Context, params *eks.DescribeAddonConfigurationInput, optFns ...func(*eks.Options)) (*eks.DescribeAddonConfigurationOutput, error)
 }
 
 type ElasticacheClient interface {
@@ -1905,6 +1933,21 @@ type NeptuneClient interface {
 	DescribePendingMaintenanceActions(context.Context, *neptune.DescribePendingMaintenanceActionsInput, ...func(*neptune.Options)) (*neptune.DescribePendingMaintenanceActionsOutput, error)
 	DescribeValidDBInstanceModifications(context.Context, *neptune.DescribeValidDBInstanceModificationsInput, ...func(*neptune.Options)) (*neptune.DescribeValidDBInstanceModificationsOutput, error)
 	ListTagsForResource(context.Context, *neptune.ListTagsForResourceInput, ...func(*neptune.Options)) (*neptune.ListTagsForResourceOutput, error)
+}
+
+type NetworkfirewallClient interface {
+	ListFirewalls(ctx context.Context, params *networkfirewall.ListFirewallsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallsOutput, error)
+	ListFirewallPolicies(ctx context.Context, params *networkfirewall.ListFirewallPoliciesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesOutput, error)
+	ListRuleGroups(ctx context.Context, params *networkfirewall.ListRuleGroupsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListRuleGroupsOutput, error)
+	DescribeFirewall(ctx context.Context, params *networkfirewall.DescribeFirewallInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallOutput, error)
+	DescribeFirewallPolicy(ctx context.Context, params *networkfirewall.DescribeFirewallPolicyInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallPolicyOutput, error)
+	DescribeRuleGroup(ctx context.Context, params *networkfirewall.DescribeRuleGroupInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeRuleGroupOutput, error)
+}
+
+type OpensearchClient interface {
+	ListDomainNames(ctx context.Context, params *opensearch.ListDomainNamesInput, optFns ...func(*opensearch.Options)) (*opensearch.ListDomainNamesOutput, error)
+	ListTags(ctx context.Context, params *opensearch.ListTagsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListTagsOutput, error)
+	DescribeDomain(ctx context.Context, params *opensearch.DescribeDomainInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDomainOutput, error)
 }
 
 type OrganizationsClient interface {
@@ -2733,6 +2776,14 @@ type AmpClient interface {
 	ListRuleGroupsNamespaces(context.Context, *amp.ListRuleGroupsNamespacesInput, ...func(*amp.Options)) (*amp.ListRuleGroupsNamespacesOutput, error)
 	ListTagsForResource(context.Context, *amp.ListTagsForResourceInput, ...func(*amp.Options)) (*amp.ListTagsForResourceOutput, error)
 	ListWorkspaces(context.Context, *amp.ListWorkspacesInput, ...func(*amp.Options)) (*amp.ListWorkspacesOutput, error)
+}
+
+type AmplifyClient interface {
+	ListApps(ctx context.Context, params *amplify.ListAppsInput, optFns ...func(*amplify.Options)) (*amplify.ListAppsOutput, error)
+}
+
+type AppconfigClient interface {
+	ListApplications(context.Context, *appconfig.ListApplicationsInput, ...func(*appconfig.Options)) (*appconfig.ListApplicationsOutput, error)
 }
 
 type AppstreamClient interface {

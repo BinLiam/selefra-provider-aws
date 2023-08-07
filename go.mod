@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/aws/aws-sdk-go v1.44.149
-	github.com/aws/aws-sdk-go-v2 v1.17.3
+	github.com/aws/aws-sdk-go-v2 v1.20.0
 	github.com/aws/aws-sdk-go-v2/config v1.17.10
 	github.com/aws/aws-sdk-go-v2/credentials v1.12.23
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.37
@@ -12,18 +12,22 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/account v1.8.0
 	github.com/aws/aws-sdk-go-v2/service/acm v1.15.2
 	github.com/aws/aws-sdk-go-v2/service/amp v1.16.0
+	github.com/aws/aws-sdk-go-v2/service/amplify v1.14.0
 	github.com/aws/aws-sdk-go-v2/service/apigateway v1.15.22
 	github.com/aws/aws-sdk-go-v2/service/apigatewayv2 v1.12.20
+	github.com/aws/aws-sdk-go-v2/service/appconfig v1.18.0
 	github.com/aws/aws-sdk-go-v2/service/applicationautoscaling v1.15.20
 	github.com/aws/aws-sdk-go-v2/service/apprunner v1.15.0
 	github.com/aws/aws-sdk-go-v2/service/appstream v1.20.0
 	github.com/aws/aws-sdk-go-v2/service/appsync v1.15.12
 	github.com/aws/aws-sdk-go-v2/service/athena v1.18.12
+	github.com/aws/aws-sdk-go-v2/service/auditmanager v1.26.0
 	github.com/aws/aws-sdk-go-v2/service/autoscaling v1.23.18
-	github.com/aws/aws-sdk-go-v2/service/backup v1.17.11
+	github.com/aws/aws-sdk-go-v2/service/backup v1.23.1
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.23.0
 	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.20.7
 	github.com/aws/aws-sdk-go-v2/service/cloudhsmv2 v1.13.21
+	github.com/aws/aws-sdk-go-v2/service/cloudsearch v1.15.1
 	github.com/aws/aws-sdk-go-v2/service/cloudtrail v1.19.2
 	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.21.8
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.16.0
@@ -42,7 +46,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.13.19
 	github.com/aws/aws-sdk-go-v2/service/ecs v1.23.1
 	github.com/aws/aws-sdk-go-v2/service/efs v1.17.18
-	github.com/aws/aws-sdk-go-v2/service/eks v1.22.3
+	github.com/aws/aws-sdk-go-v2/service/eks v1.29.1
 	github.com/aws/aws-sdk-go-v2/service/elasticache v1.22.12
 	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.14.20
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing v1.14.20
@@ -70,6 +74,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mq v1.13.15
 	github.com/aws/aws-sdk-go-v2/service/mwaa v1.14.0
 	github.com/aws/aws-sdk-go-v2/service/neptune v1.18.0
+	github.com/aws/aws-sdk-go-v2/service/networkfirewall v1.29.1
+	github.com/aws/aws-sdk-go-v2/service/opensearch v1.19.1
 	github.com/aws/aws-sdk-go-v2/service/organizations v1.16.15
 	github.com/aws/aws-sdk-go-v2/service/qldb v1.14.20
 	github.com/aws/aws-sdk-go-v2/service/quicksight v1.30.0
@@ -105,7 +111,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.23.0
 	github.com/aws/aws-sdk-go-v2/service/workspaces v1.24.0
 	github.com/aws/aws-sdk-go-v2/service/xray v1.13.21
-	github.com/aws/smithy-go v1.13.5
+	github.com/aws/smithy-go v1.14.0
 	github.com/basgys/goxml2json v1.1.0
 	github.com/gocarina/gocsv v0.0.0-20220927221512-ad3251f9fa25
 	github.com/golang/mock v1.6.0
@@ -118,15 +124,17 @@ require (
 	github.com/songzhibin97/go-ognl v0.0.2
 	github.com/spf13/viper v1.13.0
 	github.com/stretchr/testify v1.8.1
+	github.com/turbot/steampipe-plugin-sdk/v4 v4.1.13
 	golang.org/x/sync v0.1.0
 )
 
 require (
 	github.com/Masterminds/squirrel v1.5.3 // indirect
+	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d // indirect
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.4.9 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.12.19 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.27 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.4.21 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.37 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.4.31 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/ini v1.3.26 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/v4a v1.0.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.9.10 // indirect
@@ -137,16 +145,20 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sso v1.11.25 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.13.8 // indirect
 	github.com/bitly/go-simplejson v0.5.0 // indirect
+	github.com/btubbs/datetime v0.1.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/doug-martin/goqu/v9 v9.18.0 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
+	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/hashicorp/go-hclog v1.3.1 // indirect
 	github.com/hashicorp/go-plugin v1.4.6 // indirect
+	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect
+	github.com/iancoleman/strcase v0.2.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.13.0 // indirect
 	github.com/jackc/pgio v1.0.0 // indirect
@@ -162,18 +174,25 @@ require (
 	github.com/magiconair/properties v1.8.6 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
+	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
 	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
 	github.com/oklog/run v1.1.0 // indirect
+	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.5 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/spf13/afero v1.8.2 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/subosito/gotenv v1.4.1 // indirect
+	github.com/tkrajina/go-reflector v0.5.4 // indirect
+	github.com/turbot/go-kit v0.4.0 // indirect
+	go.opentelemetry.io/otel v1.7.0 // indirect
+	go.opentelemetry.io/otel/trace v1.7.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
